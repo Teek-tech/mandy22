@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-2 text-center text-lg-left">
 
-                    <a href="index-2.html" class="site-logo">
+                    <a href="{{route('home')}}" class="site-logo">
                         <img src="img/xlogo.png.pagespeed.ic.g8beR9VzMk.png" alt="">
                     </a>
                 </div>
@@ -29,7 +29,7 @@
                         <i class="flaticon-bag"></i>
                         <span>0</span>
                         </div>
-                        <a href="#">Shopping Cart</a>
+                        <a href="{{route('cart')}}">Cart</a>
                     </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@
         <div class="container">
 
             <ul class="main-menu">
-            <li><a href="{{route('home')}}">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{{route('welcome')}}">Home</a></li>
+            <li><a href="{{route('about')}}">About</a></li>
             <li><a href="#">Shop</a>
                 <ul class="sub-menu">
                     <li><a href="{{route('shop.men')}}">Men</a></li>
