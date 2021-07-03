@@ -1,3 +1,10 @@
+/* VARS */
+:root {
+    --primary-color: #fa4410;
+    --white: #fff;
+    --black: #000;
+}
+
 .about-section {
     padding: 40px 0;
 }

@@ -187,12 +187,12 @@
             </div>
             <ul class="product-filter-menu nav nav-tabs" id="best-selling-products-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" href="#adults" data-toggle="tab" role="tab" aria-controls="adults"
-                        aria-selected="true">ADULTS</a>
+                    <a class="nav-link active adult-class" href="#adults" data-toggle="tab" role="tab"
+                        aria-controls="adults" aria-selected="true">ADULTS</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="#children" data-toggle="tab" role="tab" aria-controls="children"
-                        aria-selected="true">CHILDREN</a>
+                    <a class="nav-link children-class" href="#children" data-toggle="tab" role="tab"
+                        aria-controls="children" aria-selected="true">CHILDREN</a>
                 </li>
             </ul>
 
@@ -392,6 +392,37 @@
         window.addEventListener('load', () => {
             // vars
             const productItems = document.querySelectorAll('.product-item img[data-href]');
+
+            const bestsellerItemTabs = document.querySelectorAll('#best-selling-products-tab .nav-item');
+            const adultsTabContent = document.querySelector('#adults');
+            const childrenTabContent = document.querySelector('#children');
+
+            // const tweakedAdultsId = '#' + adultsTabContent.id;
+            // const tweakedChildrenId = '#' + childrenTabContent.id;
+
+            // console.log(adultsTabContent.id);
+            // const tweakedId = 
+            // console.log(tweakedId);
+
+            // bestsellerItemTabs.forEach(bestsellerItemTab => {
+            //     console.log(bestsellerItemTab.children);
+            // })
+
+
+            bestsellerItemTabs.forEach(bestsellerItemTab => {
+                if (bestsellerItemTab.firstElementChild.classList.contains('active')) {
+                    // console.log(bestsellerItemTab.firstElementChild);
+                    let tabItemToShow = bestsellerItemTab.firstElementChild;
+                    console.log(tabItemToShow.classList);
+                    if (tabItemToShow.classList.contains('adult-class')) {
+                        childrenTabContent.style.display = 'none';
+                        console.log('going somewhere');
+                    } else if (tabItemToShow.classList.contains('children-class')) {
+                        adultsTabContent.style.display = 'none';
+                        childrenTabContent.style.display = 'block';
+                    }
+                }
+            })
 
             productItems.forEach(productItem => {
                 productItem.addEventListener('click', () => {
