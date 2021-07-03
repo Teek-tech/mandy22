@@ -44,8 +44,8 @@
             <li><a href="{{route('about')}}">About</a></li>
             <li><a href="#">Shop</a>
                 <ul class="sub-menu">
-                    <li><a href="{{route('shop.men')}}">Men</a></li>
-                    <li><a href="{{route('shop.women')}}">Women</a></li>
+                    <li><a href="{{route('shop.adults')}}">Adults</a></li>
+                    <li><a href="{{route('shop.children')}}">Children</a></li>
                 </ul>
             </li>
             <li><a href="#">Gallery</a></li>
@@ -54,3 +54,6 @@
         </div>
     </nav>
 </header>
+<script src="">
+    
+</script>

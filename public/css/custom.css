@@ -1,17 +1,19 @@
-.about-section{
+.about-section {
     padding: 40px 0;
 }
 
-.about-section-img{
+.about-section-img {
     height: 550px;
     width: 100%;
     object-fit: cover;
 }
 
+.product-item {
+    cursor: pointer;
+}
 
-
-@media (min-width: 1200px){
-    .slicknav_menu{
+@media (min-width: 1200px) {
+    .slicknav_menu {
         display: none;
     }
 }

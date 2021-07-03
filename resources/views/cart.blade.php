@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Divisima | eCommerce Template</title>
+    <title>Divisima | eCommerce Template</title>
     @include('layouts.head')
 </head>
+
 <body>
 
     @include('layouts.nav')
@@ -52,8 +54,12 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="size-col"><h4>Size M</h4></td>
-                                        <td class="total-col"><h4>$45.90</h4></td>
+                                        <td class="size-col">
+                                            <h4>Size M</h4>
+                                        </td>
+                                        <td class="total-col">
+                                            <h4>$45.90</h4>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="product-col">
@@ -70,8 +76,12 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="size-col"><h4>Size M</h4></td>
-                                        <td class="total-col"><h4>$45.90</h4></td>
+                                        <td class="size-col">
+                                            <h4>Size M</h4>
+                                        </td>
+                                        <td class="total-col">
+                                            <h4>$45.90</h4>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="product-col">
@@ -88,8 +98,12 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="size-col"><h4>Size M</h4></td>
-                                        <td class="total-col"><h4>$45.90</h4></td>
+                                        <td class="size-col">
+                                            <h4>Size M</h4>
+                                        </td>
+                                        <td class="total-col">
+                                            <h4>$45.90</h4>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -104,7 +118,7 @@
                         <input type="text" placeholder="Enter promo code">
                         <button>Submit</button>
                     </form>
-                    <a href="#" class="site-btn">Proceed to checkout</a>
+                    <a href="{{ route('checkout') }}" class="site-btn">Proceed to checkout</a>
                     <a href="#" class="site-btn sb-dark">Continue shopping</a>
                 </div>
             </div>
@@ -117,11 +131,11 @@
             <div class="section-title text-uppercase">
                 <h2>Continue Shopping</h2>
             </div>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <div class="tag-new">New</div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <div class="tag-new">New</div>
                             <img src="img/product/x2.jpg.pagespeed.ic.yx20XuH2nc.jpg" alt="">
                             <div class="pi-links">
                                 <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
@@ -186,4 +200,5 @@
 
     @include('layouts.footer')
 </body>
+
 </html>

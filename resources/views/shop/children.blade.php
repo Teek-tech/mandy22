@@ -5,13 +5,23 @@
 @include('layouts.head')
 </head>
 <body>
+    
     @include('layouts.nav')
 
+    <div class="page-top-info">
+        <div class="container">
+            <h4>Shop</h4>
+            <div class="site-pagination">
+                <a href="#">shop</a> /
+                <a href="#">children</a>
+            </div>
+        </div>
+    </div>
 
 
     <section class="product-filter-section">
         <div class="container">
-            <div class="section-title">
+            {{-- <div class="section-title">
                 <h2>BROWSE TOP SELLING PRODUCTS</h2>
             </div>
             <ul class="product-filter-menu">
@@ -23,7 +33,7 @@
                 <li><a href="#">COATS</a></li>
                 <li><a href="#">JUMPERS</a></li>
                 <li><a href="#">LEGGINGS</a></li>
-            </ul>
+            </ul> --}}
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
