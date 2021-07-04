@@ -31,7 +31,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-wave-square"></i></div>
                     Activities
                 </a>
-                <a class="nav-link" href="{{ route('admin.activities') }}">
+                <a class="nav-link" href="{{ route('admin.profile') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
                     Profile
                 </a>

@@ -94,6 +94,11 @@ Route::get('/activities', function(){
     return view('admin.activities');
 })->name('admin.activities');
 
+// profile
+Route::get('/profile', function(){
+    return view('admin.profile');
+})->name('admin.profile');
+
 
 
 Auth::routes();

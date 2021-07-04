@@ -5,3 +5,44 @@
 .transactions-table table tbody tr {
     cursor: pointer;
 }
+
+.profile-area {
+    width: 70%;
+}
+
+.profile-img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-area form label {
+    font-size: 0.9em;
+}
+
+.profile-area form input::placeholder {
+    font-size: 0.9em;
+}
+
+.change-avatar-label {
+    text-transform: capitalize;
+}
+
+@media (min-width: 1200px) {
+    .profile-area {
+        width: 50%;
+    }
+}
