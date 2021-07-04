@@ -91,7 +91,7 @@
                 <a href="#" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
             </div>
 
-            <p class="text-white text-center mt-5">Copyright &copy;<script></script>___scripts_1___ All rights reserved |
+            <p class="text-white text-center mt-5">Copyright &copy;<script></script> All rights reserved |
                 This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
                     href="https://colorlib.com/" target="_blank">Colorlib</a></p>
 

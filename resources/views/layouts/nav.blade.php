@@ -5,19 +5,19 @@
 <header class="header-section">
     <div class="header-top">
         <div class="container">
-            <div class="row">
+            <div class="row" style="display: flex; justify-content: space-between;width:100%;">
                 <div class="col-lg-2 text-center text-lg-left">
 
                     <a href="{{route('home')}}" class="site-logo">
                         <img src="img/xlogo.png.pagespeed.ic.g8beR9VzMk.png" alt="">
                     </a>
                 </div>
-                <div class="col-xl-6 col-lg-5">
+                {{-- <div class="col-xl-6 col-lg-5">
                     <form class="header-search-form">
                     <input type="text" placeholder="Search on divisima ....">
                     <button><i class="flaticon-search"></i></button>
                     </form>
-                </div>
+                </div> --}}
                 <div class="col-xl-4 col-lg-5">
                     <div class="user-panel">
                     <div class="up-item">
