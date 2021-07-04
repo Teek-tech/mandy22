@@ -68,11 +68,26 @@ Route::get('/products', function(){
     return view('admin.products.index');
 })->name('admin.products');
 
+// Add products
+Route::get('/products/add', function(){
+    return view('admin.products.create');
+})->name('admin.products.create');
+
+// Edit porducts
+Route::get('/products/edit', function(){
+    return view('admin.products.edit');
+})->name('admin.products.edit');
+
 
 // Transaction
 Route::get('/transactions', function(){
     return view('admin.transactions.index');
 })->name('admin.transactions');
+
+// Transaction details
+Route::get('/transactions/details', function(){
+    return view('admin.transactions.details');
+})->name('admin.transactions.details');
 
 // Activities
 Route::get('/activities', function(){

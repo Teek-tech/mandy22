@@ -1,0 +1,7 @@
+.add-products-form label {
+    font-weight: bold;
+}
+
+.transactions-table table tbody tr {
+    cursor: pointer;
+}

@@ -2,26 +2,40 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
-                <a class="nav-link" href="{{route('admin.home')}}">
+                <a class="nav-link" href="{{ route('admin.home') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
-                <a class="nav-link" href="{{route('admin.products')}}">
+                {{-- <a class="nav-link" href="{{ route('admin.products') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-shopping-bag"></i></div>
                     Products
+                </a> --}}
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
+                    aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-shopping-bag"></i></div>
+                    Products
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <a class="nav-link" href="{{route('admin.transactions')}}">
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                    data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="{{ route('admin.products') }}">View Products</a>
+                        <a class="nav-link" href="{{ route('admin.products.create') }}">Add Products</a>
+                    </nav>
+                </div>
+                <a class="nav-link" href="{{ route('admin.transactions') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-credit-card"></i></div>
                     Transactions
                 </a>
-                <a class="nav-link" href="{{route('admin.activities')}}">
+                <a class="nav-link" href="{{ route('admin.activities') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-wave-square"></i></div>
                     Activities
                 </a>
-                <a class="nav-link" href="{{route('admin.activities')}}">
+                <a class="nav-link" href="{{ route('admin.activities') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
                     Profile
                 </a>
+
             </div>
         </div>
     </nav>
