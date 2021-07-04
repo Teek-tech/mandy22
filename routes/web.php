@@ -99,6 +99,16 @@ Route::get('/profile', function(){
     return view('admin.profile');
 })->name('admin.profile');
 
+// login
+Route::get('/admin/login', function(){
+    return view('admin.login');
+})->name('admin.login');
+
+// Register
+Route::get('/admin/register', function(){
+    return view('admin.register');
+})->name('admin.register');
+
 
 
 Auth::routes();

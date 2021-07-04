@@ -110,8 +110,8 @@
                 row.addEventListener('click', () => {
                     window.location.href = row.dataset.href;
                 })
-            })
-        })
+            });
+        });
     </script>
 
 </body>

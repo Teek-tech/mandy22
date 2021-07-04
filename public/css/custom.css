@@ -5,26 +5,29 @@
     --black: #000;
 }
 
-
 /* nav */
-.shopping-card span{
+.shopping-card span {
     background: var(--primary-color);
 }
 
-.main-navbar{
+.main-navbar {
     background: var(--primary-color);
 }
 
-.main-menu li:hover>a {
+.main-menu li:hover > a {
     color: var(--black);
 }
 
 /* home page */
-.hero-slider .hs-item .offer-card{
+.hero-slider .hs-item .offer-card {
     background: var(--primary-color);
 }
 
-.feature:nth-child(2){
+.hero-slider .hs-item .offer-card:after {
+    border: 1px solid var(--primary-color);
+}
+
+.feature:nth-child(2) {
     background: var(--primary-color);
 }
 
@@ -32,24 +35,24 @@
     background: var(--primary-color);
 }
 
-.site-btn{
+.site-btn {
     background: var(--primary-color);
 }
 
-.footer-widget ul li a:after{
+.footer-widget ul li a:after {
     background: var(--primary-color);
     border: 1px solid var(--primary-color);
 }
 
-.w-latest-post-widget .lp-content .readmore{
+.w-latest-post-widget .lp-content .readmore {
     background: var(--primary-color);
 }
 
-.contact-widget .con-info span{
+.contact-widget .con-info span {
     color: var(--primary-color);
 }
 
-.fw-latest-post-widget .lp-content .readmore{
+.fw-latest-post-widget .lp-content .readmore {
     color: var(--primary-color);
 }
 
@@ -71,21 +74,20 @@
     cursor: pointer;
 }
 
-
 /* product details page */
-.product-details .p-stock span{
+.product-details .p-stock span {
     color: var(--primary-color);
 }
 
-.product-details .p-rating i{
+.product-details .p-rating i {
     color: var(--primary-color);
 }
 
-.product-details .fw-size-choose input[type=radio]:checked+label{
+.product-details .fw-size-choose input[type="radio"]:checked + label {
     border: 2px solid var(--primary-color);
 }
 
-.fw-size-choose input[type=radio]:checked+label {
+.fw-size-choose input[type="radio"]:checked + label {
     background: var(--primary-color);
 }
 
@@ -93,9 +95,8 @@
     border: 2px solid var(--primary-color);
 }
 
-
 /* checkout page */
-.promo-code-form button{
+.promo-code-form button {
     color: var(--primary-color);
 }
 
