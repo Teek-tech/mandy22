@@ -185,191 +185,139 @@
             <div class="section-title">
                 <h2>BROWSE TOP SELLING PRODUCTS</h2>
             </div>
-            <ul class="product-filter-menu nav nav-tabs" id="best-selling-products-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active adult-class" href="#adults" data-toggle="tab" role="tab"
-                        aria-controls="adults" aria-selected="true">ADULTS</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link children-class" href="#children" data-toggle="tab" role="tab"
-                        aria-controls="children" aria-selected="true">CHILDREN</a>
-                </li>
+            <ul class="product-filter-menu">
+                <li class="control-btn"><a href="#" data-filter="adults">Adults</a></li>
+                <li class="control-btn"><a href="#" data-filter="children">Children</a></li>
             </ul>
-
-            {{-- Tab content start --}}
-            <div class="">
-                <div class="tab-content" id="best-selling-products-tab-content">
-
-                    <div class="tab-pane fade show active" id="adults" role="tabpanel" aria-labelledby="adults-tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x5.jpg.pagespeed.ic.1gwhyxLPpw.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Flamboyant Pink Top </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <div class="tag-sale">ON SALE</div>
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Black and White Stripes Dress</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x7.jpg.pagespeed.ic.5I9GOq1aHl.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Flamboyant Pink Top </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x8.jpg.pagespeed.ic.QAETlyM_Qb.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Flamboyant Pink Top </p>
-                                    </div>
-                                </div>
+            <div class="row adults">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="{{ asset('img/product/x5.jpg.pagespeed.ic.1gwhyxLPpw.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="tab-pane fade" id="children" role="tabpanel" aria-labelledby="children-tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x5.jpg.pagespeed.ic.1gwhyxLPpw.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Flamboyant Pink Top </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <div class="tag-sale">ON SALE</div>
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Black and White Stripes Dress</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x7.jpg.pagespeed.ic.5I9GOq1aHl.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Flamboyant Pink Top </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img data-href="/shop/adults/product/detail"
-                                            src="img/product/x8.jpg.pagespeed.ic.QAETlyM_Qb.jpg" alt="">
-                                        <div class="pi-links">
-                                            <a href="{{ route('cart') }}" class="add-card"><i
-                                                    class="flaticon-bag"></i><span>ADD
-                                                    TO
-                                                    CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <h6>$35,00</h6>
-                                        <p>Flamboyant Pink Top </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Flamboyant Pink Top</p>
                         </div>
                     </div>
-                    {{-- children content end --}}
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <div class="tag-sale">ON SALE</div>
+                            <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Black and White Stripes Dress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="{{ asset('img/product/x7.jpg.pagespeed.ic.5I9GOq1aHl.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Flamboyant Pink Top</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="{{ asset('img/product/x8.jpg.pagespeed.ic.QAETlyM_Qb.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Flamboyant Pink Top</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {{-- <div class="text-center pt-5">
+            <div class="row children">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="{{ asset('img/product/x5.jpg.pagespeed.ic.1gwhyxLPpw.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Flamboyant Pink Top</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <div class="tag-sale">ON SALE</div>
+                            <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Black and White Stripes Dress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="{{ asset('img/product/x7.jpg.pagespeed.ic.5I9GOq1aHl.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Flamboyant Pink Top</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="{{ asset('img/product/x8.jpg.pagespeed.ic.QAETlyM_Qb.jpg') }}" alt="" />
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Flamboyant Pink Top</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-5">
                 <button class="site-btn sb-line sb-dark">LOAD MORE</button>
-            </div> --}}
+            </div>
         </div>
     </section>
 
@@ -389,40 +337,28 @@
     @include('layouts.footer')
 
     <script>
+        $(document).ready(function() {
+
+            $('.control-btn').click(function() {
+
+                $(this).addClass('active').siblings().removeClass('active');
+
+                const filter = $(this).attr('data-filter')
+
+                if (filter == 'all') {
+                    $('.image').show(400);
+                } else {
+                    $('.image').not('.' + filter).hide(200);
+                    $('.image').filter('.' + filter).show(400);
+                }
+
+            });
+
+        });
+
         window.addEventListener('load', () => {
             // vars
             const productItems = document.querySelectorAll('.product-item img[data-href]');
-
-            const bestsellerItemTabs = document.querySelectorAll('#best-selling-products-tab .nav-item');
-            const adultsTabContent = document.querySelector('#adults');
-            const childrenTabContent = document.querySelector('#children');
-
-            // const tweakedAdultsId = '#' + adultsTabContent.id;
-            // const tweakedChildrenId = '#' + childrenTabContent.id;
-
-            // console.log(adultsTabContent.id);
-            // const tweakedId = 
-            // console.log(tweakedId);
-
-            // bestsellerItemTabs.forEach(bestsellerItemTab => {
-            //     console.log(bestsellerItemTab.children);
-            // })
-
-
-            bestsellerItemTabs.forEach(bestsellerItemTab => {
-                if (bestsellerItemTab.firstElementChild.classList.contains('active')) {
-                    // console.log(bestsellerItemTab.firstElementChild);
-                    let tabItemToShow = bestsellerItemTab.firstElementChild;
-                    console.log(tabItemToShow.classList);
-                    if (tabItemToShow.classList.contains('adult-class')) {
-                        childrenTabContent.style.display = 'none';
-                        console.log('going somewhere');
-                    } else if (tabItemToShow.classList.contains('children-class')) {
-                        adultsTabContent.style.display = 'none';
-                        childrenTabContent.style.display = 'block';
-                    }
-                }
-            })
 
             productItems.forEach(productItem => {
                 productItem.addEventListener('click', () => {
@@ -430,6 +366,9 @@
                 });
             });
         });
+    </script>
+    <script>
+
     </script>
 
 </body>

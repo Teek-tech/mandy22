@@ -25,7 +25,11 @@
     <section class="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 about-section-img-area">
+                    <img class="about-section-img" src="{{ asset('img/product/x1.jpg.pagespeed.ic._92Pc1JtDC.jpg') }}"
+                        alt="">
+                </div>
+                <div class="col-md-6 about-section-text-area">
                     <div>
                         <h4>Top Notch Fashion store</h4>
                         <p>
@@ -40,26 +44,6 @@
                             reprehenderit tempora quod!
                         </p>
                     </div>
-                    <div>
-                        <h4>Quality and affordable clothing</h4>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque perferendis nostrum ducimus
-                            sunt itaque est neque, libero, sequi praesentium molestias dicta deserunt numquam officiis,
-                            porro aspernatur at unde ratione fuga!
-                        </p>
-                    </div>
-                    <div>
-                        <h4>Variety of fashion brands</h4>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque perferendis nostrum ducimus
-                            sunt itaque est neque, libero, sequi praesentium molestias dicta deserunt numquam officiis,
-                            porro aspernatur at unde ratione fuga!
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="about-section-img" src="{{ asset('img/product/x1.jpg.pagespeed.ic._92Pc1JtDC.jpg') }}"
-                        alt="">
                 </div>
             </div>
         </div>

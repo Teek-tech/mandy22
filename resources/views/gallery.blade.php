@@ -1,37 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- Google fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="Font-Awesome-4.7/css/font-awesome.min.css" />
-    <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/hero-slider-style.css" />
-    <!-- Hero slider style (https://codyhouse.co/gem/hero-slider/) -->
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <!-- Magnific popup style (http://dimsemenov.com/plugins/magnific-popup/) -->
-    <link rel="stylesheet" href="css/templatemo-style.css" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-    <!-- These two JS are loaded at the top for gray scale including the loader. -->
-
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <!-- jQuery (https://jquery.com/download/) -->
+    <title>Divisima | eCommerce Template</title>
+    @include('layouts.head')
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 </head>
 
 <body>
+
+    @include('layouts.nav')
+
+    <div class="page-top-info">
+        <div class="container">
+            <h4>Gallery</h4>
+            <div class="site-pagination">
+                <a href="#">Home</a> /
+                <a href="#">Gallery</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="gallery-area">
+        <div class="container">
+            <div class="gallery">
+                <ul class="gallery-controls">
+                    <li class="control-btn active" data-filter="all">All</li>
+                    <li class="control-btn" data-filter="adults">Adults</li>
+                    <li class="control-btn" data-filter="children">Children</li>
+                </ul>
+
+                <div class="image-container">
+                    <a href="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" class="image adults">
+                        <img src="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" class="image children">
+                        <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" class="image adults">
+                        <img src="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" class="image children">
+                        <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" class="image adults">
+                        <img src="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" class="image children">
+                        <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" class="image adults">
+                        <img src="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" class="image children">
+                        <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" class="image adults">
+                        <img src="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" alt="">
+                    </a>
+
+                    <a href="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" class="image children">
+                        <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @include('layouts.footer')
+
+    <!-- magnific popup js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('.control-btn').click(function() {
+
+                $(this).addClass('active').siblings().removeClass('active');
+
+                const filter = $(this).attr('data-filter')
+
+                if (filter == 'all') {
+                    $('.image').show(400);
+                } else {
+                    $('.image').not('.' + filter).hide(200);
+                    $('.image').filter('.' + filter).show(400);
+                }
+
+            });
+
+            $('.gallery').magnificPopup({
+
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+
+            });
+
+        });
+    </script>
 
 </body>
 

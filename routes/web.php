@@ -41,6 +41,11 @@ Route::get('/shop/adults/product/detail', function(){
     return view('shop.details');
 })->name('shop.product.detail');
 
+// gallery
+Route::get('/gallery', function(){
+    return view('gallery');
+})->name('gallery');
+
 // cart
 Route::get('/cart', function(){
     return view('cart');

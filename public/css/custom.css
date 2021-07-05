@@ -3,6 +3,7 @@
     --primary-color: #fc8835;
     --white: #fff;
     --black: #000;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* nav */
@@ -61,13 +62,17 @@
 } */
 
 .about-section {
-    padding: 40px 0;
+    margin-top: 50px;
 }
 
 .about-section-img {
     height: 550px;
     width: 100%;
     object-fit: cover;
+}
+
+.about-section-text-area {
+    margin: 20px;
 }
 
 .product-item {
@@ -95,6 +100,63 @@
     border: 2px solid var(--primary-color);
 }
 
+/* Gallery */
+.gallery-area {
+    /* padding: 40px 0; */
+    margin: 50px 0;
+    transition: all 0.2s cubic-bezier(0.34, 1.12, 0.68, 1.31);
+}
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    height: 40px;
+    width: 140px;
+    background: var(--white);
+    color: #666;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 50px;
+}
+
+.control-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.gallery .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery .image-container .image {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.gallery .image-container .image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.gallery .image-container .image:hover img {
+    transform: scale(1.4);
+}
+
 /* checkout page */
 .promo-code-form button {
     color: var(--primary-color);
@@ -104,8 +166,36 @@
     background: var(--primary-color);
 }
 
+@media (min-width: 900px) {
+    .gallery .image-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (min-width: 1000px) {
     .slicknav_menu {
         display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* .about-section-img-area {
+        position: relative;
+    } */
+
+    .about-section-text-area {
+        position: relative;
+        top: 150px;
+        left: -80px;
+        height: 300px;
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        background: var(--white);
+        z-index: 100;
+        margin: 0;
+    }
+
+    .gallery .image-container {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
