@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Divisima | eCommerce Template</title>
+    <title>Mandy22 | No.1 Fashionista in Port Harcourt</title>
     @include('layouts.head')
 
 </head>
@@ -14,12 +14,12 @@
 
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="img/bg.jpg">
+            <div class="hs-item set-bg" data-setbg="img/queen.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-7 text-white">
                             <span>New Arrivals</span>
-                            <h2>denim jackets</h2>
+                            <h2>Native Perfection</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
                                 commodo viverra maecenas accumsan lacus vel facilisis. </p>
@@ -29,17 +29,17 @@
                     </div>
                     <div class="offer-card text-white">
                         <span>from</span>
-                        <h2>$29</h2>
+                        <h2>₦7k</h2>
                         <p>SHOP NOW</p>
                     </div>
                 </div>
             </div>
-            <div class="hs-item set-bg" data-setbg="img/bg-2.jpg">
+            <div class="hs-item set-bg" data-setbg="img/casual.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-7 text-white">
                             <span>New Arrivals</span>
-                            <h2>denim jackets</h2>
+                            <h2>Casual Originality</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
                                 commodo viverra maecenas accumsan lacus vel facilisis. </p>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="offer-card text-white">
                         <span>from</span>
-                        <h2>$29</h2>
+                        <h2>₦10k</h2>
                         <p>SHOP NOW</p>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
+                        <h6>₦35,00</h6>
                         <p>Flamboyant Pink Top </p>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
+                        <h6>₦35,00</h6>
                         <p>Black and White Stripes Dress</p>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
+                        <h6>₦35,00</h6>
                         <p>Flamboyant Pink Top </p>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
+                        <h6>₦35,00</h6>
                         <p>Flamboyant Pink Top </p>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
+                        <h6>₦35,00</h6>
                         <p>Flamboyant Pink Top </p>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Flamboyant Pink Top</p>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Black and White Stripes Dress</p>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Flamboyant Pink Top</p>
                         </div>
                     </div>
@@ -246,7 +246,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Flamboyant Pink Top</p>
                         </div>
                     </div>
@@ -263,7 +263,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Flamboyant Pink Top</p>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Black and White Stripes Dress</p>
                         </div>
                     </div>
@@ -294,7 +294,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Flamboyant Pink Top</p>
                         </div>
                     </div>
@@ -309,7 +309,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>$35,00</h6>
+                            <h6>₦35,00</h6>
                             <p>Flamboyant Pink Top</p>
                         </div>
                     </div>

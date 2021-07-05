@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Divisima | eCommerce Template</title>
+    <title>Mandy22 | No.1 Fashionista in Port Harcourt</title>
     @include('layouts.head')
 </head>
 

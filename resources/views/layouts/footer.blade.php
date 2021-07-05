@@ -91,9 +91,8 @@
                 <a href="#" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
             </div>
 
-            <p class="text-white text-center mt-5">Copyright &copy;<script></script> All rights reserved |
-                This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                    href="https://colorlib.com/" target="_blank">Colorlib</a></p>
+            <p class="text-white text-center mt-5">Copyright &copy;<script></script> All rights reserved | Designed <a
+                    href="https://mezitox.com/" target="_blank">Mezitox</a></p>
 
         </div>
     </div>
