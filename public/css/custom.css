@@ -3,12 +3,19 @@
     --primary-color: #fc8835;
     --white: #fff;
     --black: #000;
+    --black-2: #111111;
+    --grey: #ebebeb;
     --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    --box-shadow-2: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* nav */
 .shopping-card span {
     background: var(--primary-color);
+}
+
+.slicknav_menu {
+    display: none;
 }
 
 .main-navbar {
@@ -55,6 +62,31 @@
 
 .fw-latest-post-widget .lp-content .readmore {
     color: var(--primary-color);
+}
+
+.product-filter-menu {
+    display: flex;
+}
+
+.product-filter-menu .control-btn {
+    color: var(--black-2);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 31px;
+    cursor: pointer;
+}
+
+.product-filter-menu .control-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
 }
 
 /* .fw-latest-post-widget .lp-content .readmore {
@@ -114,16 +146,16 @@
     margin-bottom: 20px;
 }
 
-.control-btn {
+.gallery-controls .control-btn {
     height: 40px;
     width: 140px;
     background: var(--white);
-    color: #666;
-    font-size: 20px;
+    color: var(--black-2);
+    font-size: 1em;
     line-height: 40px;
     cursor: pointer;
     margin: 20px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow-2);
     text-align: center;
     border-radius: 50px;
 }
@@ -166,17 +198,32 @@
     background: var(--primary-color);
 }
 
+@media (max-width: 449px) {
+    .gallery .image-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .main-menu {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .main-menu li a {
+        margin-right: 20px;
+    }
+}
+
 @media (min-width: 900px) {
     .gallery .image-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 1000px) {
-    .slicknav_menu {
-        display: none;
-    }
-}
+/* @media (min-width: 1000px) {
+
+} */
 
 @media (min-width: 1200px) {
     /* .about-section-img-area {
