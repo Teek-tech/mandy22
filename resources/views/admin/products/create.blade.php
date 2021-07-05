@@ -21,7 +21,7 @@
                     <div class="card my-4">
                         <div class="card-body">
                             <form class="add-products-form" action="">
-                                <div class="row">
+                                <div class="row d-flex justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="form-group my-3">
                                             <label for="name">Name</label>
