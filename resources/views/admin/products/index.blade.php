@@ -32,21 +32,30 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                @php
+                                    $sn=1;
+                                @endphp
                                 <tbody>
+                                    @foreach ($products as $product)
                                     <tr>
-                                        <td>1</td>
-                                        <td>Dorime wrapper</td>
-                                        <td>Puprle female sleevless gown</td>
-                                        <td>Adults</td>
-                                        <td>21st July 2021</td>
-                                        <td><span class="badge bg-success">in stock</span>
-                                            <span class="badge bg-warning">unavailable</span></td>
+                                        <td>{{$sn++}}</td>
+                                        <td>{{$product->title}}</td>
+                                        <td>{{$product->description}}</td>
+                                        <td>{{$product->category}}</td>
+                                        <td>{{$product->created_at}}</td>
+                                        <td>
+                                            @if ($product->in_stock == TRUE)
+                                            <span class="badge bg-success">in stock</span>
+                                            @else
+                                            <span class="badge bg-warning">unavailable</span>
+                                            @endif
+                                            </td>
                                         <td class="d-flex justify-content-center"><a
-                                                href="{{ route('admin.products.edit') }}"
+                                                href="{{ route('admin.product.edit', $product->uuid) }}"
                                                 class="btn btn-primary">Edit</a>
                                         </td>
                                     </tr>
-                                 
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -67,11 +76,11 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                        <div class="text-muted">Copyright &copy; Mandy22 2021</div>
                         <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
+                            Designed by <a href="https://mezitox.com">Mezitox</a>
+                            {{-- &middot;
+                            <a href="#">Terms &amp; Conditions</a> --}}
                         </div>
                     </div>
                 </div>

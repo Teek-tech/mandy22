@@ -15,7 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.products.index');
+        $products = Product::all();
+        return view('admin.products.index', compact('products'));
     }
 
     /**
@@ -96,7 +97,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $product = Product::findOrFail($product->id);
+        return view('admin.products.edit', compact('product'));
     }
 
     /**
@@ -126,7 +128,6 @@ class ProductController extends Controller
         $product->color = $request->get('color');
         $product->price = $request->get('price');
         $product->description = $request->get('description');
-        $product->status = $request->get('status');
         $product->save();
         
         if($request->hasFile('image_file')) {
