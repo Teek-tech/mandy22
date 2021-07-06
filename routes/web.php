@@ -68,15 +68,7 @@ Route::get('/admin', function (){
     return view('admin.index');
 })->name('admin.home');
 
-// Products
-Route::get('/products', function(){
-    return view('admin.products.index');
-})->name('admin.products');
 
-// Add products
-Route::get('/products/add', function(){
-    return view('admin.products.create');
-})->name('admin.products.create');
 
 // Edit porducts
 Route::get('/products/edit', function(){
@@ -116,19 +108,31 @@ Route::get('/admin/register', function(){
 
 
 
-Auth::routes();
+// Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Products
+// Route::get('/products', function(){
+//     return view('admin.products.index');
+// })->name('admin.products');
 
+// Add products
+// Route::get('/products/add', function(){
+//     return view('admin.products.create');
+// })->name('admin.products.create');
 
-Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verified']], function () {
+//Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verified']], function () {
+Route::group(['prefix' => 'admin'], function () {
     // Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashbaord');
     // Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
-    // Route::get('products', [App\Http\Controllers\ProductController::class, 'index'])->name('admin.product.index');
+   
+    Route::get('products', [App\Http\Controllers\ProductController::class, 'index'])->name('admin.products');
+    Route::get('product-create', [App\Http\Controllers\ProductController::class, 'create'])->name('admin.products.create');
     
-    // Route::post('add-products', [App\Http\Controllers\ProductController::class, 'store'])->name('admin.add-product');
-    // Route::get('edit-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'edit'])->name('admin.edit-product');
-    // Route::post('update-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update-product');
+    Route::post('add-products', [App\Http\Controllers\ProductController::class, 'store'])->name('admin.add-product');
+    Route::get('edit-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'edit'])->name('admin.edit-product');
+    Route::post('update-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update-product');
     
     // Route::post('update-product-image', [App\Http\Controllers\ProductController::class, 'updateImage'])->name('admin-update-product-image');
     

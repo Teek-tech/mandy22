@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -14,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.products.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.products.create');
     }
 
     /**
@@ -40,7 +41,7 @@ class ProductController extends Controller
             'title' => 'required|max:20|min:3',
             'category' => 'required',
             'size' => 'required',
-            'color' => 'max:20|min:3',
+            // 'color' => 'max:20|min:3',
             'price' => 'required|max:20|min:3',
             'description' => 'required|max:500|min:5',
             'product_image' => 'required',
@@ -54,7 +55,7 @@ class ProductController extends Controller
                     'title' => $validate['title'],
                     'category' => $validate['category'],
                     'size' => $validate['size'],
-                    'color' => $validate['color'],
+                    // 'color' => $validate['color'],
                     'price' => $validate['price'],
                     'description' => $validate['description']
                 ]);

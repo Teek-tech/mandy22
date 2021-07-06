@@ -39,48 +39,14 @@
                                         <td>Puprle female sleevless gown</td>
                                         <td>Adults</td>
                                         <td>21st July 2021</td>
-                                        <td><span class="badge bg-success">in stock</span></td>
+                                        <td><span class="badge bg-success">in stock</span>
+                                            <span class="badge bg-warning">unavailable</span></td>
                                         <td class="d-flex justify-content-center"><a
                                                 href="{{ route('admin.products.edit') }}"
                                                 class="btn btn-primary">Edit</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Dorime wrapper</td>
-                                        <td>Puprle female sleevless gown</td>
-                                        <td>Adults</td>
-                                        <td>21st July 2021</td>
-                                        <td><span class="badge bg-warning">unavailable</span></td>
-                                        <td class="d-flex justify-content-center"><a
-                                                href="{{ route('admin.products.edit') }}"
-                                                class="btn btn-primary">Edit</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Dorime wrapper</td>
-                                        <td>Puprle female sleevless gown</td>
-                                        <td>Adults</td>
-                                        <td>21st July 2021</td>
-                                        <td><span class="badge bg-success">in stock</span></td>
-                                        <td class="d-flex justify-content-center"><a
-                                                href="{{ route('admin.products.edit') }}"
-                                                class="btn btn-primary">Edit</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Dorime wrapper</td>
-                                        <td>Puprle female sleevless gown</td>
-                                        <td>Adults</td>
-                                        <td>21st July 2021</td>
-                                        <td><span class="badge bg-warning">unavailable</span></td>
-                                        <td class="d-flex justify-content-center"><a
-                                                href="{{ route('admin.products.edit') }}"
-                                                class="btn btn-primary">Edit</a>
-                                        </td>
-                                    </tr>
+                                 
                                 </tbody>
                                 <tfoot>
                                     <tr>

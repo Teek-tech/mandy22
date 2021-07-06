@@ -9,13 +9,25 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
-    protected  static  function  boot()
-    {
-        parent::boot();
-
-        static::creating(function  ($model)  {
-            $model->uuid = (string) Str::uuid();
-        });
-    }
+    public function images()
+     {
+         return $this->hasMany(ProductImage::class, 'product_id');
+     }
+ 
+     public function firstImage()
+     {
+         return $this->hasOne(ProductImage::class);
+     }
+ 
+ 
+     protected  static  function  boot()
+     {
+         parent::boot();
+ 
+         static::creating(function  ($model)  {
+             $model->uuid = (string) Str::uuid();
+         });
+     }
 }
