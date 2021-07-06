@@ -10,7 +10,10 @@
         <div class="auth">
             <div class="bg-pattern"></div>
             <div class="card">
-                <h4 class="card-title">Sign In</h4>
+                <div class="auth-logo">
+                    <img src="{{ asset('img/logo/logo.png') }}" alt="mandy22 logo">
+                </div>
+                <h5 class="card-title">Sign In</h5>
                 <div class="card-body">
                     <form action="">
                         <div class="form-group">
