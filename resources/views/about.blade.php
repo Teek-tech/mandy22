@@ -26,8 +26,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 about-section-img-area">
-                    <img class="about-section-img" src="{{ asset('img/product/x1.jpg.pagespeed.ic._92Pc1JtDC.jpg') }}"
-                        alt="">
+                    <img class="about-section-img" src="{{ asset('img/pattern.jpg') }}" alt="pattern image">
                 </div>
                 <div class="col-md-6 about-section-text-area">
                     <div>
