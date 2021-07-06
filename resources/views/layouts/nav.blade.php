@@ -9,7 +9,7 @@
                 <div class="col-lg-2 text-center text-lg-left">
 
                     <a href="{{ route('home') }}" class="site-logo">
-                        <img src="{{ asset('img/xlogo.png.pagespeed.ic.g8beR9VzMk.png') }}" alt="">
+                        MANDY22
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-5">
