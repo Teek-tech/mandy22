@@ -5,17 +5,17 @@
 <header class="header-section">
     <div class="header-top">
         <div class="container">
-            <div class="row" style="display: flex; justify-content: space-between;width:100%;">
-                <div class="col-lg-2 text-center text-lg-left">
+            <div class="row header-top-row">
+                <div class="d-flex align-items-center">
                     <a href="{{ route('home') }}" class="site-logo">
                         <img src="{{ asset('img/logo/logo.png') }}" alt="mandy22 logo">
                     </a>
                 </div>
-                <div class="col-xl-4 col-lg-5">
+                <div class="">
                     <div class="user-panel">
                         <div class="up-item">
                             <i class="flaticon-profile"></i>
-                            <a href="{{ route('admin.register') }}">Sign</a> In or <a href="#">Create Account</a>
+                            <a href="{{ route('admin.register') }}">Sign In</a>
                         </div>
                         <div class="up-item">
                             <div class="shopping-card">

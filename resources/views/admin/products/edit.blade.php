@@ -68,6 +68,36 @@
                             </form>
                         </div>
                     </div>
+
+                    <div class="card mb-4 mt-4">
+                        <div class="card-body">
+                            <table class="table table-bordered edit-images-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">File name</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Action</th>
+                                        <th>some other</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>purple gown</td>
+                                        <td class="img-to-edit">
+                                            <img src="{{ asset('img/product/x8.jpg.pagespeed.ic.QAETlyM_Qb.jpg') }}"
+                                                alt="" />
+                                        </td>
+                                        <td>
+                                            <input type="file" name="" id="">
+                                        </td>
+                                        <td>ldls</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">

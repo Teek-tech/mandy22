@@ -18,6 +18,21 @@
     font-weight: bold;
 }
 
+.edit-images-table .img-to-edit {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.edit-images-table .img-to-edit img {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .transactions-table table tbody tr {
     cursor: pointer;
 }
