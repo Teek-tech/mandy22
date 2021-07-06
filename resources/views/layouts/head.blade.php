@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
-<meta name="description" content=" Divisima | eCommerce Template">
-<meta name="keywords" content="divisima, eCommerce, creative, html">
+<meta name="description" content=" Mandy22 | Fashion House">
+<meta name="keywords" content="mandy22, eCommerce, native wear, casual wears">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="{{ asset('img/favicon.ico') }}" rel="shortcut icon" />

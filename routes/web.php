@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// home
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+
 
 // about
 Route::get('/about', function(){
@@ -64,24 +61,16 @@ Route::get('/contact', function (){
 
 
 // admin index
-Route::get('/admin', function (){
-    return view('admin.index');
-})->name('admin.home');
+// Route::get('/admin', function (){
+//     return view('admin.index');
+// })->name('admin.home');
 
-// Products
-Route::get('/products', function(){
-    return view('admin.products.index');
-})->name('admin.products');
 
-// Add products
-Route::get('/products/add', function(){
-    return view('admin.products.create');
-})->name('admin.products.create');
 
 // Edit porducts
-Route::get('/products/edit', function(){
-    return view('admin.products.edit');
-})->name('admin.products.edit');
+// Route::get('/products/edit', function(){
+//     return view('admin.products.edit');
+// })->name('admin.products.edit');
 
 
 // Transaction
@@ -116,6 +105,33 @@ Route::get('/admin/register', function(){
 
 
 
-Auth::routes();
+// Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [App\Http\Controllers\GuestController::class, 'index'])->name('welcome');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verified']], function () {
+// Route::group(['prefix' => 'admin'], function () {
+    // Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashbaord');
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
+   
+    Route::get('products', [App\Http\Controllers\ProductController::class, 'index'])->name('admin.products');
+    Route::get('product-create', [App\Http\Controllers\ProductController::class, 'create'])->name('admin.products.create');
+    
+    Route::post('add-products', [App\Http\Controllers\ProductController::class, 'store'])->name('admin.add-product');
+    Route::get('edit-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'edit'])->name('admin.product.edit');
+    Route::post('update-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update-product');
+    
+    // Route::post('update-product-image', [App\Http\Controllers\ProductController::class, 'updateImage'])->name('admin-update-product-image');
+    
+    // Route::get('add-products/cars', [App\Http\Controllers\ProductController::class, 'cars'])->name('admin.add-cars');
+    // Route::get('add-products/parts', [App\Http\Controllers\ProductController::class, 'parts'])->name('admin.add-parts');
+    // Route::get('transactions', [App\Http\Controllers\TransactionController::class, 'index'])->name('admin.transactions');
+    // Route::get('transaction/{id}', [App\Http\Controllers\TransactionController::class, 'info'])->name('admin.transaction-details');
+    
+    // Route::get('activity', [App\Http\Controllers\AdminController::class, 'activity'])->name('admin.activity');
+    // Route::get('profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile');
+      
+});

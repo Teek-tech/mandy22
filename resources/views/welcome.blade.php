@@ -99,6 +99,25 @@
                 <h2>LATEST PRODUCTS</h2>
             </div>
             <div class="product-slider owl-carousel">
+                @if ($products->count() > 3)
+                    @foreach ($products as $product)
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img data-href="/shop/adults/product/detail"
+                                src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="">
+                            <div class="pi-links">
+                                <a href="{{ route('cart') }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
+                                        CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>₦{{$product->price}}</h6>
+                            <p>{{$product->title}}</p>
+                        </div>
+                    </div>
+                    @endforeach
+                @else
                 <div class="product-item">
                     <div class="pi-pic">
                         <img data-href="/shop/adults/product/detail"
@@ -175,6 +194,8 @@
                         <p>Flamboyant Pink Top </p>
                     </div>
                 </div>
+                @endif
+               
             </div>
         </div>
     </section>

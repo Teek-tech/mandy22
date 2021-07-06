@@ -17,21 +17,42 @@
             <main>
                 <div class="container-fluid px-4">
                     <h5 class="mt-4">Edit Product</h5>
-
+                    @if(session()->has('success'))
+                    <div class="alert alert-solid alert-success" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                      {{ session()->get('success') }}
+                    </div>
+                  @endif
+                  @if(session()->has('error'))
+                  <div class="alert alert-solid alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                    {{ session()->get('error') }}
+                  </div>
+                @endif
                     <div class="card my-4">
                         <div class="card-body">
-                            <form class="add-products-form" action="">
+                            <form class="add-products-form" action="{{route('admin.update-product', $product->uuid)}}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="form-group my-3">
-                                            <label for="name">Name</label>
-                                            <input type="text" class="form-control" placeholder="Name of product">
+                                            <label for="name">Product Title</label>
+                                            <input type="text" name="title" class="form-control" value="{{$product->title}}">
+                                        </div>
+
+                                        <div class="form-group my-3">
+                                            <label for="name">Price</label>
+                                            <input type="text" name="price" class="form-control" value="{{$product->price}}">
                                         </div>
 
                                         <div class="form-group my-3">
                                             <label for="category">Category</label>
                                             <select name="category" class="form-control">
-                                                <option label="select"></option>
+                                                <option value="{{$product->category}}" selected>{{$product->category}}</option>
                                                 <option value="adults">Adults</option>
                                                 <option value="children">Children</option>
                                             </select>
@@ -40,7 +61,7 @@
                                         <div class="form-group my-3">
                                             <label for="size">size</label>
                                             <select name="size" class="form-control">
-                                                <option label="select"></option>
+                                                <option value="{{$product->size}}" selected>{{$product->size}}</option>
                                                 <option value="xs">xs</option>
                                                 <option value="s">s</option>
                                                 <option value="m">m</option>
@@ -52,16 +73,16 @@
                                         <div class="form-group my-3">
                                             <label for="description">Description</label>
                                             <textarea name="description" cols="30" rows="5"
-                                                class="form-control"></textarea>
+                                                class="form-control">{{$product->description}}</textarea>
                                         </div>
 
-                                        <div class="form-group my-3">
-                                            <label for="image">Image</label>
-                                            <input type="file" name="image" class="form-control" multiple>
-                                        </div>
+                                        {{-- <div class="form-group my-3">
+                                            <label for="image">AddImage</label>
+                                            <input type="file" name="image_file[]" class="form-control" multiple>
+                                        </div> --}}
 
                                         <div class="btn-area d-flex justify-content-center align-items-center my-2">
-                                            <button class="btn btn-primary">update</button>
+                                            <button class="btn btn-primary" type="submit">Update</button>
                                         </div>
                                     </div>
                                 </div>
@@ -103,11 +124,11 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                        <div class="text-muted">Copyright &copy; Mandy22 2021</div>
                         <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
+                            Designed by <a href="https://mezitox.com">Mezitox</a>
+                            {{-- &middot;
+                            <a href="#">Terms &amp; Conditions</a> --}}
                         </div>
                     </div>
                 </div>
