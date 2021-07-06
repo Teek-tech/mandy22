@@ -7,9 +7,8 @@
         <div class="container">
             <div class="row" style="display: flex; justify-content: space-between;width:100%;">
                 <div class="col-lg-2 text-center text-lg-left">
-
                     <a href="{{ route('home') }}" class="site-logo">
-                        MANDY22
+                        <img src="{{ asset('img/logo/logo.png') }}" alt="mandy22 logo">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-5">

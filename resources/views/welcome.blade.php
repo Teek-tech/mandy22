@@ -24,7 +24,7 @@
                                 ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
                                 commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             <a href="#" class="site-btn sb-line">DISCOVER</a>
-                            <a href="#" class="site-btn sb-white">ADD TO CART</a>
+                            <a href="#" class="site-btn">ADD TO CART</a>
                         </div>
                     </div>
                     <div class="offer-card text-white">
@@ -44,7 +44,7 @@
                                 ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
                                 commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             <a href="#" class="site-btn sb-line">DISCOVER</a>
-                            <a href="#" class="site-btn sb-white">ADD TO CART</a>
+                            <a href="#" class="site-btn">ADD TO CART</a>
                         </div>
                     </div>
                     <div class="offer-card text-white">
@@ -186,10 +186,10 @@
                 <h2>BROWSE TOP SELLING PRODUCTS</h2>
             </div>
             <ul class="product-filter-menu">
-                <li class="control-btn"><a href="#" data-filter="adults">Adults</a></li>
-                <li class="control-btn"><a href="#" data-filter="children">Children</a></li>
+                <li class="control-btn active" data-filter="adults">Adults</li>
+                <li class="control-btn" data-filter="children">Children</li>
             </ul>
-            <div class="row adults">
+            <div class="row best-selling-products adults">
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
@@ -252,7 +252,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row children">
+            <div class="row best-selling-products children" style="display: none;">
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
@@ -315,9 +315,9 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center pt-5">
+            {{-- <div class="text-center pt-5">
                 <button class="site-btn sb-line sb-dark">LOAD MORE</button>
-            </div>
+            </div> --}}
         </div>
     </section>
 
@@ -343,14 +343,17 @@
 
                 $(this).addClass('active').siblings().removeClass('active');
 
-                const filter = $(this).attr('data-filter')
+                const filter = $(this).attr('data-filter');
 
-                if (filter == 'all') {
-                    $('.image').show(400);
-                } else {
-                    $('.image').not('.' + filter).hide(200);
-                    $('.image').filter('.' + filter).show(400);
-                }
+                $('.best-selling-products').not('.' + filter).hide(200);
+                $('.best-selling-products').filter('.' + filter).show(400);
+
+                // if (filter == 'all') {
+                //     $('.image').show(400);
+                // } else {
+                //     $('.image').not('.' + filter).hide(200);
+                //     $('.image').filter('.' + filter).show(400);
+                // }
 
             });
 

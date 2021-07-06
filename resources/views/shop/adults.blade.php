@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <section class="product-filter-section">
+    <section class="product-filter-section" style="margin-top: 50px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
