@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Email</label>
+                            <label for="phone">Phone</label>
                                 <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Enter phone">
 
                                 @error('phone')
