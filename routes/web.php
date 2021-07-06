@@ -61,9 +61,9 @@ Route::get('/contact', function (){
 
 
 // admin index
-// Route::get('/admin', function (){
-//     return view('admin.index');
-// })->name('admin.home');
+Route::get('404', function (){
+    return view('404');
+})->name('404');
 
 
 
