@@ -32,7 +32,7 @@
                             <div class="col-md-7">
                                 <p>*Billing Information</p>
                             </div>
-                            <div class="col-md-5">
+                            {{-- <div class="col-md-5">
                                 <div class="cf-radio-btns address-rb">
                                     <div class="cfr-item">
                                         <input type="radio" name="pm" id="one">
@@ -43,20 +43,26 @@
                                         <label for="two">Use a different address</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="row address-inputs">
-                            <div class="col-md-12">
-                                <input type="text" placeholder="Address">
-                                <input type="text" placeholder="Address line 2">
-                                <input type="text" placeholder="Country">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="First Name">
                             </div>
                             <div class="col-md-6">
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                            <div class="col-md-12">
+                                <input type="email" placeholder="Email">
+                                <input type="text" placeholder="Address">
+                                <input type="text" placeholder="details" hidden>
+                            </div>
+                            {{-- <div class="col-md-6">
                                 <input type="text" placeholder="Zip code">
                             </div>
                             <div class="col-md-6">
                                 <input type="text" placeholder="Phone no.">
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="cf-title">Delievery Info</div>
                         <div class="row shipping-btns">
