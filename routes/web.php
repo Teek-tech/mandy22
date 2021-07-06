@@ -119,3 +119,25 @@ Route::get('/admin/register', function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verified']], function () {
+    // Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashbaord');
+    // Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
+    // Route::get('products', [App\Http\Controllers\ProductController::class, 'index'])->name('admin.product.index');
+    
+    // Route::post('add-products', [App\Http\Controllers\ProductController::class, 'store'])->name('admin.add-product');
+    // Route::get('edit-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'edit'])->name('admin.edit-product');
+    // Route::post('update-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update-product');
+    
+    // Route::post('update-product-image', [App\Http\Controllers\ProductController::class, 'updateImage'])->name('admin-update-product-image');
+    
+    // Route::get('add-products/cars', [App\Http\Controllers\ProductController::class, 'cars'])->name('admin.add-cars');
+    // Route::get('add-products/parts', [App\Http\Controllers\ProductController::class, 'parts'])->name('admin.add-parts');
+    // Route::get('transactions', [App\Http\Controllers\TransactionController::class, 'index'])->name('admin.transactions');
+    // Route::get('transaction/{id}', [App\Http\Controllers\TransactionController::class, 'info'])->name('admin.transaction-details');
+    
+    // Route::get('activity', [App\Http\Controllers\AdminController::class, 'activity'])->name('admin.activity');
+    // Route::get('profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile');
+      
+});
