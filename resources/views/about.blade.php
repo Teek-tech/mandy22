@@ -31,6 +31,7 @@
                 <div class="col-md-6 about-section-text-area">
                     <div>
                         <h4>Top Notch Fashion store</h4>
+                        <h3>Meet the C.E.O</h3>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur debitis perferendis
                             eius id! Illum cupiditate minima rem ea incidunt mollitia. Iusto itaque aliquam impedit
