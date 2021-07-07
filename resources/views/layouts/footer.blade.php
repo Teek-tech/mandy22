@@ -4,39 +4,26 @@
             <a href="index-2.html"><img src="img/xlogo-light.png.pagespeed.ic._jFl0m9iP2.png" alt="" /></a>
         </div> --}}
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="footer-widget about-widget">
                     <h2>About</h2>
                     <p>
-                        Donec vitae purus nunc. Morbi faucibus erat sit
-                        amet congue mattis. Nullam frin-gilla faucibus
-                        urna, id dapibus erat iaculis ut. Integer ac
-                        sem.
+                        We all about ensuring that you look outstanding in all our mandies pieces. Each designs are created with precision and care to ensure that our customer is satisfied.
                     </p>
                     <img src="img/xcards.png.pagespeed.ic.JYcvaPNjMW.png" alt="" />
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="footer-widget about-widget">
                     <h2>Shop</h2>
                     <ul>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Track Orders</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Bloggers</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Return Policy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            {{-- <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget about-widget">
                     <h2>Gallery</h2>
                     <div class="fw-latest-post-widget">
@@ -58,29 +45,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
+            </div> --}}
+            <div class="col-lg-4 col-sm-6">
                 <div class="footer-widget contact-widget">
                     <h2>Contact</h2>
                     <div class="con-info">
                         <span>C.</span>
-                        <p>Your Company Ltd</p>
+                        <p>Mandies22 Ltd</p>
                     </div>
                     <div class="con-info">
                         <span>B.</span>
                         <p>
-                            1481 Creekside Lane Avila Beach, CA 93424,
+                            Peter Odili Road Port-Harcourt,
                             P.O. BOX 68
                         </p>
                     </div>
                     <div class="con-info">
                         <span>T.</span>
-                        <p>+53 345 7953 32453</p>
+                        <p>+(234) 000 000 0000</p>
                     </div>
                     <div class="con-info">
                         <span>E.</span>
                         <p>
-                            <a href="#" class="__cf_email__">test@test.com</a>
+                            hello@mandies22.ng
+                            {{-- <a href="#" class="__cf_email__">hello@mandies22.ng</a> --}}
                         </p>
                     </div>
                 </div>
@@ -89,7 +77,7 @@
     </div>
     <div class="social-links-warp">
         <div class="container">
-            <div class="social-links">
+            <div class="social-links text-center">
                 <a href="#" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
                 {{-- <a href="#" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a> --}}
                 {{-- <a href="#" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a> --}}
