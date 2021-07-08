@@ -116,6 +116,18 @@ Route::get('/admin/register', function(){
 
 
 
+
+// user dashboard
+Route::get('/user/index', function(){
+    return view('user-dashboard.index');
+})->name('user-dashboard.index');
+
+// orders
+Route::get('/user/orders', function(){
+    return view('user-dashboard.orders');
+})->name('user-dashboard.orders');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
