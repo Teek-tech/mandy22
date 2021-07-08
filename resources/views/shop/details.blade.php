@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-lg-6 product-details">
                     <h2 class="p-title">{{$product->title}}</h2>
-                    <h3 class="p-price">₦{{$product->price}}</h3>
+                    <h3 class="p-price">₦{{number_format($product->price, 0, '.', ',')}}</h3>
                     <h4 class="p-stock">Available: <span>{{$product->in_stock == TRUE ? 'In Stock' : 'Sold out' }}</span></h4>
                     <div class="p-rating">
                         <i class="fa fa-star-o"></i>

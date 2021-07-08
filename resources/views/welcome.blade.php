@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>₦{{$product->price}}</h6>
+                            <h6>₦{{number_format($product->price, 0, '.', ',')}}</h6>
                             <p>{{$product->title}}</p>
                         </div>
                     </div>
