@@ -104,7 +104,7 @@
                                 data-id="{{$product->id}}"
                                 data-quantity="1"
                                 data-price="{{$product->price}}"
-                                data-size="{{$product->size}}"
+                                data-size="none"
                                 data-product="{{$product->title}}"
                                 data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
                                 >
@@ -113,7 +113,7 @@
                                 data-id="{{$product->id}}"
                                 data-quantity="1"
                                 data-price="{{$product->price}}"
-                                data-size="{{$product->size}}"
+                                data-size="none"
                                 data-product="{{$product->title}}"
                                 data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
                                 ><i class="flaticon-bag"></i><span>ADD TO

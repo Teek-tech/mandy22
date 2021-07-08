@@ -15,6 +15,22 @@ $("#shopTable tbody").on('click', '.updateProduct', function(e){
      getData();
     })
 
+//update size from cart by id
+$(".sc-item").on('click', '.updateProductSize', function(e){
+    var productID = $(".sc-item").attr('data-id');
+    // console.log(this.value);
+    // console.log(productID);
+
+     let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
+        updateCart = shoppingCart.findIndex((product => product.productID == productID));
+        shoppingCart[updateCart].size = this.value == '' ? 'none' : this.value
+        if(updateCart){
+            $('#successText').text('Quantity updated successfullly.');
+            $('#successMsg').show();
+        }
+     localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
+     getData();
+    })
 
 
     // var proQty = $('.pro-qty');
@@ -60,21 +76,18 @@ function getData(){
            html += `<tr>
            <td class="product-col">
                 ${cart.img}
-                <div class="pc-title">
-                    <h4>Animal Print Dress</h4>
-                    <p>₦${cart.price}</p>
-                </div>
+               
             </td>
-            <td class="quy-col">
+            <td class="quy-col text-center">
             <h4> ${cart.quantity}</h4>
             </td>
-            <td class="size-col">
-                <h4>Size ${cart.size}</h4>
+            <td class="size-col text-center">
+                <h4>${cart.size.toUpperCase()}</h4>
             </td>
-            <td class="total-col">
+            <td class="total-col text-center">
                 <h4>₦${cart.quantity * cart.price}</h4>
             </td>
-            <td class="action-th"><i class='fa fa-trash removeProduct' style='color:red' data-id="${cart.productID}"></i></td>
+            <td class="action-th text-center"><i class='fa fa-trash removeProduct' style='color:red' data-id="${cart.productID}"></i></td>
            </tr>`
            totalAmount += parseInt(cart.quantity * cart.price)
         });
