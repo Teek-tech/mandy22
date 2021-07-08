@@ -20,6 +20,15 @@ class GuestController extends Controller
         return view('welcome', compact('products'));
     }
 
+    public function adults(){
+        $products = Product::where('category', 'adults')->get();
+        return view('shop.adults', compact('products'));
+    }
+
+    public function productDetails(Product $product){
+        $product = Product::findOrFail($product->id);
+        return view('shop.details', compact('product'));
+    }
     /**
      * Show the form for creating a new resource.
      *

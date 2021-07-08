@@ -29,16 +29,18 @@
                     <div class="cart-table">
                         <h3>Your Cart</h3>
                         <div class="cart-table-warp">
-                            <table>
+                            <table id="shopTable">
                                 <thead>
                                     <tr>
                                         <th class="product-th">Product</th>
                                         <th class="quy-th">Quantity</th>
-                                        <th class="size-th">SizeSize</th>
+                                        <th class="size-th">Size</th>
                                         <th class="total-th">Price</th>
+                                        <th class="action-th">Delete</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="shop"></tbody>
+                                {{-- <tbody class="shopping">
                                     <tr>
                                         <td class="product-col">
                                             <img src="img/cart/x1.jpg.pagespeed.ic.AVpomRStqD.jpg" alt="">
@@ -61,65 +63,22 @@
                                             <h4>$45.90</h4>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="product-col">
-                                            <img src="img/cart/x2.jpg.pagespeed.ic.Fv7nxaNQ--.jpg" alt="">
-                                            <div class="pc-title">
-                                                <h4>Ruffle Pink Top</h4>
-                                                <p>$45.90</p>
-                                            </div>
-                                        </td>
-                                        <td class="quy-col">
-                                            <div class="quantity">
-                                                <div class="pro-qty">
-                                                    <input type="text" value="1">
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="size-col">
-                                            <h4>Size M</h4>
-                                        </td>
-                                        <td class="total-col">
-                                            <h4>$45.90</h4>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-col">
-                                            <img src="img/cart/x3.jpg.pagespeed.ic.D_8Dw5eewK.jpg" alt="">
-                                            <div class="pc-title">
-                                                <h4>Skinny Jeans</h4>
-                                                <p>$45.90</p>
-                                            </div>
-                                        </td>
-                                        <td class="quy-col">
-                                            <div class="quantity">
-                                                <div class="pro-qty">
-                                                    <input type="text" value="1">
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="size-col">
-                                            <h4>Size M</h4>
-                                        </td>
-                                        <td class="total-col">
-                                            <h4>$45.90</h4>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                   
+                                </tbody> --}}
                             </table>
                         </div>
                         <div class="total-cost">
-                            <h6>Total <span>$99.90</span></h6>
+                            <h6>Total ₦<span id="total">0</span></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 card-right">
-                    <form class="promo-code-form">
+                    {{-- <form class="promo-code-form">
                         <input type="text" placeholder="Enter promo code">
                         <button>Submit</button>
-                    </form>
-                    <a href="{{ route('checkout') }}" class="site-btn">Proceed to checkout</a>
-                    <a href="#" class="site-btn sb-dark">Continue shopping</a>
+                    </form> --}}
+                    <a href="#" class="site-btn">Proceed to checkout</a>
+                    <a href="{{ route('shop.adults') }}" class="site-btn sb-dark">Continue shopping</a>
                 </div>
             </div>
         </div>

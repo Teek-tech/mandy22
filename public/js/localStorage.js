@@ -4,25 +4,45 @@ jQuery(function() {
 //update item from cart by id
 $("#shopTable tbody").on('click', '.updateProduct', function(e){
     // console.log(this.id);
-     let shoppingCart = JSON.parse(localStorage.getItem('KenShop'));    
+     let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
         updateCart = shoppingCart.findIndex((product => product.productID == this.id));
         shoppingCart[updateCart].quantity = this.value > 0 ? this.value : 1
         if(updateCart){
             $('#successText').text('Quantity updated successfullly.');
             $('#successMsg').show();
         }
-     localStorage.setItem('KenShop', JSON.stringify(shoppingCart));
+     localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
      getData();
     })
 
+
+
+    // var proQty = $('.pro-qty');
+	//  proQty.prepend('<span class="dec qtybtn">-</span>');
+	//  proQty.append('<span class="inc qtybtn">+</span>');
+    $('.pro-qty').on('click', '.qtybtn', function () {
+		 var $button = $(this);
+		 var quantity = $button.parent().find('input').val();
+         var product_id = $("#quant input").attr("id");
+
+         let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
+        updateCart = shoppingCart.findIndex((product => product.productID == product_id));
+        shoppingCart[updateCart].quantity = quantity > 0 ? quantity : 1
+        if(updateCart){
+            $('#successText').text('Quantity updated successfullly.');
+            $('#successMsg').show();
+        }
+     localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
+     getData();
+	 });
 
     //remove item from cart by id
     $("#shopTable tbody").on('click', '.removeProduct', function(){
         var productID = $(this).attr('data-id');
         console.log(productID)
-        let shoppingCart = JSON.parse(localStorage.getItem('KenShop'));
+        let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
         let filteredProducts = shoppingCart.filter(product => product.productID !== productID );
-        localStorage.setItem('KenShop', JSON.stringify(filteredProducts));
+        localStorage.setItem('Mandy22Shop', JSON.stringify(filteredProducts));
         getData();
         })
 
@@ -30,7 +50,7 @@ $("#shopTable tbody").on('click', '.updateProduct', function(e){
 
 function getData(){
     const tr = document.querySelector('.shop');
-    let shoppingCart = JSON.parse(localStorage.getItem('KenShop'));
+    let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
     $('#item_count').text(shoppingCart.length);
     const total = document.querySelector('#total');
     let html = ``;
@@ -38,14 +58,23 @@ function getData(){
     if(shoppingCart){
         shoppingCart.forEach((cart) => {
            html += `<tr>
-           <td>${cart.productID}</td>
-           <td>${cart.product}</td>
-           <td>${cart.price}</td>
-           <td>
-           <input type="number" id="${cart.productID}" value="${cart.quantity}"  style="width:50px;" class="updateProduct"/>
+           <td class="product-col">
+                ${cart.img}
+                <div class="pc-title">
+                    <h4>Animal Print Dress</h4>
+                    <p>₦${cart.price}</p>
+                </div>
             </td>
-           <td>${cart.quantity * cart.price}</td>
-           <td><i class='fa fa-trash removeProduct' style='color:red' data-id="${cart.productID}"></i></td>
+            <td class="quy-col">
+            <h4> ${cart.quantity}</h4>
+            </td>
+            <td class="size-col">
+                <h4>Size ${cart.size}</h4>
+            </td>
+            <td class="total-col">
+                <h4>₦${cart.quantity * cart.price}</h4>
+            </td>
+            <td class="action-th"><i class='fa fa-trash removeProduct' style='color:red' data-id="${cart.productID}"></i></td>
            </tr>`
            totalAmount += parseInt(cart.quantity * cart.price)
         });
@@ -67,14 +96,16 @@ function getData(){
         var product = $(this).attr('data-product');
         var quantity = $(this).attr('data-quantity');
         var price = $(this).attr('data-price');
+        var size = $(this).attr('data-size');
+        var img = $(this).attr('data-img');
 
         let shoppingCart = [];
         //get cart items if user have added items to cart before
-       if (localStorage.getItem("KenShop")) {
-        shoppingCart = JSON.parse(localStorage.getItem('KenShop'));
+       if (localStorage.getItem("Mandy22Shop")) {
+        shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
        }else{
            //create new storage for unknown user
-        localStorage.setItem("KenShop", "[Empty Cart]");
+        localStorage.setItem("Mandy22Shop", "[Empty Cart]");
        }
 
         //Find index of specific object using findIndex method.  
@@ -89,13 +120,15 @@ function getData(){
                 'productID' : productID,
                 'product' : product,
                 'price' : price,
-                'quantity' : quantity
+                'size' : size,
+                'quantity' : quantity,
+                'img' : img
                 })
         }
         //Log object to Console.
         console.log("Before update: ", shoppingCart[getProductID])
         //retrieve updated cart items.
-        localStorage.setItem("KenShop", JSON.stringify(shoppingCart));
+        localStorage.setItem("Mandy22Shop", JSON.stringify(shoppingCart));
         //console.log("se itmes: " + shoppingCart);
     });
 

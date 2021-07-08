@@ -20,7 +20,7 @@
                         <div class="up-item">
                             <div class="shopping-card">
                                 <i class="flaticon-bag"></i>
-                                <span>0</span>
+                                <span id="item_count">0</span>
                             </div>
                             <a href="{{ route('cart') }}">Cart</a>
                         </div>

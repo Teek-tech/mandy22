@@ -97,24 +97,34 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">File name</th>
+                                        {{-- <th scope="col">Image</th> --}}
                                         <th scope="col">Image</th>
-                                        <th scope="col">Action</th>
-                                        <th>some other</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($product->images as $image)
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>purple gown</td>
+                                        <td>{{$image->image_file}}</td>
                                         <td class="img-to-edit">
-                                            <img src="{{ asset('img/product/x8.jpg.pagespeed.ic.QAETlyM_Qb.jpg') }}"
+                                            <img src="{{asset('product_images/'.$product->category. '/' .$image->image_file)}}"
                                                 alt="" />
                                         </td>
+                                        {{-- <td>
+                                            <input type="file" name="image_file[]" id="">
+                                        </td> --}}
                                         <td>
-                                            <input type="file" name="" id="">
+                                            <form action="{{route('admin-update-product-image')}}" method="post" enctype="multipart/form-data">
+                                                @csrf
+                                            <input type="file" name="image_file" required>
+                                            <input type="hidden" name="category" value="{{$product->category}}" required>
+                                            <input type="hidden" name="id" value="{{$image->id}}" required>
+                                            <button class="btn btn-primary" type="submit">Update Image</button>
+                                            </form>
                                         </td>
-                                        <td>ldls</td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

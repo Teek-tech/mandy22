@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mandy22 | No.1 Fashionista in Port Harcourt</title>
+    <title>Mandy22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
 </head>
 
