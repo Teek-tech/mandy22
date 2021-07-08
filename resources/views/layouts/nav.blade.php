@@ -8,7 +8,7 @@
             <div class="row header-top-row">
                 <div class="d-flex align-items-center">
                     <a href="{{ route('home') }}" class="site-logo">
-                        <img src="{{ asset('img/logo/logo.png') }}" alt="mandy22 logo">
+                        <img src="{{ asset('img/logo/logo1.png') }}" alt="mandy22 logo">
                     </a>
                 </div>
                 <div class="">
