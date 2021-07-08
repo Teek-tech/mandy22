@@ -33,15 +33,13 @@
                         <h4>Top Notch Fashion store</h4>
                         <h3>Meet the C.E.O</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur debitis perferendis
-                            eius id! Illum cupiditate minima rem ea incidunt mollitia. Iusto itaque aliquam impedit
-                            voluptatibus esse aut, repellat voluptates! Aliquid, distinctio optio laudantium, nobis quas
-                            hic fugit omnis qui doloribus animi molestiae tenetur, dolores eveniet. Odio optio et quos
-                            quis facilis incidunt adipisci quasi dolore voluptates animi. Rerum tempora dicta cum saepe
-                            quis itaque eligendi sunt, doloribus distinctio veniam, aliquid sit iste quae deserunt
-                            molestiae dolores debitis, architecto suscipit nemo sint repellendus dolore voluptatibus
-                            quam. Sunt quasi quibusdam debitis architecto impedit excepturi aliquam nam odit, eius cum
-                            reprehenderit tempora quod!
+                            Mandies22 is a Nigerian fashion brand that produces unique bespoke pieces ranging from corporate designs to shift wears for the confident woman. <br> 
+                            Our beautifully designed pieces make you beautiful and stand out. You are sure to turn heads  at events or functions in a Mandie dress. <br>
+
+                            Experience our world of beauty. We hope you enjoy wearing our designs as much as we enjoyed making them 
+                            <br> <br>
+
+                            <a href="{{route('shop.adults')}}" class="site-btn">Shop Now</a>
                         </p>
                     </div>
                 </div>
