@@ -20,11 +20,9 @@
                         <div class="col-xl-6 col-lg-7 text-white">
                             <span>New Arrivals</span>
                             <h2>Native Perfection</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
-                                commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                            <a href="#" class="site-btn sb-line">DISCOVER</a>
-                            <a href="#" class="site-btn">ADD TO CART</a>
+                            <p>Our beautifully designed wears give you an aura of confidence and make you stand out. We don't dress your body alone, we dress your confidence. </p>
+                            <a href="{{route('shop.adults')}}" class="site-btn sb-line">DISCOVER</a>
+                            <a href="{{route('contact')}}" class="site-btn">Contact Mandy</a>
                         </div>
                     </div>
                     <div class="offer-card text-white">
@@ -40,11 +38,9 @@
                         <div class="col-xl-6 col-lg-7 text-white">
                             <span>New Arrivals</span>
                             <h2>Casual Originality</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus
-                                commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                            <a href="#" class="site-btn sb-line">DISCOVER</a>
-                            <a href="#" class="site-btn">ADD TO CART</a>
+                            <p>Every design we create tells a story. We hope you have an amazing experience wearing  our carefully crafted pieces. </p>
+                            <a href="{{route('shop.adults')}}" class="site-btn sb-line">Shop</a>
+                            <a href="{{route('about')}}" class="site-btn">Learn More</a>
                         </div>
                     </div>
                     <div class="offer-card text-white">
