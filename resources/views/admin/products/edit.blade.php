@@ -62,11 +62,14 @@
                                             <label for="size">size</label>
                                             <select name="size" class="form-control">
                                                 <option value="{{$product->size}}" selected>{{$product->size}}</option>
-                                                <option value="xs">xs</option>
-                                                <option value="s">s</option>
-                                                <option value="m">m</option>
-                                                <option value="l">l</option>
-                                                <option value="xl">xl</option>
+                                                <option value="8">8</option>
+                                                <option value="10">10</option>
+                                                <option value="12">12</option>
+                                                <option value="14">14</option>
+                                                <option value="16">16</option>
+                                                <option value="18">18</option>
+                                                <option value="20">20</option>
+                                                <option value="22">22</option>
                                             </select>
                                         </div>
 
