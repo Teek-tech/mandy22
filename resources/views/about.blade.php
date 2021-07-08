@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mandy22 | No.1 Fashionista in Port Harcourt</title>
+    <title>Mandy22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
 </head>
 
@@ -26,12 +26,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 about-section-img-area">
-                    <img class="about-section-img" src="{{ asset('img/product/x1.jpg.pagespeed.ic._92Pc1JtDC.jpg') }}"
-                        alt="">
+                    <img class="about-section-img" src="{{ asset('img/pattern.jpg') }}" alt="pattern image">
                 </div>
                 <div class="col-md-6 about-section-text-area">
                     <div>
                         <h4>Top Notch Fashion store</h4>
+                        <h3>Meet the C.E.O</h3>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur debitis perferendis
                             eius id! Illum cupiditate minima rem ea incidunt mollitia. Iusto itaque aliquam impedit

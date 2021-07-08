@@ -10,6 +10,15 @@
 }
 
 /* nav */
+.header-top-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .site-logo {
     height: 60px;
     width: 60px;
@@ -230,6 +239,11 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .site-logo {
+        height: 40px;
+        width: 40px;
+    }
+
     .main-menu {
         display: flex;
         justify-content: center;
@@ -237,7 +251,7 @@
     }
 
     .main-menu li a {
-        margin-right: 10px;
+        margin-right: 20px;
         font-size: 0.9em;
     }
 

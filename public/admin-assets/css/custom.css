@@ -18,6 +18,21 @@
     font-weight: bold;
 }
 
+.edit-images-table .img-to-edit {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.edit-images-table .img-to-edit img {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .transactions-table table tbody tr {
     cursor: pointer;
 }
@@ -59,11 +74,27 @@
 
 .auth-area {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 100wh;
-    height: 100vh;
+    min-height: 100%;
+    padding: 20px 0;
     background: var(--gradient);
+}
+
+.auth-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../img/pattern.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
 }
 
 .auth-area .bg-pattern {
@@ -98,6 +129,19 @@
 .auth .card {
     border: none;
     padding: 20px;
+}
+
+.auth-logo {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auth-logo img {
+    height: 100%;
+    width: 100%;
 }
 
 .auth .card .card-title {

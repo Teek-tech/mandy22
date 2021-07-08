@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Mandy22 | No.1 Fashionista in Port Harcourt</title>
+    <title>Mandy22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
 
 </head>
@@ -81,7 +81,7 @@
                         <div class="feature-icon">
                             <img src="img/icons/x3.png.pagespeed.ic.2GgW50Yyxu.png" alt="#">
                         </div>
-                        <h2>Free & fast Delivery</h2>
+                        <h2>Quick Delivery</h2>
                     </div>
                 </div>
             </div>
@@ -95,6 +95,39 @@
                 <h2>LATEST PRODUCTS</h2>
             </div>
             <div class="product-slider owl-carousel">
+                @if ($products->count() > 0)
+                    @foreach ($products as $product)
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img data-href="{{route('shop.product.detail', $product->uuid)}}"
+                                src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="" class="add-to-cart" 
+                                data-id="{{$product->id}}"
+                                data-quantity="1"
+                                data-price="{{$product->price}}"
+                                data-size="{{$product->size}}"
+                                data-product="{{$product->title}}"
+                                data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
+                                >
+                            <div class="pi-links">
+                                <a href="{{ route('cart') }}" class="add-card add-to-cart"
+                                data-id="{{$product->id}}"
+                                data-quantity="1"
+                                data-price="{{$product->price}}"
+                                data-size="{{$product->size}}"
+                                data-product="{{$product->title}}"
+                                data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
+                                ><i class="flaticon-bag"></i><span>ADD TO
+                                        CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>₦{{$product->price}}</h6>
+                            <p>{{$product->title}}</p>
+                        </div>
+                    </div>
+                    @endforeach
+                @else
                 <div class="product-item">
                     <div class="pi-pic">
                         <img data-href="/shop/adults/product/detail"
@@ -171,6 +204,8 @@
                         <p>Flamboyant Pink Top </p>
                     </div>
                 </div>
+                @endif
+               
             </div>
         </div>
     </section>
