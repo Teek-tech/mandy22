@@ -6,7 +6,7 @@
     <div class="header-top">
         <div class="container">
             <div class="row header-top-row">
-                <div class="d-flex align-items-center">
+                <div class="" style="display: flex;justify-content: center;align-items:center'">
                     <a href="{{ route('home') }}" class="site-logo">
                         <img src="{{ asset('img/logo/logo1.png') }}" alt="mandy22 logo">
                     </a>
@@ -18,11 +18,13 @@
                             <a href="{{ route('admin.register') }}">Sign In</a>
                         </div>
                         <div class="up-item">
-                            <div class="shopping-card">
-                                <i class="flaticon-bag"></i>
-                                <span id="item_count">0</span>
-                            </div>
-                            <a href="{{ route('cart') }}">Cart</a>
+                            <a href="{{ route('cart') }}">
+                                <div class="shopping-card">
+                                    <i class="flaticon-bag"></i>
+                                    <span>0</span>
+                                </div>
+                                {{-- <p>cart</p> --}}
+                            </a>
                         </div>
                     </div>
                 </div>

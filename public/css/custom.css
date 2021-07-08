@@ -10,6 +10,10 @@
 }
 
 /* nav */
+.header-top {
+    padding: 8px 10px;
+}
+
 .header-top-row {
     display: flex;
     flex-wrap: nowrap;
@@ -20,6 +24,8 @@
 }
 
 .site-logo {
+    display: block;
+    margin: auto 0;
     height: 60px;
     width: 60px;
 }
