@@ -3,6 +3,9 @@
 
 <head>
     @include('layouts.admin.head')
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -58,7 +61,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="form-group my-3">
+                                        {{-- <div class="form-group my-3">
                                             <label for="size">size</label>
                                             <select name="size" class="form-control">
                                                 <option value="{{$product->size}}" selected>{{$product->size}}</option>
@@ -70,6 +73,19 @@
                                                 <option value="18">18</option>
                                                 <option value="20">20</option>
                                                 <option value="22">22</option>
+                                            </select>
+                                        </div> --}}
+                                        
+                                        <div class="form-group my-3">
+                                            <label for="size">Select Available Sizes</label>
+                                            <select name="size[]" class="form-control js-example-basic-multiple" multiple="multiple">
+                                               <option value="{{$product->size}}" selected>{{$product->size}}</option>
+
+                                                <option value="xs">XS</option>
+                                                <option value="s">S</option>
+                                                <option value="m">M</option>
+                                                <option value="l">L</option>
+                                                <option value="xl">XL</option>
                                             </select>
                                         </div>
 
@@ -150,6 +166,11 @@
     </div>
 
     @include('layouts.admin.footer')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
 </body>
 
 </html>

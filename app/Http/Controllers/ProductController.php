@@ -125,7 +125,7 @@ class ProductController extends Controller
         
         $product->title = $request->get('title');
         $product->category = $request->get('category');
-        $product->size = $request->get('size');
+        $product->size = implode(',', $request->get('size'));
         $product->color = $request->get('color');
         $product->price = $request->get('price');
         $product->description = $request->get('description');

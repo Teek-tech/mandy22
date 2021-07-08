@@ -26,21 +26,21 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img  src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="" class="add-to-cart">
+                            <img src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="" class="add-to-cart">
                             <div class="pi-links">
                                 <a href="{{route('shop.product.detail', $product->uuid)}}" class="add-card add-to-cart"
                                 data-id="{{$product->id}}"
                                 data-quantity="1"
                                 data-price="{{$product->price}}"
-                                data-size="{{$product->size}}"
+                                data-size="none"
                                 data-product="{{$product->title}}"
                                 data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
                                 ><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                                 <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                             </div>
-                        </div>
+                        </div> 
                         <div class="pi-text">
-                            <h6>₦{{$product->price}}</h6>
+                            <h6>₦{{number_format($product->price, 0, '.', ',')}}</h6>
                             <p>{{$product->title}}</p>
                         </div>
                     </div>

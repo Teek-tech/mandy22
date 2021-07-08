@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-lg-6 product-details">
                     <h2 class="p-title">{{$product->title}}</h2>
-                    <h3 class="p-price">₦{{$product->price}}</h3>
+                    <h3 class="p-price">₦{{number_format($product->price, 0, '.', ',')}}</h3>
                     <h4 class="p-stock">Available: <span>{{$product->in_stock == TRUE ? 'In Stock' : 'Sold out' }}</span></h4>
                     <div class="p-rating">
                         <i class="fa fa-star-o"></i>
@@ -59,11 +59,14 @@
                     </div> --}}
                     <div class="fw-size-choose">
                         <p>Size</p>
-                        <div class="sc-item">
-                            <input type="radio" name="sc" id="xs-size">
-                            <label for="xs-size">32</label>
-                        </div>
-                        <div class="sc-item">
+                        @foreach(explode(',', $product->size) as $sizes)
+                            <div class="sc-item" data-id="{{$product->id}}">
+                                <input type="radio" name="sc" id="{{$sizes}}-size" value="{{$sizes}}" class="updateProductSize">
+                                <label for="{{$sizes}}-size">{{strtoupper($sizes)}}</label>
+                            </div>
+                        @endforeach
+                       
+                        {{-- <div class="sc-item">
                             <input type="radio" name="sc" id="s-size">
                             <label for="s-size">34</label>
                         </div>
@@ -82,7 +85,7 @@
                         <div class="sc-item">
                             <input type="radio" name="sc" id="xxl-size">
                             <label for="xxl-size">42</label>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="quantity">
                         <p>Quantity</p>

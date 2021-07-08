@@ -104,7 +104,7 @@
                                 data-id="{{$product->id}}"
                                 data-quantity="1"
                                 data-price="{{$product->price}}"
-                                data-size="{{$product->size}}"
+                                data-size="none"
                                 data-product="{{$product->title}}"
                                 data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
                                 >
@@ -113,7 +113,7 @@
                                 data-id="{{$product->id}}"
                                 data-quantity="1"
                                 data-price="{{$product->price}}"
-                                data-size="{{$product->size}}"
+                                data-size="none"
                                 data-product="{{$product->title}}"
                                 data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
                                 ><i class="flaticon-bag"></i><span>ADD TO
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div class="pi-text">
-                            <h6>₦{{$product->price}}</h6>
+                            <h6>₦{{number_format($product->price, 0, '.', ',')}}</h6>
                             <p>{{$product->title}}</p>
                         </div>
                     </div>
