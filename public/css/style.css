@@ -1633,6 +1633,17 @@ ol {
     color: #404040;
 }
 
+.quantity .pro-qty #qtybtn {
+    width: 15px;
+    display: block;
+    float: left;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    color: #404040;
+}
+
 .quantity .pro-qty input {
     width: 28px;
     float: left;
@@ -1745,6 +1756,10 @@ ol {
 }
 
 .cart-table .quantity .pro-qty .qtybtn {
+    width: 10px;
+}
+
+.cart-table .quantity .pro-qty #qtybtn {
     width: 10px;
 }
 

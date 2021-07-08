@@ -20,7 +20,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12">
-                                    <label for="first_name">First Name</label>
+                                    <label for="first_name">First Name </label>
                                     <input id="first_name" type="text"
                                         class="form-control @error('first_name') is-invalid @enderror" name="first_name"
                                         value="{{ old('first_name') }}" required autocomplete="name" autofocus

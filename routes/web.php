@@ -22,10 +22,7 @@ Route::get('/about', function(){
 })->name('about');
 
 
-// shop men
-Route::get('/shop/adults', function(){
-    return view('shop.adults');
-})->name('shop.adults');
+
 
 
 // shop women
@@ -111,6 +108,8 @@ Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [App\Http\Controllers\GuestController::class, 'index'])->name('welcome');
+Route::get('/shop/adults', [App\Http\Controllers\GuestController::class, 'adults'])->name('shop.adults');
+Route::get('/shop/product/{product:uuid}', [App\Http\Controllers\GuestController::class, 'productDetails'])->name('shop.product.detail');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verified']], function () {
 // Route::group(['prefix' => 'admin'], function () {
@@ -124,7 +123,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verifie
     Route::get('edit-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'edit'])->name('admin.product.edit');
     Route::post('update-product/{product:uuid}', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update-product');
     
-    // Route::post('update-product-image', [App\Http\Controllers\ProductController::class, 'updateImage'])->name('admin-update-product-image');
+    Route::post('update-product-image', [App\Http\Controllers\ProductController::class, 'updateImage'])->name('admin-update-product-image');
     
     // Route::get('add-products/cars', [App\Http\Controllers\ProductController::class, 'cars'])->name('admin.add-cars');
     // Route::get('add-products/parts', [App\Http\Controllers\ProductController::class, 'parts'])->name('admin.add-parts');

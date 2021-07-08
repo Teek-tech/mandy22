@@ -18,6 +18,7 @@
                             <a href="{{ route('admin.register') }}">Sign In</a>
                         </div>
                         <div class="up-item">
+<<<<<<< HEAD
                             <a href="{{ route('cart') }}">
                                 <div class="shopping-card">
                                     <i class="flaticon-bag"></i>
@@ -25,6 +26,13 @@
                                 </div>
                                 {{-- <p>cart</p> --}}
                             </a>
+=======
+                            <div class="shopping-card">
+                                <i class="flaticon-bag"></i>
+                                <span id="item_count">0</span>
+                            </div>
+                            <a href="{{ route('cart') }}">Cart</a>
+>>>>>>> c604601f1d2d2cd2928c59a1876c707eb1301433
                         </div>
                     </div>
                 </div>
