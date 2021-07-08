@@ -4,7 +4,9 @@
 
         <ul class="navbar-item theme-brand flex-row  text-center">
             <li class="nav-item theme-text">
-                <a href="index.html" class="nav-link"> Lakeside </a>
+                <a href="index.html" class="nav-link">
+                    <img src="{{ asset('img/logo/logo1.png') }}" alt="mandy22 logo" height="40px" width="40px">
+                </a>
             </li>
         </ul>
 

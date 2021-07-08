@@ -127,6 +127,11 @@ Route::get('/user/orders', function(){
     return view('user-dashboard.orders');
 })->name('user-dashboard.orders');
 
+// Transactions
+Route::get('/user/transactions', function(){
+    return view('user-dashboard.transactions');
+})->name('user-dashboard.transactions');
+
 
 Auth::routes();
 
