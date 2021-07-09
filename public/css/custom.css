@@ -265,6 +265,12 @@
     background: var(--primary-color);
 }
 
+.main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main-menu li:hover > a {
     color: var(--black);
 }
