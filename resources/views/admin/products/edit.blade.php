@@ -80,12 +80,14 @@
                                             <label for="size">Select Available Sizes</label>
                                             <select name="size[]" class="form-control js-example-basic-multiple" multiple="multiple">
                                                <option value="{{$product->size}}" selected>{{$product->size}}</option>
-
-                                                <option value="xs">XS</option>
-                                                <option value="s">S</option>
-                                                <option value="m">M</option>
-                                                <option value="l">L</option>
-                                                <option value="xl">XL</option>
+                                               <option value="8">8</option>
+                                               <option value="10">10</option>
+                                               <option value="12">12</option>
+                                               <option value="14">14</option>
+                                               <option value="16">16</option>
+                                               <option value="18">18</option>
+                                               <option value="20">20</option>
+                                               <option value="22">22</option>
                                             </select>
                                         </div>
 
