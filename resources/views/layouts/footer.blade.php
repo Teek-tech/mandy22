@@ -125,12 +125,37 @@
 <script src="{{ asset('js/main.js') }}"></script>
 <script>
     $(document).ready(function() {
+
+        const shopDropDownBtn = $('.shop-mobile-menu');
+        const shopDropDown = $('.shop-drop');
+
+        console.log(shopDropDownBtn);
+
+        // open web search
         $('.web-search-trigger').on('click', function() {
             $('.web-screen-search-section').fadeIn();
         });
 
+
+        // close web search
         $('.close-search-trigger').on('click', function() {
             $('.web-screen-search-section').fadeOut();
         });
+
+
+        // open mobile menu
+        $('.mobile-menu-icon').on('click', function() {
+            $('.mobile-screen-nav-section').fadeIn();
+        });
+
+        // close mobile menu
+        $('.close-mobile-menu-tirgger').on('click', function() {
+            $('.mobile-screen-nav-section').fadeOut();
+        });
+
+        // show and hide shop nav drop down
+        $('.shop-mobile-menu').on('click', function() {
+            $('.shop-drop').slideToggle();
+        })
     });
 </script>

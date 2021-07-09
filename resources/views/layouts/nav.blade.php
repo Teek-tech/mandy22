@@ -10,9 +10,7 @@
                 <div class="">
                     <div class="right-side-panel">
                         <div class="panel-icon mobile-menu-icon">
-                            <a href="#">
-                                <i class="fas fa-bars"></i>
-                            </a>
+                            <i class="fas fa-bars"></i>
                         </div>
 
                         <div class="panel-icon web-search-trigger">
@@ -81,6 +79,72 @@
         </div>
     </div>
 
+    <div class="mobile-screen-nav-section">
+        <div class="mobile-screen-nav-area">
+            <div class="nav-left-panel">
+                <div class="close-btn-area">
+                    <span class="close-mobile-menu-tirgger">
+                        <i class="fa fa-close"></i>
+                    </span>
+                </div>
+                <div class="left-panel-items">
+                    <div class="panel-item">
+                        <a href="{{ route('admin.register') }}">
+                            <i class="flaticon-profile"></i>
+                        </a>
+                    </div>
+                    <div class="panel-item">
+                        <a href="#">
+                            <i class="flaticon-heart"></i>
+                        </a>
+                    </div>
+                    <div class="panel-item">
+                        <a href="{{ route('cart') }}">
+                            <i class="flaticon-bag"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right-panel">
+                <div class="right-panel-search-area">
+                    <input type="text" placeholder="search">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-other-items">
+                    <div class="nav-right-panel-menu-items">
+                        <ul>
+                            <li class="panel-menu-item"><a href="{{ route('welcome') }}">Home</a></li>
+                            <li class="panel-menu-item"><a href="{{ route('about') }}">About</a></li>
+                            <li class="panel-menu-item shop-mobile-menu">Shop</li>
+                            <div class="shop-drop">
+                                <ul>
+                                    <li class="shop-drop-item"><a href="{{ route('shop.adults') }}">Adults</a></li>
+                                    <li class="shop-drop-item"><a href="{{ route('shop.children') }}">Children</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <li class="panel-menu-item"><a href="{{ route('gallery') }}">Gallery</a></li>
+                            <li class="panel-menu-item"><a href="{{ route('contact') }}">Contact</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="nav-right-panel-social-icons">
+                        <span class="panel-social-icon">
+                            <a href="">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </span>
+                        <span class="panel-social-icon">
+                            <a href="">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav class="main-navbar">
         <div class="container">
 
@@ -99,6 +163,3 @@
         </div>
     </nav>
 </header>
-<script src="">
-
-</script>
