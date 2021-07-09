@@ -123,3 +123,14 @@
 <script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
 <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        $('.web-search-trigger').on('click', function() {
+            $('.web-screen-search-section').fadeIn();
+        });
+
+        $('.close-search-trigger').on('click', function() {
+            $('.web-screen-search-section').fadeOut();
+        });
+    });
+</script>
