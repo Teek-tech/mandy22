@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="site-logo-area">
-                    <a href="{{ route('home') }}" class="site-logo">
+                    <a href="{{ route('welcome') }}" class="site-logo">
                         <img src="{{ asset('img/logo/logo1.png') }}" alt="mandy22 logo">
                         <h3>Mandies22</h3>
                     </a>
@@ -40,7 +40,7 @@
                 <div class="">
                     <div class="user-panel">
                         <div class="up-item">
-                            <a href="{{ route('admin.register') }}">
+                            <a href="{{ route('register') }}">
                                 <i class="flaticon-profile"></i>
                             </a>
                         </div>
