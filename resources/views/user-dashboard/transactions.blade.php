@@ -48,7 +48,7 @@
                                             <th>Product</th>
                                             <th>Quantity</th>
                                             <th class="text-center">Status</th>
-                                            <th class="text-center">Action</th>
+                                            <th class="text-center">Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -59,7 +59,7 @@
                                             <td>2</td>
                                             <td>Pending</td>
                                             <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
+                                                12th July 2021
                                             </td>
                                         </tr>
                                         <tr>
@@ -69,7 +69,7 @@
                                             <td>2</td>
                                             <td>Pending</td>
                                             <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
+                                                12th July 2021
                                             </td>
                                         </tr>
 
