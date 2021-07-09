@@ -30,11 +30,11 @@
                 </div>
                 <div class="col-md-6 about-section-text-area">
                     <div>
-                        <h4>Top Notch Fashion store</h4>
-                        <h3>Meet the C.E.O</h3>
+                        {{-- <h4>Top Notch Fashion store</h4> --}}
+                        <h4>Meet the C.E.O</h4>
                         <p>
                             Mandies22 is a Nigerian fashion brand that produces unique bespoke pieces ranging from corporate designs to shift wears for the confident woman. <br> 
-                            Our beautifully designed pieces make you beautiful and stand out. You are sure to turn heads  at events or functions in a Mandie dress. <br>
+                            Our beautifully designed pieces make you beautiful and stand out. You are sure to turn heads  at events or functions in a Mandies dress. <br>
 
                             Experience our world of beauty. We hope you enjoy wearing our designs as much as we enjoyed making them 
                             <br> <br>

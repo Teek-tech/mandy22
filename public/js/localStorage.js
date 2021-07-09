@@ -82,7 +82,7 @@ function getData(){
             <h4> ${cart.quantity}</h4>
             </td>
             <td class="size-col text-center">
-                <h4>${cart.size.toUpperCase()}</h4>
+                <h4>${cart.size}</h4>
             </td>
             <td class="total-col text-center">
                 <h4>₦${cart.quantity * cart.price}</h4>
