@@ -27,7 +27,7 @@
                     </div>
                     <div class="offer-card text-white">
                         <span>from</span>
-                        <h2>₦7k</h2>
+                        <h2>₦6999</h2>
                         <p>SHOP NOW</p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="offer-card text-white">
                         <span>from</span>
-                        <h2>₦10k</h2>
+                        <h2>₦5999</h2>
                         <p>SHOP NOW</p>
                     </div>
                 </div>
