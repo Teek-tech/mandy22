@@ -8,7 +8,8 @@
                 <div class="footer-widget about-widget">
                     <h2>About</h2>
                     <p>
-                        We all about ensuring that you look outstanding in all our mandies pieces. Each designs are created with precision and care to ensure that our customer is satisfied.
+                        We are a brand committed to bringing showcasing feminine beauty with our Mandies Pieces.
+                        Each design is specifically suited to suit our customer's tastes and preferences.
                     </p>
                     <img src="img/xcards.png.pagespeed.ic.JYcvaPNjMW.png" alt="" />
                 </div>
