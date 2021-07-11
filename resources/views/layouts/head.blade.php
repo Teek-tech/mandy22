@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<meta name="description" content=" Mandy22 | Fashion House">
+<meta name="description" content="Our beautifully designed wears give you an aura of confidence and make you stand out. We don't dress your body alone, we dress your confidence">
 <meta name="keywords" content="mandy22, eCommerce, native wear, casual wears">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
