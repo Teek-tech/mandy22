@@ -62,9 +62,11 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
         getData();
         })
 
-        // $(".add-to-cart").on('click', function(){
-        //     $('.show-info').show();
-        //  });
+        $(".empty-cart").on('click', function(){
+            localStorage.clear();
+            console.log(localStorage.getItem('Mandy22Shop'));
+            getData();
+         });
 
 })
 
@@ -102,7 +104,7 @@ function getData(){
        
         
     }else{
-        tr.innerHTML = "No Data";
+        tr.innerHTML = "<td>No Data</td>";
         total.innerHTML = 0;
     }
 }
@@ -156,5 +158,5 @@ function getData(){
 getData();
 
 
-console.log($('form').serializeArray());
+
 

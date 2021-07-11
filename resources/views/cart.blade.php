@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="cart-table">
-                        <h3>Your Cart</h3>
+                        <h3>Your Cart <a href="{{route('cart')}}" class="empty-cart"><i class='fa fa-trash' style='color:red; float: right;'></i></a></h3>  
                         <div class="cart-table-warp">
                             <table id="shopTable">
                                 <thead>
@@ -69,6 +69,7 @@
                         </div>
                         <div class="total-cost">
                             <h6>Total ₦<span id="total">0</span></h6>
+                           
                         </div>
                     </div>
                 </div>
