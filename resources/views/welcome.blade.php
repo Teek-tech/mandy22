@@ -100,14 +100,7 @@
                     <div class="product-item">
                         <div class="pi-pic">
                             <img data-href="{{route('shop.product.detail', $product->uuid)}}"
-                                src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="" class="add-to-cart" 
-                                data-id="{{$product->id}}"
-                                data-quantity="1"
-                                data-price="{{$product->price}}"
-                                data-size="none"
-                                data-product="{{$product->title}}"
-                                data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
-                                >
+                                src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="">
                             <div class="pi-links">
                                 <a href="{{ route('cart') }}" class="add-card add-to-cart"
                                 data-id="{{$product->id}}"

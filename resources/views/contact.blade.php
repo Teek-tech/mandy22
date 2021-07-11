@@ -37,12 +37,20 @@
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                         <a href="#"><i class="fa fa-behance"></i></a>
                     </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your name">
-                        <input type="text" placeholder="Your e-mail">
-                        <input type="text" placeholder="Subject">
-                        <textarea placeholder="Message"></textarea>
-                        <button class="site-btn">SEND NOW</button>
+                    @if(session()->has('success'))
+                    <div class="alert alert-solid alert-success" role="alert" style="background-color: green; color:#fff;">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>Success!
+                      {{ session()->get('success') }}
+                    </div>
+                  @endif
+                    <form class="contact-form" action="{{route('contact-admin')}}" method="POST">
+                        @csrf
+                        <input type="text" name="name" placeholder="Your name">
+                        <input type="email" name="email" placeholder="Your e-mail">
+                        <textarea placeholder="Message" name="message"></textarea>
+                        <button type="submit" class="site-btn">SEND NOW</button>
                     </form>
                 </div>
             </div>

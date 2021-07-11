@@ -124,6 +124,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [App\Http\Controllers\GuestController::class, 'index'])->name('welcome');
+
+Route::post('contact-admin', [App\Http\Controllers\GuestController::class, 'notifyUser'])->name('contact-admin');
+
 Route::get('/shop/adults', [App\Http\Controllers\GuestController::class, 'adults'])->name('shop.adults');
 Route::get('/shop/product/{product:uuid}', [App\Http\Controllers\GuestController::class, 'productDetails'])->name('shop.product.detail');
 

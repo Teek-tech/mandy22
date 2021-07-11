@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Product;
 use App\Models\ProductImage;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NotifyAdmin;
+use App\Notifications\NotifyCustomer;
 
 class GuestController extends Controller
 {
@@ -90,8 +94,20 @@ class GuestController extends Controller
      * @param  \App\Models\Transaction  $transaction
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function notifyUser()
     {
-        //
+        $contact = request()->validate([
+            'name' => 'required|min:3|max:15',
+            'email' => 'required',
+            'message' => 'required|max:500|min:5'
+        ]);
+        $user = new User;
+        $user->name = $contact['name'];
+        $user->email = $contact['email'];
+        $user->message = $contact['message'];
+        Mail::to("tochukwuodeme@gmail.com")->send(new NotifyAdmin($user));
+        $user->notify(new NotifyCustomer($user));
+        return back()->with('success', 'We will contact you shortly.');
     }
+    
 }

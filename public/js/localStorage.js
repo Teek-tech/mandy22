@@ -62,6 +62,10 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
         getData();
         })
 
+        // $(".add-to-cart").on('click', function(){
+        //     $('.show-info').show();
+        //  });
+
 })
 
 function getData(){
@@ -105,6 +109,9 @@ function getData(){
 
 
     $('.add-to-cart').on('click', function(e){
+        $('.show-info').show();
+        $('.show-cart').show();
+        $('.add-to-cart').hide();
         var productID = $(this).attr('data-id');
         var product = $(this).attr('data-product');
         var quantity = $(this).attr('data-quantity');
@@ -147,3 +154,7 @@ function getData(){
 
 //display Cart
 getData();
+
+
+console.log($('form').serializeArray());
+

@@ -111,6 +111,7 @@
 <script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
 <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/localStorage.js') }}"></script>
 <script>
     $(document).ready(function() {
 

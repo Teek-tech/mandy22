@@ -53,7 +53,7 @@
                             <a href="{{ route('cart') }}">
                                 <div class="shopping-card">
                                     <i class="flaticon-bag"></i>
-                                    <span>0</span>
+                                    <span id="item_count">0</span>
                                 </div>
                             </a>
                         </div>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="left-panel-items">
                     <div class="panel-item">
-                        <a href="{{ route('admin.register') }}">
+                        <a href="{{ route('register') }}">
                             <i class="flaticon-profile"></i>
                         </a>
                     </div>

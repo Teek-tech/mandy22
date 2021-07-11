@@ -43,6 +43,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 product-details">
+                    
                     <h2 class="p-title">{{$product->title}}</h2>
                     <h3 class="p-price">₦{{number_format($product->price, 0, '.', ',')}}</h3>
                     <h4 class="p-stock">Available: <span>{{$product->in_stock == TRUE ? 'In Stock' : 'Sold out' }}</span></h4>
@@ -57,7 +58,9 @@
                     {{-- <div class="p-review">
                         <a href="#">3 reviews</a>|<a href="#">Add your review</a>
                     </div> --}}
-                    <div class="fw-size-choose">
+                    {{-- <form> --}}
+                    <div class="show-info" style="display: none;">
+                        <div class="fw-size-choose">
                         <p>Size</p>
                         @foreach(explode(',', $product->size) as $sizes)
                             <div class="sc-item" data-id="{{$product->id}}">
@@ -65,7 +68,8 @@
                                 <label for="{{$sizes}}-size">{{strtoupper($sizes)}}</label>
                             </div>
                         @endforeach
-                       
+                        {{-- <input type="hidden" id="product_id" value="{{$product->id}}">
+                        <input type="hidden" id="title" value="{{$product->title}}"> --}}
                         {{-- <div class="sc-item">
                             <input type="radio" name="sc" id="s-size">
                             <label for="s-size">34</label>
@@ -91,7 +95,18 @@
                         <p>Quantity</p>
                         <div class="pro-qty" id="quant"><input type="text" id="{{$product->id}}" value="1" class="updateProductQty"></div>
                     </div>
-                    <a href="{{route('cart')}}" class="site-btn">View Cart</a>
+                </div>
+                    <a class="site-btn add-to-cart" 
+                                data-id="{{$product->id}}"
+                                data-quantity="1"
+                                data-price="{{$product->price}}"
+                                data-size="none"
+                                data-product="{{$product->title}}"
+                                data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
+                    >Add to Cart</a>  
+                    <a href="{{route('cart')}}" class="site-btn show-cart" style="display:none;">View Cart</a>
+
+                    {{-- </form> --}}
                     <div id="accordion" class="accordion-area">
                         <div class="panel">
                             <div class="panel-header" id="headingOne">
