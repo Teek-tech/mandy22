@@ -26,7 +26,8 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="" class="add-to-cart">
+                            
+                            <a href="{{route('shop.product.detail', $product->uuid)}}"><img src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt=""></a>
                             <div class="pi-links">
                                 <a href="{{route('shop.product.detail', $product->uuid)}}" class="add-card add-to-cart"
                                 data-id="{{$product->id}}"

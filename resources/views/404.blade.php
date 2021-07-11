@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mand22 | 404 </title>
+    <meta name="description" content="Our beautifully designed wears give you an aura of confidence and make you stand out. We don't dress your body alone, we dress your confidence">
+<meta name="keywords" content="mandy22, eCommerce, native wear, casual wears">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="{{ asset('img/logo/favicon.png') }}" />
+    <title>Mandy22 | No.1 Fashion Store in Port Harcourt</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

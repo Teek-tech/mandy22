@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Divisima | eCommerce Template</title>
+    <title>Mandy22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
 </head>
 
