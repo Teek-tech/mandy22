@@ -133,6 +133,30 @@ Route::get('/user/transactions', function(){
 })->name('user-dashboard.transactions');
 
 
+// new admin routes
+Route::get('/new-admin/index', function(){
+    return view('new-admin.index');
+})->name('new-admin.index');
+
+// products
+Route::get('/new-admin/products', function(){
+    return view('new-admin.products.index');
+})->name('new-admin.products.index');
+
+// add products
+Route::get('/new-admin/add-products', function(){
+    return view('new-admin.products.create');
+})->name('new-admin.products.add-product');
+
+// edit products
+Route::get('/new-admin/edit-products', function(){
+    return view('new-admin.products.edit');
+})->name('new-admin.products.edit');
+
+
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

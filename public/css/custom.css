@@ -504,10 +504,6 @@
 }
 
 @media (min-width: 900px) {
-    /* .body {
-        overflow-x: hidden;
-    } */
-
     .right-side-panel {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -577,14 +573,12 @@
     }
 
     .web-screen-search .search-area input {
-        /* flex: 0.9; */
         width: 95%;
         padding: 10px;
         border: 1px solid var(--grey);
     }
 
     .web-screen-search .search-area button {
-        /* flex: 0.1; */
         width: 5%;
         display: flex;
         justify-content: center;
