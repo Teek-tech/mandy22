@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Mandy22 | No.1 Fashionista in Port Harcourt</title>
+    <title>Mandies22 | No.1 Fashionista in Port Harcourt</title>
     @include('layouts.head')
     <!-- magnific-popup css cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">

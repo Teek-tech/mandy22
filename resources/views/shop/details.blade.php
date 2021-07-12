@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mandy22 | No.1 Fashion Store in Port Harcourt</title>
+    <title>Mandies22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
 </head>
 
@@ -59,11 +59,11 @@
                         <a href="#">3 reviews</a>|<a href="#">Add your review</a>
                     </div> --}}
                     {{-- <form> --}}
-                    <div class="show-info" style="display: none;">
+                    <div class="">
                         <div class="fw-size-choose">
                         <p>Size</p>
                         @foreach(explode(',', $product->size) as $sizes)
-                            <div class="sc-item" data-id="{{$product->id}}">
+                            <div class="sc-item" data-id="{{$product->id}}" id="siz">
                                 <input type="radio" name="sc" id="{{$sizes}}-size" value="{{$sizes}}" class="updateProductSize">
                                 <label for="{{$sizes}}-size">{{strtoupper($sizes)}}</label>
                             </div>
@@ -94,17 +94,18 @@
                     <div class="quantity">
                         <p>Quantity</p>
                         <div class="pro-qty" id="quant"><input type="text" id="{{$product->id}}" value="1" class="updateProductQty"></div>
-                    </div>
+                    </div> 
                 </div>
+                <input type="hidden" id="sizedata" value="8">
                     <a class="site-btn add-to-cart" 
                                 data-id="{{$product->id}}"
-                                data-quantity="1"
+                                {{-- data-quantity="1" --}}
                                 data-price="{{$product->price}}"
-                                data-size="none"
+                                {{-- data-size="none" --}}
                                 data-product="{{$product->title}}"
                                 data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
-                    >Add to Cart</a>  
-                    <a href="{{route('cart')}}" class="site-btn show-cart" style="display:none;">View Cart</a>
+                    >Add to Carts</a>  
+                    {{-- <a href="{{route('cart')}}" class="site-btn">View Cart</a> --}}
 
                     {{-- </form> --}}
                     <div id="accordion" class="accordion-area">

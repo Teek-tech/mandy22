@@ -20,14 +20,16 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
     var productID = $(".sc-item").attr('data-id');
     // console.log(this.value);
     // console.log(productID);
-
+    $("#sizedata").val(this.value);
      let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
         updateCart = shoppingCart.findIndex((product => product.productID == productID));
         shoppingCart[updateCart].size = this.value == '' ? 'none' : this.value
         if(updateCart){
             $('#successText').text('Quantity updated successfullly.');
             $('#successMsg').show();
+            // $('#sizedata').val(this.value)
         }
+       
      localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
      getData();
     })
@@ -51,7 +53,7 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
      localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
      getData();
 	 });
-
+     
     //remove item from cart by id
     $("#shopTable tbody").on('click', '.removeProduct', function(){
         var productID = $(this).attr('data-id');
@@ -111,14 +113,11 @@ function getData(){
 
 
     $('.add-to-cart').on('click', function(e){
-        $('.show-info').show();
-        $('.show-cart').show();
-        $('.add-to-cart').hide();
         var productID = $(this).attr('data-id');
         var product = $(this).attr('data-product');
-        var quantity = $(this).attr('data-quantity');
-        var price = $(this).attr('data-price');
-        var size = $(this).attr('data-size');
+        var quantity = $('#quant input').val(); // $(this).attr('data-quantity');
+        var price =   $(this).attr('data-price');
+        var size = $('#sizedata').val(); // $(this).attr('data-size');
         var img = $(this).attr('data-img');
 
         let shoppingCart = [];

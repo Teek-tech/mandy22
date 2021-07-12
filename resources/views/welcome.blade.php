@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Mandy22 | No.1 Fashion Store in Port Harcourt</title>
+    <title>Mandies22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
 
 </head>
@@ -22,7 +22,7 @@
                             <h2>Native Perfection</h2>
                             <p>Our beautifully designed wears give you an aura of confidence and make you stand out. We don't dress your body alone, we dress your confidence. </p>
                             <a href="{{route('shop.adults')}}" class="site-btn sb-line">DISCOVER</a>
-                            <a href="{{route('contact')}}" class="site-btn">Contact Mandy</a>
+                            <a href="{{route('contact')}}" class="site-btn">Contact Us</a>
                         </div>
                     </div>
                     <div class="offer-card text-white">
