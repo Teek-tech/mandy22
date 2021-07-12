@@ -153,6 +153,27 @@ Route::get('/new-admin/edit-products', function(){
     return view('new-admin.products.edit');
 })->name('new-admin.products.edit');
 
+// transactions
+Route::get('/new-admin/transaction', function(){
+    return view('new-admin.transactions.index');
+})->name('new-admin.transactions.index');
+
+// transaction details
+Route::get('/new-admin/transactions/details', function(){
+    return view('new-admin.transactions.details');
+})->name('new-admin.transactions.details');
+
+// activities
+Route::get('/new-admin/activities', function(){
+    return view('new-admin.activities');
+})->name('new-admin.activities');
+
+// profile
+Route::get('/new-admin/profile', function(){
+    return view('new-admin.profile');
+})->name('new-admin.profile');
+
+
 
 
 

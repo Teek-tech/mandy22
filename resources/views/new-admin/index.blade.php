@@ -144,7 +144,7 @@
                                 </div>
 
                                 <div class="tm-action-btn">
-                                    <a href="#" class="btn">View All</a>
+                                    <a href="{{ route('new-admin.transactions.index') }}" class="btn">View All</a>
                                 </div>
                             </div>
                         </div>
