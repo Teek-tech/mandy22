@@ -1,6 +1,6 @@
 <center>
     <h2 style="padding: 23px;background: #1d5995;">
-        <a style="color:floralwhite" href="https://mezitox.com">Mezitox</a>
+        <a style="color:floralwhite" href="https://mandies22.ng">Mandies22</a>
     </h2>
 </center>
 {{-- <h2>APP REPORT</h2> --}}

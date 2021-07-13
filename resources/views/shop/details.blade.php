@@ -96,7 +96,7 @@
                         <div class="pro-qty" id="quant"><input type="text" id="{{$product->id}}" value="1" class="updateProductQty"></div>
                     </div> 
                 </div>
-                <input type="hidden" id="sizedata" value="8">
+                <input type="hidden" id="sizedata" value="0">
                     <a class="site-btn add-to-cart" 
                                 data-id="{{$product->id}}"
                                 {{-- data-quantity="1" --}}
