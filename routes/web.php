@@ -119,6 +119,51 @@ Route::get('/user/transactions', function(){
 })->name('user-dashboard.transactions');
 
 
+// new admin routes
+Route::get('/new-admin/index', function(){
+    return view('new-admin.index');
+})->name('new-admin.index');
+
+// products
+Route::get('/new-admin/products', function(){
+    return view('new-admin.products.index');
+})->name('new-admin.products.index');
+
+// add products
+Route::get('/new-admin/add-products', function(){
+    return view('new-admin.products.create');
+})->name('new-admin.products.add-product');
+
+// edit products
+Route::get('/new-admin/edit-products', function(){
+    return view('new-admin.products.edit');
+})->name('new-admin.products.edit');
+
+// transactions
+Route::get('/new-admin/transaction', function(){
+    return view('new-admin.transactions.index');
+})->name('new-admin.transactions.index');
+
+// transaction details
+Route::get('/new-admin/transactions/details', function(){
+    return view('new-admin.transactions.details');
+})->name('new-admin.transactions.details');
+
+// activities
+Route::get('/new-admin/activities', function(){
+    return view('new-admin.activities');
+})->name('new-admin.activities');
+
+// profile
+Route::get('/new-admin/profile', function(){
+    return view('new-admin.profile');
+})->name('new-admin.profile');
+
+
+
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
