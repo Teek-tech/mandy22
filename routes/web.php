@@ -120,7 +120,7 @@ Route::get('/user/transactions', function(){
 
 
 // new admin routes
-Route::get('/new-admin/index', function(){
+Route::get('/new-admin', function(){
     return view('new-admin.index');
 })->name('new-admin.index');
 
@@ -173,6 +173,8 @@ Route::get('/', [App\Http\Controllers\GuestController::class, 'index'])->name('w
 Route::post('contact-admin', [App\Http\Controllers\GuestController::class, 'notifyUser'])->name('contact-admin');
 
 Route::get('/shop/adults', [App\Http\Controllers\GuestController::class, 'adults'])->name('shop.adults');
+
+
 Route::get('/shop/product/{product:uuid}', [App\Http\Controllers\GuestController::class, 'productDetails'])->name('shop.product.detail');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verified']], function () {
