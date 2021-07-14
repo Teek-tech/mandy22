@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Mandies22 </title>
+    <title>Lakeside Admin Template </title>
 
     @include('layouts.user-dashboard.head')
 
@@ -32,7 +32,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.user-dashboard.sidebar')
+        @include('layouts.new-admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
@@ -41,47 +41,53 @@
                 <div class="row layout-top-spacing">
                     <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                         <div class="widget-content widget-content-area br-6">
-                            <h4>Orders</h4>
-                            <div class="table-responsive mb-4 mt-4">
-                                <table class="multi-table table table-hover" style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th>S/N</th>
-                                            <th>Order Id</th>
-                                            <th>Product</th>
-                                            <th>Quantity</th>
-                                            <th class="text-center">Status</th>
-                                            <th class="text-center">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>#MANDY22000653</td>
-                                            <td>Dorime Gown</td>
-                                            <td>2</td>
-                                            <td>Pending</td>
-                                            <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>#MANDY22000653</td>
-                                            <td>Dorime Gown</td>
-                                            <td>2</td>
-                                            <td>Pending</td>
-                                            <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
-                                            </td>
-                                        </tr>
+                            <h4>Edit Product</h4>
+                            <form class="add-products-form" action="">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-6">
+                                        <div class="form-group my-3">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" placeholder="Name of product">
+                                        </div>
 
+                                        <div class="form-group my-3">
+                                            <label for="category">Category</label>
+                                            <select name="category" class="form-control">
+                                                <option label="select"></option>
+                                                <option value="adults">Adults</option>
+                                                <option value="children">Children</option>
+                                            </select>
+                                        </div>
 
-                                    </tbody>
+                                        <div class="form-group my-3">
+                                            <label for="size">size</label>
+                                            <select name="size" class="form-control">
+                                                <option label="select"></option>
+                                                <option value="xs">xs</option>
+                                                <option value="s">s</option>
+                                                <option value="m">m</option>
+                                                <option value="l">l</option>
+                                                <option value="xl">xl</option>
+                                            </select>
+                                        </div>
 
-                                </table>
+                                        <div class="form-group my-3">
+                                            <label for="description">Description</label>
+                                            <textarea name="description" cols="30" rows="5"
+                                                class="form-control"></textarea>
+                                        </div>
 
-                            </div>
+                                        <div class="form-group my-3">
+                                            <label for="image">Image</label>
+                                            <input type="file" name="image" class="form-control" multiple>
+                                        </div>
+
+                                        <div class="btn-area d-flex justify-content-center align-items-center my-2">
+                                            <button class="btn btn-primary">update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
 

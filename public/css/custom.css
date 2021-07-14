@@ -266,7 +266,7 @@
 }
 
 .main-navbar {
-    background: var(--primary-color);
+    background: #000;
 }
 
 .main-menu {
@@ -276,7 +276,7 @@
 }
 
 .main-menu li:hover > a {
-    color: var(--black);
+    color: #fc8837;
 }
 
 .main-menu .sub-menu li a:hover {
@@ -285,7 +285,7 @@
 
 /* home page */
 .hero-slider .hs-item .offer-card {
-    background: var(--primary-color);
+    background: #115ae6;
 }
 
 .hero-slider .hs-item .offer-card:after {
@@ -301,7 +301,7 @@
 }
 
 .site-btn {
-    background: var(--primary-color);
+    background: #fc3535;
 }
 
 .footer-widget ul li a:after {
@@ -342,7 +342,7 @@
 }
 
 .product-filter-menu .control-btn.active {
-    background: var(--primary-color);
+    background: #fc3535;
     color: var(--white);
 }
 
@@ -508,10 +508,6 @@
 }
 
 @media (min-width: 900px) {
-    /* .body {
-        overflow-x: hidden;
-    } */
-
     .right-side-panel {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -581,14 +577,12 @@
     }
 
     .web-screen-search .search-area input {
-        /* flex: 0.9; */
         width: 95%;
         padding: 10px;
         border: 1px solid var(--grey);
     }
 
     .web-screen-search .search-area button {
-        /* flex: 0.1; */
         width: 5%;
         display: flex;
         justify-content: center;

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Mandies22 </title>
+    <title>Lakeside Admin Template </title>
 
     @include('layouts.user-dashboard.head')
 
@@ -26,7 +26,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.user-dashboard.sidebar')
+        @include('layouts.new-admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT PART  -->
@@ -39,44 +39,14 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
                         <div class="widget widget-one">
                             <div class="widget-heading">
-                                <h6 class="">Statistics</h6>
-                            </div>
-                            <div class="w-chart">
-                                <div class="w-chart-section">
-                                    <div class="w-detail">
-                                        <p class="w-title">Total Rooms</p>
-                                        <p class="w-stats">20</p>
-                                    </div>
-                                </div>
-
-                                <div class="w-chart-section">
-                                    <div class="w-detail">
-                                        <p class="w-title">Rooms Available</p>
-                                        <p class="w-stats">5</p>
-                                    </div>
-                                </div>
+                                <h6 class="">Total Sales</h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
                         <div class="widget widget-one">
                             <div class="widget-heading">
-                                <h6 class="">Revenue</h6>
-                            </div>
-                            <div class="w-chart">
-                                <div class="w-chart-section">
-                                    <div class="w-detail">
-                                        <p class="w-title">Online</p>
-                                        <p class="w-stats">₦423,964</p>
-                                    </div>
-                                </div>
-
-                                <div class="w-chart-section">
-                                    <div class="w-detail">
-                                        <p class="w-title">Offline</p>
-                                        <p class="w-stats">₦7,929</p>
-                                    </div>
-                                </div>
+                                <h6 class="">Total Products</h6>
                             </div>
                         </div>
                     </div>
@@ -109,7 +79,7 @@
                         <div class="widget widget-activity-two">
 
                             <div class="widget-heading">
-                                <h5 class="">Recent Orders</h5>
+                                <h5 class="">Trnasactions</h5>
                             </div>
 
                             <div class="widget-content">
@@ -120,11 +90,12 @@
                                             <tr>
                                                 <th>S/N</th>
                                                 <th>Order Id</th>
-                                                <th>Product Name</th>
-                                                <th>Quantity</th>
-                                                <th>status</th>
-                                                <th>Amount</th>
-                                                <th></th>
+                                                <th>Product</th>
+                                                <th>Date</th>
+                                                <th>Total</th>
+                                                <th>Payment Method</th>
+                                                <th>Status</th>
+                                                <th>action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -132,48 +103,48 @@
                                                 <td>1</td>
                                                 <td>#MANDY220056</td>
                                                 <td>Dorime Gown</td>
-                                                <td>1</td>
-                                                <td>Pending</td>
+                                                <td>12th July 2021</td>
                                                 <td>₦25000</td>
-                                                <td class="text-center"><a href="new-booking.html">View</a></td>
-
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td>1</td>
                                                 <td>#MANDY220056</td>
                                                 <td>Dorime Gown</td>
-                                                <td>1</td>
-                                                <td>Pending</td>
+                                                <td>12th July 2021</td>
                                                 <td>₦25000</td>
-                                                <td class="text-center"><a href="new-booking.html">View</a></td>
-
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td>1</td>
                                                 <td>#MANDY220056</td>
                                                 <td>Dorime Gown</td>
-                                                <td>1</td>
-                                                <td>Pending</td>
+                                                <td>12th July 2021</td>
                                                 <td>₦25000</td>
-                                                <td class="text-center"><a href="new-booking.html">View</a></td>
-
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td>1</td>
                                                 <td>#MANDY220056</td>
                                                 <td>Dorime Gown</td>
-                                                <td>1</td>
-                                                <td>Pending</td>
+                                                <td>12th July 2021</td>
                                                 <td>₦25000</td>
-                                                <td class="text-center"><a href="new-booking.html">View</a></td>
-
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
 
                                 <div class="tm-action-btn">
-                                    <a href="{{ route('user-dashboard.orders') }}" class="btn">View All</a>
+                                    <a href="{{ route('new-admin.transactions.index') }}" class="btn">View All</a>
                                 </div>
                             </div>
                         </div>

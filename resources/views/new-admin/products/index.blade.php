@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Mandies22 </title>
+    <title>Lakeside Admin Template </title>
 
     @include('layouts.user-dashboard.head')
 
@@ -32,7 +32,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.user-dashboard.sidebar')
+        @include('layouts.new-admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
@@ -41,15 +41,16 @@
                 <div class="row layout-top-spacing">
                     <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                         <div class="widget-content widget-content-area br-6">
-                            <h4>Orders</h4>
+                            <h4>Products</h4>
                             <div class="table-responsive mb-4 mt-4">
                                 <table class="multi-table table table-hover" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>S/N</th>
-                                            <th>Order Id</th>
-                                            <th>Product</th>
-                                            <th>Quantity</th>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Category</th>
+                                            <th>Date Posted</th>
                                             <th class="text-center">Status</th>
                                             <th class="text-center">Action</th>
                                         </tr>
@@ -57,23 +58,27 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>#MANDY22000653</td>
                                             <td>Dorime Gown</td>
-                                            <td>2</td>
-                                            <td>Pending</td>
+                                            <td>Armeno Armeno latire</td>
+                                            <td>Children</td>
+                                            <td>21st July</td>
                                             <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
+                                                Pending
                                             </td>
+                                            <td><a href="{{ route('new-admin.products.edit') }}"
+                                                    class="btn btn-primary">Edit</a></td>
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>#MANDY22000653</td>
                                             <td>Dorime Gown</td>
-                                            <td>2</td>
-                                            <td>Pending</td>
+                                            <td>Armeno Armeno latire</td>
+                                            <td>Children</td>
+                                            <td>21st July</td>
                                             <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
+                                                Pending
                                             </td>
+                                            <td><a href="{{ route('new-admin.products.edit') }}"
+                                                    class="btn btn-primary">Edit</a></td>
                                         </tr>
 
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Mandies22 </title>
+    <title>Mandies22 | Activities</title>
 
     @include('layouts.user-dashboard.head')
 
@@ -32,7 +32,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.user-dashboard.sidebar')
+        @include('layouts.new-admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
@@ -41,38 +41,63 @@
                 <div class="row layout-top-spacing">
                     <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                         <div class="widget-content widget-content-area br-6">
-                            <h4>Orders</h4>
+                            <h4>Activities</h4>
                             <div class="table-responsive mb-4 mt-4">
                                 <table class="multi-table table table-hover" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>S/N</th>
-                                            <th>Order Id</th>
-                                            <th>Product</th>
-                                            <th>Quantity</th>
-                                            <th class="text-center">Status</th>
-                                            <th class="text-center">Action</th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>#MANDY22000653</td>
-                                            <td>Dorime Gown</td>
-                                            <td>2</td>
-                                            <td>Pending</td>
-                                            <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
+                                            <td>
+                                                <small class="text-muted">Today, 10:29 PM</small>
+                                            </td>
+                                            <td>
+                                                <span class="text-uppercase font-weight-bold text-danger">ORDER
+                                                    ALERT</span> - New order from IP Address 9232049adbebt...
                                             </td>
                                         </tr>
+
                                         <tr>
-                                            <td>1</td>
-                                            <td>#MANDY22000653</td>
-                                            <td>Dorime Gown</td>
-                                            <td>2</td>
-                                            <td>Pending</td>
-                                            <td class="text-center">
-                                                <a data-toggle="modal" data-target="#editPackage" href="#">View</a>
+                                            <td>
+                                                <small class="text-muted">Today, 10:29 PM</small>
+                                            </td>
+                                            <td>
+                                                <span class="text-uppercase font-weight-bold text-danger">ORDER
+                                                    ALERT</span> - New order from IP Address 9232049adbebt...
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <small class="text-muted">Today, 10:29 PM</small>
+                                            </td>
+                                            <td>
+                                                <span class="text-uppercase font-weight-bold text-danger">ORDER
+                                                    ALERT</span> - New order from IP Address 9232049adbebt...
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <small class="text-muted">Today, 10:29 PM</small>
+                                            </td>
+                                            <td>
+                                                <span class="text-uppercase font-weight-bold text-danger">ORDER
+                                                    ALERT</span> - New order from IP Address 9232049adbebt...
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <small class="text-muted">Today, 10:29 PM</small>
+                                            </td>
+                                            <td>
+                                                <span class="text-uppercase font-weight-bold text-danger">ORDER
+                                                    ALERT</span> - New order from IP Address 9232049adbebt...
                                             </td>
                                         </tr>
 
@@ -113,11 +138,11 @@
                     "sInfo": "Showing page _PAGE_ of _PAGES_",
                     "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
                     "sSearchPlaceholder": "Search...",
-                    // "sLengthMenu": "Results :  _MENU_",
+                    "sLengthMenu": "Results :  _MENU_",
                 },
                 "stripeClasses": [],
-                // "lengthMenu": [7, 10, 20, 50],
-                // "pageLength": 7,
+                "lengthMenu": [7, 10, 20, 50],
+                "pageLength": 7,
                 drawCallback: function() {
                     $('.t-dot').tooltip({
                         template: '<div class="tooltip status" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
