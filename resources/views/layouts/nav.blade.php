@@ -33,8 +33,8 @@
 
                 <div class="site-logo-area">
                     <a href="{{ route('welcome') }}" class="site-logo">
-                        <img src="{{ asset('img/logo/logo1.png') }}" alt="mandy22 logo">
-                        <h3>Mandies22</h3>
+                        <img src="{{ asset('img/logo/logon.png') }}" alt="mandy22 logo">
+                        
                     </a>
                 </div>
                 <div class="">
