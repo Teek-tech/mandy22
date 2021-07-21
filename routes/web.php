@@ -31,9 +31,9 @@ Route::get('/shop/children', function(){
 })->name('shop.children');
 
 // product detail
-Route::get('/shop/adults/product/detail', function(){
-    return view('shop.details');
-})->name('shop.product.detail');
+// Route::get('/shop/adults/product/detail', function(){
+//     return view('shop.details');
+// })->name('shop.product.detail');
 
 // gallery
 Route::get('/gallery', function(){
@@ -45,10 +45,7 @@ Route::get('/cart', function(){
     return view('cart');
 })->name('cart');
 
-// checkout
-Route::get('/checkout', function(){
-    return view('checkout');
-})->name('checkout');
+
 
 // contact
 Route::get('/contact', function (){
@@ -160,8 +157,11 @@ Route::get('/new-admin/profile', function(){
 })->name('new-admin.profile');
 
 
-
-
+// checkout
+Route::get('/checkout', function(){
+    return view('checkout');
+})->name('checkout')->middleware('auth');
+Route::post('checkout', [App\Http\Controllers\TransactionController::class, 'store'])->name('user.checkout');
 
 
 Auth::routes();

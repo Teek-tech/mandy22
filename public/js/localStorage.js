@@ -1,6 +1,14 @@
 // Developed by Tochukwu Odeme ** https://github.com/teek-tech
 jQuery(function() {
-  
+    let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
+    const total = document.querySelector('#total');
+    if (shoppingCart && shoppingCart.length > 0) {
+        $('#item_count').text(shoppingCart.length);
+    }else{
+        $('#item_count').text(0);
+    }
+   
+
 //update item from cart by id
 $("#shopTable tbody").on('click', '.updateProduct', function(e){
     // console.log(this.id);
@@ -12,7 +20,7 @@ $("#shopTable tbody").on('click', '.updateProduct', function(e){
             $('#successMsg').show();
         }
      localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
-     getData();
+     //getData();
     })
 
 //update size from cart by id
@@ -72,44 +80,7 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
 
 })
 
-function getData(){
-    const tr = document.querySelector('.shop');
-    let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
-    $('#item_count').text(shoppingCart.length);
-    const total = document.querySelector('#total');
-    let html = ``;
-    let totalAmount = 0;
-    if(shoppingCart){
-        shoppingCart.forEach((cart) => {
-           html += `<tr>
-           <td class="product-col">
-                ${cart.img}
-               
-            </td>
-            <td class="quy-col text-center">
-            <h4> ${cart.quantity}</h4>
-            </td>
-            <td class="size-col text-center">
-                <h4>${cart.size}</h4>
-            </td>
-            <td class="total-col text-center">
-                <h4>₦${cart.quantity * cart.price}</h4>
-            </td>
-            <td class="action-th text-center"><i class='fa fa-trash removeProduct' style='color:red' data-id="${cart.productID}"></i></td>
-           </tr>`
-           totalAmount += parseInt(cart.quantity * cart.price)
-        });
-       // console.log(html);
-      // console.log(totalAmount);
-        tr.innerHTML = html;
-        total.innerHTML = totalAmount;
-       
-        
-    }else{
-        tr.innerHTML = "<td>No Data</td>";
-        total.innerHTML = 0;
-    }
-}
+
 
 
     $('.add-to-cart').on('click', function(e){
@@ -153,9 +124,90 @@ function getData(){
         //console.log("se itmes: " + shoppingCart);
     });
 
-//display Cart
-getData();
 
 
 
 
+
+  // paystack
+  function payWithPaystack(){
+    var amount = document.getElementById("amount").value;
+    var charge = 0.15;
+    if (amount > 2500) {
+        charge = (amount + 100) * 0.15;
+        total = charge + amount;
+    }else{
+        charge = amount * 0.15;
+        total = charge + amount;
+    }
+    document.getElementById("amount").value = amount;
+   // document.getElementById("fee").value = charge;
+var handler = PaystackPop.setup({
+key: 'pk_test_e683c68a6edfe02bba60e52d92ec930427339096',
+email: document.getElementById("email").value,
+amount: total * 100, //document.getElementById("votes").value * 30 + "00",
+currency: "NGN",
+ref: 'M22' + (Math.random().toString(36).substring(2, 16)).toUpperCase(),
+
+callback: function(response){
+    document.getElementById("refcode").value = response.reference; 
+    $('#finish').hide();
+    $('#checkout').submit();
+    // $('#tallyVote').modal('hide');
+    //location.reload();
+},
+onClose: function(){
+    document.getElementById("refcode").value = 'FAILED TRANSACTION';
+    $('#finish').hide();
+    $('#checkout').submit();
+    // $('#tallyVote').modal('hide'); 
+    //alert('window closed');
+}
+});
+handler.openIframe();
+
+}
+
+$('.site-btn').on('click', function(){
+    $('#checkout').submit();
+});
+
+// $(document).ready(function () {
+//     $('.site-btn').on('click', function(){
+//         $('#checkout').validate({ // initialize the plugin
+//             rules: {
+//                 first_name: {
+//                     required: true,
+//                     minlength: 2,
+//                     maxlength: 15
+//                 },
+//                 last_name: {
+//                     required: true,
+//                     minlength: 2,
+//                     maxlength: 15
+//                 },
+//                 email: {
+//                     required: true,
+//                     email: true
+//                 },
+//                 phone: {
+//                     required: true,
+//                     minlength: 11,
+//                     maxlength: 11
+//                 },
+//                 address: {
+//                     required: true,
+//                     minlength: 5
+//                 },
+//                 amount: {
+//                     required: true,
+//                 },
+//                 product_details: {
+//                     required: true
+//                 },
+//             }
+//         });
+//        // alert('Hello')
+       
+//     });
+// });

@@ -159,6 +159,53 @@
 
 
     @include('layouts.footer')
+
+    <script>
+        function getData(){
+    const tr = document.querySelector('.shop');
+    let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
+    if (shoppingCart && shoppingCart.length > 0) {
+        $('#item_count').text(shoppingCart.length);
+    }else{
+        $('#item_count').text(0);
+    }
+    const total = document.querySelector('#total');
+    let html = ``;
+    let totalAmount = 0;
+    if(shoppingCart){
+        shoppingCart.forEach((cart) => {
+           html += `<tr>
+           <td class="product-col">
+                ${cart.img}
+               
+            </td>
+            <td class="quy-col text-center">
+            <h4> ${cart.quantity}</h4>
+            </td>
+            <td class="size-col text-center">
+                <h4>${cart.size}</h4>
+            </td>
+            <td class="total-col text-center">
+                <h4>₦${cart.quantity * cart.price}</h4>
+            </td>
+            <td class="action-th text-center"><i class='fa fa-trash removeProduct' style='color:red' data-id="${cart.productID}"></i></td>
+           </tr>`
+           totalAmount += parseInt(cart.quantity * cart.price)
+        });
+       // console.log(html);
+      // console.log(totalAmount);
+        tr.innerHTML = html;
+        total.innerHTML = totalAmount > 0 ? totalAmount : 0;
+       
+        
+    }else{
+        tr.innerHTML = "<td>No Data</td>";
+        total.innerHTML = 0;
+    }
+}
+//display Cart
+getData();
+    </script>
 </body>
 
 </html>

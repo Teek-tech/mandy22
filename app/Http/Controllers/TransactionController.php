@@ -35,9 +35,22 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $validate = $request->validate([
+            'first_name' => 'required|min:2|max:15',
+            'last_name' => 'required|min:2|max:15',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required|min:5',
+            'product_details' => 'required',
+            'orderID' => 'required',
+            'amount' => 'required'
+        ]);
+         //dd($validate);
+        Transaction::create(request()->all());
 
+        return back()->with('success', 'Your order ('.$validate['orderID'].') have been received.');
+       
+    }
     /**
      * Display the specified resource.
      *

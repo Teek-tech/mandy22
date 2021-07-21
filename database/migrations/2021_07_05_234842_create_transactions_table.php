@@ -21,7 +21,8 @@ class CreateTransactionsTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->text('address');
-            $table->string('details');
+            $table->string('product_details');
+            $table->integer('amount');
             $table->boolean('status')->default(false);
             $table->timestamps();
         });
