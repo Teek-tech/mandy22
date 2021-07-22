@@ -14,7 +14,8 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        //
+        $transactions = Transaction::all();
+       return view('admin.transactions.index', compact('transactions'));
     }
 
     /**
@@ -48,7 +49,7 @@ class TransactionController extends Controller
          //dd($validate);
         Transaction::create(request()->all());
 
-        return back()->with('success', 'Your order ('.$validate['orderID'].') have been received.');
+        return back()->with('success', 'Your order #'.$validate['orderID'].' has been received.');
        
     }
     /**
@@ -59,7 +60,8 @@ class TransactionController extends Controller
      */
     public function show(Transaction $transaction)
     {
-        //
+        $receipt = Transaction::findOrFail($transaction->id);
+        return view('admin.transactions.details', compact('receipt'));
     }
 
     /**

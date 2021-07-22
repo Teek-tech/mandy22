@@ -2,162 +2,203 @@
 <html lang="en">
 
 <head>
-    @include('layouts.admin.head')
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Lakeside Admin Template </title>
+
+    @include('layouts.user-dashboard.head')
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <link href="{{ asset('user-dashboard-assets/plugins/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('user-dashboard-assets/css/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
 </head>
 
-<body class="sb-nav-fixed">
+<body>
+    @include('layouts.user-dashboard.nav')
 
-    @include('layouts.admin.nav')
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
 
-    <div id="layoutSidenav">
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
 
-        @include('layouts.admin.sidebar')
+        <!--  BEGIN SIDEBAR  -->
+        @include('layouts.new-admin.sidebar')
+        <!--  END SIDEBAR  -->
 
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <h3 class="mt-4">Hello {{auth()->user()->first_name}}!</h3>
-                    <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-primary text-white mb-4">
-                                <div class="card-body">Total Sales </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
-                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+        <!--  BEGIN CONTENT PART  -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <div class="row layout-top-spacing">
+
+
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Statistics</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Total Rooms</p>
+                                        <p class="w-stats">20</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Rooms Available</p>
+                                        <p class="w-stats">5</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-warning text-white mb-4">
-                                <div class="card-body">Total Products</div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
-                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Revenue</h6>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-success text-white mb-4">
-                                <div class="card-body">Success Card</div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
-                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Online</p>
+                                        <p class="w-stats">₦423,964</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-danger text-white mb-4">
-                                <div class="card-body">Danger Card</div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
-                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Offline</p>
+                                        <p class="w-stats">₦7,929</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-credit-card me-1"></i>
-                            Transactions
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                        <th>S/N</th>
-                                        <th>OrderID</th>
-                                        <th>Product</th>
-                                        <th>Date</th>
-                                        <th>Total</th>
-                                        <th>Payment Method</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr data-href="/transactions/details">
-                                        <td>1</td>
-                                        <td>#CBH210455</td>
-                                        <td>Purple children's gown</td>
-                                        <td>20th july 2021</td>
-                                        <td>10,000</td>
-                                        <td>Transfer</td>
-                                        <td><span class="badge bg-success">shipped</span></td>
-                                    </tr>
-                                    <tr data-href="/transactions/details">
-                                        <td>2</td>
-                                        <td>#CBH210455</td>
-                                        <td>Purple children's gown</td>
-                                        <td>20th july 2021</td>
-                                        <td>10,000</td>
-                                        <td>Transfer</td>
-                                        <td><span class="badge bg-warning">pending</span></td>
-                                    </tr>
-                                    <tr data-href="/transactions/details">
-                                        <td>3</td>
-                                        <td>#CBH210455</td>
-                                        <td>Purple children's gown</td>
-                                        <td>20th july 2021</td>
-                                        <td>10,000</td>
-                                        <td>Transfer</td>
-                                        <td><span class="badge bg-success">shipped</span></td>
-                                    </tr>
-                                    <tr data-href="/transactions/details">
-                                        <td>1</td>
-                                        <td>#CBH210455</td>
-                                        <td>Purple children's gown</td>
-                                        <td>20th july 2021</td>
-                                        <td>10,000</td>
-                                        <td>Transfer</td>
-                                        <td><span class="badge bg-success">shipped</span></td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Revenue</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Online</p>
+                                        <p class="w-stats">₦423,964</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Offline</p>
+                                        <p class="w-stats">₦7,929</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-activity-two">
+
+                            <div class="widget-heading">
+                                <h5 class="">Trnasactions</h5>
+                            </div>
+
+                            <div class="widget-content">
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th>S/N</th>
+                                                <th>Order Id</th>
+                                                <th>Product</th>
+                                                <th>Date</th>
+                                                <th>Total</th>
+                                                <th>Payment Method</th>
+                                                <th>Status</th>
+                                                <th>action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>#MANDY220056</td>
+                                                <td>Dorime Gown</td>
+                                                <td>12th July 2021</td>
+                                                <td>₦25000</td>
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>#MANDY220056</td>
+                                                <td>Dorime Gown</td>
+                                                <td>12th July 2021</td>
+                                                <td>₦25000</td>
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>#MANDY220056</td>
+                                                <td>Dorime Gown</td>
+                                                <td>12th July 2021</td>
+                                                <td>₦25000</td>
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>#MANDY220056</td>
+                                                <td>Dorime Gown</td>
+                                                <td>12th July 2021</td>
+                                                <td>₦25000</td>
+                                                <td>Bank Transfer</td>
+                                                <td>Pending</td>
+                                                <td class="text-center"><a href="#">View</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="tm-action-btn">
+                                    <a href="{{ route('new-admin.transactions.index') }}" class="btn">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-            </main>
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Mandy22 2021</div>
-                        <div>
-                            Designed by <a href="https://mezitox.com">Mezitox</a>
-                            {{-- &middot;
-                            <a href="#">Terms &amp; Conditions</a> --}}
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            </footer>
+
+            </div>
+
+            @include('layouts.user-dashboard.copyright')
         </div>
+        <!--  END CONTENT PART  -->
+
     </div>
+    <!-- END MAIN CONTAINER -->
 
+    @include('layouts.user-dashboard.footer')
 
-    @include('layouts.admin.footer')
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="{{ asset('user-dashboard-assets/plugins/apex/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('user-dashboard-assets/js/dashboard/dash_2.js') }}"></script>
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-    <script>
-        window.addEventListener('load', () => {
-            const rows = document.querySelectorAll('tr[data-href]');
-
-            rows.forEach(row => {
-                row.style.cursor = 'pointer';
-                row.addEventListener('click', () => {
-                    window.location.href = row.dataset.href;
-                })
-            });
-        });
-    </script>
 </body>
 
 </html>

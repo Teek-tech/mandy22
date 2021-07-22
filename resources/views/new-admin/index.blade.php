@@ -39,35 +39,65 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
                         <div class="widget widget-one">
                             <div class="widget-heading">
-                                <h6 class="">Total Sales</h6>
+                                <h6 class="">Statistics</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Total Rooms</p>
+                                        <p class="w-stats">20</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Rooms Available</p>
+                                        <p class="w-stats">5</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
                         <div class="widget widget-one">
                             <div class="widget-heading">
-                                <h6 class="">Total Products</h6>
+                                <h6 class="">Revenue</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Online</p>
+                                        <p class="w-stats">₦423,964</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Offline</p>
+                                        <p class="w-stats">₦7,929</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing widget-body">
-                        <div class="widget widget-card-four">
-                            <div class="widget-content">
-                                <div class="w-content">
-                                    <div class="w-info w-chart">
-                                        <p class="">Book New Guest</p>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Revenue</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Online</p>
+                                        <p class="w-stats">₦423,964</p>
                                     </div>
-                                    <div class="">
-                                        <div class="w-icon">
-                                            <a href="book-guest.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-home">
-                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                                </svg></a>
-                                        </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-title">Offline</p>
+                                        <p class="w-stats">₦7,929</p>
                                     </div>
                                 </div>
                             </div>

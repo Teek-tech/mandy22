@@ -192,8 +192,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verifie
     
     // Route::get('add-products/cars', [App\Http\Controllers\ProductController::class, 'cars'])->name('admin.add-cars');
     // Route::get('add-products/parts', [App\Http\Controllers\ProductController::class, 'parts'])->name('admin.add-parts');
-    // Route::get('transactions', [App\Http\Controllers\TransactionController::class, 'index'])->name('admin.transactions');
-    // Route::get('transaction/{id}', [App\Http\Controllers\TransactionController::class, 'info'])->name('admin.transaction-details');
+    
+    Route::get('transactions', [App\Http\Controllers\TransactionController::class, 'index'])->name('admin.transactions');
+    Route::get('transaction/{transaction:uuid}', [App\Http\Controllers\TransactionController::class, 'show'])->name('admin.transaction-details');
     
     // Route::get('activity', [App\Http\Controllers\AdminController::class, 'activity'])->name('admin.activity');
     // Route::get('profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile');

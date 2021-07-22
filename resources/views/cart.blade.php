@@ -78,7 +78,8 @@
                         <input type="text" placeholder="Enter promo code">
                         <button>Submit</button>
                     </form> --}}
-                    <button href="{{ route('checkout') }}" id="pto" class="site-btn">Proceed to checkout</button>
+                    <button id="pto" class="site-btn">
+                        <a href="{{ route('checkout') }}" style="color: #fff;">Proceed to checkout</a></button>
                     <a href="{{ route('shop.adults') }}" class="site-btn sb-dark">Continue shopping</a>
                 </div>
             </div>
@@ -160,8 +161,9 @@
 
 @include('layouts.footer')
 
-<script>
-    function getData(){
+<script type="text/javascript">
+    // function getData(){
+        $(document).ready(function() {
     const tr = document.querySelector('.shop');
     let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
     if (shoppingCart && shoppingCart.length > 0) {
@@ -203,15 +205,16 @@
         total.innerHTML = 0;
     }
 
-if (shoppingCart && shoppingCart.length > 0) {
-    $('#pto').attr("disabled", false);
-}else{
+if (shoppingCart && shoppingCart.length < 0) {
+//     $('#pto').attr("disabled", false);
+// }else{
     $('#pto').attr("disabled", true);
     $('#pto').text('Your cart is empty');
 }
-}
+        });
+// }
 //display Cart
-getData();
+// getData();
 
 
     </script>

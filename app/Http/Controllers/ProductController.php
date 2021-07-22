@@ -43,24 +43,20 @@ class ProductController extends Controller
             'title' => 'required|max:20|min:3',
             'category' => 'required',
             'size' => 'required',
-            // 'color' => 'max:20|min:3',
             'price' => 'required|max:20|min:3',
             'description' => 'required|max:500|min:5',
             'product_image' => 'required',
-            //'product_image.*' => 'image|mimes:jpeg,png,jpg|max:10000'
         ]);
-        //$validate['product_image'] = json_encode($validate['product_image']);
-            //  dd($validate);
-             //dd($validate['product_image']);
+
             if($request->hasFile('product_image')) {
                 $product = Product::create([
                     'title' => $validate['title'],
+                    'description' => $validate['description'],
                     'category' => $validate['category'],
-                    'size' => $validate['size'],
-                    // 'color' => $validate['color'],
-                    'price' => $validate['price'],
-                    'description' => $validate['description']
+                    'size' => implode(',', $validate['size']),
+                    'price' => $validate['price']
                 ]);
+
                 foreach($request->file('product_image') as $image) {
                     $destinationPath = 'product_images/'.$validate['category'];
                     $filename = $validate['category'].time().$image->getClientOriginalName();

@@ -6,7 +6,7 @@
         <ul class="list-unstyled menu-categories" id="accordionExample">
 
             <li class="menu">
-                <a href="{{ route('new-admin.index') }}" aria-expanded="false" class="dropdown-toggle">
+                <a href="{{ route('admin.index') }}" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -48,17 +48,17 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="app" data-parent="#accordionExample">
                     <li>
-                        <a href="{{ route('new-admin.products.index') }}"> View Products </a>
+                        <a href="{{ route('admin.products') }}"> View Products </a>
                     </li>
                     <li>
-                        <a href="{{ route('new-admin.products.add-product') }}"> Add Products </a>
+                        <a href="{{ route('admin.products.create') }}"> Add Products </a>
                     </li>
                 </ul>
             </li>
 
 
             <li class="menu">
-                <a href="{{ route('new-admin.transactions.index') }}" aria-expanded="false" class="dropdown-toggle">
+                <a href="{{ route('admin.transactions') }}" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

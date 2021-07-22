@@ -102,7 +102,7 @@
                             <img data-href="{{route('shop.product.detail', $product->uuid)}}"
                                 src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="">
                             <div class="pi-links">
-                                <a href="{{ route('cart') }}" class="add-card add-to-cart"
+                                <a href="{{route('shop.product.detail', $product->uuid)}}" class="add-card add-to-cart"
                                 data-id="{{$product->id}}"
                                 data-quantity="1"
                                 data-price="{{$product->price}}"
