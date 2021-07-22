@@ -156,7 +156,6 @@ Route::get('/new-admin/profile', function(){
     return view('new-admin.profile');
 })->name('new-admin.profile');
 
-
 // checkout
 Route::get('/checkout', function(){
     return view('checkout');

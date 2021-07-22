@@ -26,6 +26,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 order-2 order-lg-1">
+                    @if(session()->has('success'))
+                    <div class="alert alert-solid alert-success" role="alert" style="background-color:rgb(0, 204, 0); color:#fff;">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                      {{ session()->get('success') }}
+                    </div>
+                  @endif
                     <form class="checkout-form" id="checkout" action="{{route('user.checkout')}}" method="POST">
                         @csrf
                         <div class="cf-title">Billing Address</div>
@@ -64,7 +72,7 @@
                             @enderror
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="Email" name="email" readonly value="{{auth()->user()->email}}">
+                                <input type="email" placeholder="Email" name="email" id="email" readonly value="{{auth()->user()->email}}">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong style="color: red;">{{ $message }}</strong>
@@ -88,7 +96,7 @@
                             @enderror
                                 <input type="hidden" readonly name="product_details" id="product_details" required>
                                 <input type="hidden" readonly name="amount" id="amount" required>
-                                <input type="hidden" readonly name="orderID" id="orderID" required value="sdfdd">
+                                <input type="hidden" readonly name="orderID" id="orderID" required value="{{old('orderID')}}">
                             </div>
                             {{-- <div class="col-md-6">
                                 <input type="text" placeholder="Zip code">
@@ -132,7 +140,7 @@
                         </ul>
                     </form>
                     <button class="site-btn submit-order-btn" onclick="payWithPaystack()">Place Order</button>
-                   
+                    <br><br><div id="error"></div>
                 </div>
                 <div class="col-lg-4 order-1 order-lg-2">
                     <div class="checkout-cart">

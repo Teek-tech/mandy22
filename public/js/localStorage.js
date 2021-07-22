@@ -131,7 +131,7 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
 
   // paystack
   function payWithPaystack(){
-    var amount = document.getElementById("amount").value;
+    var amount = parseInt(document.getElementById("amount").value);
     var charge = 0.15;
     if (amount > 2500) {
         charge = (amount + 100) * 0.15;
@@ -141,6 +141,7 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
         total = charge + amount;
     }
     document.getElementById("amount").value = amount;
+    console.log(total);
    // document.getElementById("fee").value = charge;
 var handler = PaystackPop.setup({
 key: 'pk_test_e683c68a6edfe02bba60e52d92ec930427339096',
@@ -150,27 +151,32 @@ currency: "NGN",
 ref: 'M22' + (Math.random().toString(36).substring(2, 16)).toUpperCase(),
 
 callback: function(response){
-    document.getElementById("refcode").value = response.reference; 
+    document.getElementById("orderID").value = response.reference; 
     $('#finish').hide();
     $('#checkout').submit();
     // $('#tallyVote').modal('hide');
     //location.reload();
 },
 onClose: function(){
-    document.getElementById("refcode").value = 'FAILED TRANSACTION';
+    document.getElementById("orderID").value = 'FAILED TRANSACTION';
     $('#finish').hide();
-    $('#checkout').submit();
-    // $('#tallyVote').modal('hide'); 
-    //alert('window closed');
+    const errorMsg = document.querySelector('#error');
+    let failed = `<div class="alert alert-solid alert-danger" role="alert" style="background-color:red; color:#fff;">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                      Error! Something went wrong, kindly try again.
+                    </div>`
+    errorMsg.innerHTML = failed;
 }
 });
 handler.openIframe();
 
 }
 
-$('.site-btn').on('click', function(){
-    $('#checkout').submit();
-});
+// $('.site-btn').on('click', function(){
+//     $('#checkout').submit();
+// });
 
 // $(document).ready(function () {
 //     $('.site-btn').on('click', function(){

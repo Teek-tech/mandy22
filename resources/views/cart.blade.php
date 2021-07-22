@@ -78,7 +78,7 @@
                         <input type="text" placeholder="Enter promo code">
                         <button>Submit</button>
                     </form> --}}
-                    <a href="#" class="site-btn">Proceed to checkout</a>
+                    <button href="{{ route('checkout') }}" id="pto" class="site-btn">Proceed to checkout</button>
                     <a href="{{ route('shop.adults') }}" class="site-btn sb-dark">Continue shopping</a>
                 </div>
             </div>
@@ -158,10 +158,10 @@
     </section>
 
 
-    @include('layouts.footer')
+@include('layouts.footer')
 
-    <script>
-        function getData(){
+<script>
+    function getData(){
     const tr = document.querySelector('.shop');
     let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
     if (shoppingCart && shoppingCart.length > 0) {
@@ -199,12 +199,21 @@
        
         
     }else{
-        tr.innerHTML = "<td>No Data</td>";
+        tr.innerHTML = "<td>Empty Cart</td>";
         total.innerHTML = 0;
     }
+
+if (shoppingCart && shoppingCart.length > 0) {
+    $('#pto').attr("disabled", false);
+}else{
+    $('#pto').attr("disabled", true);
+    $('#pto').text('Your cart is empty');
+}
 }
 //display Cart
 getData();
+
+
     </script>
 </body>
 
