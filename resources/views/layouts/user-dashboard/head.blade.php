@@ -1,4 +1,4 @@
-<link rel="icon" type="image/x-icon" href="{{ asset('user-dashboard-assets/img/favicon.ico') }}" />
+<link rel="shortcut icon" href="{{ asset('img/logo/favicon.png') }}" />
 <link href="{{ asset('user-dashboard-assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
 <script src="{{ asset('user-dashboard-assets/js/loader.js') }}"></script>
 
