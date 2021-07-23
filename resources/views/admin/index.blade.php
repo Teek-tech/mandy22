@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Mandies22 | Admin </title>
 
-    @include('layouts.user-dashboard.head')
+    @include('layouts.admin.head')
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <link href="{{ asset('user-dashboard-assets/plugins/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    @include('layouts.user-dashboard.nav')
+    @include('layouts.admin.nav')
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container" id="container">
@@ -26,7 +26,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.new-admin.sidebar')
+        @include('layouts.admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT PART  -->
@@ -146,7 +146,7 @@
                                 </div>
 
                                 <div class="tm-action-btn">
-                                    <a href="{{ route('new-admin.transactions.index') }}" class="btn">View All</a>
+                                    <a href="{{ route('admin.transactions') }}" class="btn">View All</a>
                                 </div>
                             </div>
                         </div>
@@ -157,14 +157,14 @@
 
             </div>
 
-            @include('layouts.user-dashboard.copyright')
+            @include('layouts.admin.copyright')
         </div>
         <!--  END CONTENT PART  -->
 
     </div>
     <!-- END MAIN CONTAINER -->
 
-    @include('layouts.user-dashboard.footer')
+    @include('layouts.admin.footer')
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('user-dashboard-assets/plugins/apex/apexcharts.min.js') }}"></script>

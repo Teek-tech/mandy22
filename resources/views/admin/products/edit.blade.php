@@ -8,7 +8,7 @@
     <title>Mandies22 | Admin </title>
  <!-- BEGIN PAGE LEVEL STYLES -->
 
-    @include('layouts.user-dashboard.head')
+    @include('layouts.admin.head')
 
    
     <link rel="stylesheet" type="text/css"
@@ -27,7 +27,7 @@
 <body>
 
 
-    @include('layouts.user-dashboard.nav')
+    @include('layouts.admin.nav')
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container" id="container">
@@ -36,7 +36,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.new-admin.sidebar')
+        @include('layouts.admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
@@ -161,7 +161,7 @@
                     </div>
                 </div>
             </div>
-            @include('layouts.user-dashboard.copyright')
+            @include('layouts.admin.copyright')
         </div>
 
         
@@ -171,7 +171,7 @@
     
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    @include('layouts.user-dashboard.footer')
+    @include('layouts.admin.footer')
     <!-- END GLOBAL MANDATORY SCRIPTS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>

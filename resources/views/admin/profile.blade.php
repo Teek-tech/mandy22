@@ -115,7 +115,7 @@
                 </div>
 
             </div>
-            @include('layouts.user-dashboard.copyright')
+            @include('layouts.admin.copyright')
         </div>
         <!--  END CONTENT AREA  -->
     </div>
@@ -124,7 +124,7 @@
 
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    @include('layouts.user-dashboard.footer')
+    @include('layouts.admin.footer')
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL SCRIPTS -->

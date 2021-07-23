@@ -30,7 +30,7 @@
 <body>
 
 
-    @include('layouts.user-dashboard.nav')
+    @include('layouts.admin.nav')
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container" id="container">
@@ -39,7 +39,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.new-admin.sidebar')
+        @include('layouts.admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
@@ -86,7 +86,7 @@
                 </div>
 
             </div>
-            @include('layouts.user-dashboard.copyright')
+            @include('layouts.admin.copyright')
         </div>
         <!--  END CONTENT AREA  -->
     </div>
@@ -95,7 +95,7 @@
 
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    @include('layouts.user-dashboard.footer')
+    @include('layouts.admin.footer')
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL SCRIPTS -->

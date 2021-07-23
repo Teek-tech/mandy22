@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Mandies22 | Admin </title>
 
-    @include('layouts.user-dashboard.head')
+    @include('layouts.admin.head')
 
 
 </head>
@@ -15,7 +15,7 @@
 <body>
 
 
-    @include('layouts.user-dashboard.nav')
+    @include('layouts.admin.nav')
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container" id="container">
@@ -96,7 +96,7 @@
                 </div>
 
             </div>
-            @include('layouts.user-dashboard.copyright')
+            @include('layouts.admin.copyright')
         </div>
         <!--  END CONTENT AREA  -->
     </div>
@@ -105,7 +105,7 @@
 
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    @include('layouts.user-dashboard.footer')
+    @include('layouts.admin.footer')
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
