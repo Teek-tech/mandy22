@@ -4,6 +4,15 @@
 <head>
     <title>Mandies22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
+    <style>
+        #cshop{
+            display: none;
+            background-color: #fc8835;
+        }
+        #successMsg, #successMsgSize {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,7 +70,9 @@
                     {{-- <form> --}}
                     <div class="">
                         <div class="fw-size-choose">
+                            
                         <p>Size</p>
+                        <div style="color: green" id="successMsgSize"></div>
                         @foreach(explode(',', $product->size) as $sizes)
                             <div class="sc-item" data-id="{{$product->id}}" id="siz">
                                 <input type="radio" name="sc" id="{{$sizes}}-size" value="{{$sizes}}" class="updateProductSize">
@@ -91,21 +102,26 @@
                             <label for="xxl-size">42</label>
                         </div> --}}
                     </div>
-                    <div class="quantity">
-                        <p>Quantity</p>
-                        <div class="pro-qty" id="quant"><input type="text" id="{{$product->id}}" value="1" class="updateProductQty"></div>
-                    </div> 
-                </div>
-                <input type="hidden" id="sizedata" value="0">
-                    <a class="site-btn add-to-cart" 
+                            <div class="quantity">
+                                
+                                <p>Quantity <span style="color: red" id="errorQant"></span> <br></p>
+                                <div class="pro-qty" id="quant"><input type="text" id="{{$product->id}}" value="1" class="updateProductQty" maxlength="5"></div>
+                            </div> 
+                        </div><div style="color: green" id="successMsg"></div>
+                        <input type="hidden" id="sizedata" value="0">
+                        <input type="hidden" id="inStock" value="{{$product->stock}}">
+                        
+                <p style="color: red" id="errorText"></p>
+                    <a class="site-btn add-to-cart" style="color: #fff"; 
                                 data-id="{{$product->id}}"
                                 {{-- data-quantity="1" --}}
                                 data-price="{{$product->price}}"
-                                {{-- data-size="none" --}}
+                                data-stock="{{$product->stock}}"
+                                data-url="{{route('welcome')}}?success=1&product={{$product->title}}"
                                 data-product="{{$product->title}}"
                                 data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
-                    >Add to Carts</a>  
-                    {{-- <a href="{{route('cart')}}" class="site-btn">View Cart</a> --}}
+                    >Add to Cart</a>  
+                    <a href="{{route('shop.adults')}}" class="site-btn" id="cshop">Continue Shopping</a>
 
                     {{-- </form> --}}
                     <div id="accordion" class="accordion-area">
@@ -218,7 +234,7 @@
                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
-                    </div>
+                    </div> 
                     <div class="pi-text">
                         <h6>$35,00</h6>
                         <p>Flamboyant Pink Top </p>

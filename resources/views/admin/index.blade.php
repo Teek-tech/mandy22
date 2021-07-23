@@ -44,14 +44,14 @@
                             <div class="w-chart">
                                 <div class="w-chart-section">
                                     <div class="w-detail">
-                                        <p class="w-title">Total Rooms</p>
+                                        <p class="w-title">Total Products</p>
                                         <p class="w-stats">20</p>
                                     </div>
                                 </div>
 
                                 <div class="w-chart-section">
                                     <div class="w-detail">
-                                        <p class="w-title">Rooms Available</p>
+                                        <p class="w-title">Stock</p>
                                         <p class="w-stats">5</p>
                                     </div>
                                 </div>
@@ -66,14 +66,14 @@
                             <div class="w-chart">
                                 <div class="w-chart-section">
                                     <div class="w-detail">
-                                        <p class="w-title">Online</p>
+                                        <p class="w-title">Transactions</p>
                                         <p class="w-stats">₦423,964</p>
                                     </div>
                                 </div>
 
                                 <div class="w-chart-section">
                                     <div class="w-detail">
-                                        <p class="w-title">Offline</p>
+                                        <p class="w-title">Orders</p>
                                         <p class="w-stats">₦7,929</p>
                                     </div>
                                 </div>
@@ -84,22 +84,22 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 layout-spacing">
                         <div class="widget widget-one">
                             <div class="widget-heading">
-                                <h6 class="">Revenue</h6>
+                                <h6 class="">Sales</h6>
                             </div>
                             <div class="w-chart">
                                 <div class="w-chart-section">
                                     <div class="w-detail">
-                                        <p class="w-title">Online</p>
+                                        <p class="w-title">Amount</p>
                                         <p class="w-stats">₦423,964</p>
                                     </div>
                                 </div>
 
-                                <div class="w-chart-section">
+                                {{-- <div class="w-chart-section">
                                     <div class="w-detail">
                                         <p class="w-title">Offline</p>
                                         <p class="w-stats">₦7,929</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -115,61 +115,33 @@
                             <div class="widget-content">
 
                                 <div class="table-responsive">
-                                    <table class="table table-bordered mb-4">
+                                    <table class="multi-table table table-hover" style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th>S/N</th>
                                                 <th>Order Id</th>
-                                                <th>Product</th>
-                                                <th>Date</th>
-                                                <th>Total</th>
-                                                <th>Payment Method</th>
+                                                <th>Customer</th>
+                                                <th>Amount</th>
                                                 <th>Status</th>
-                                                <th>action</th>
+                                                <th class="text-center">Purchase on</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>#MANDY220056</td>
-                                                <td>Dorime Gown</td>
-                                                <td>12th July 2021</td>
-                                                <td>₦25000</td>
-                                                <td>Bank Transfer</td>
+                                            @php $sn=1; @endphp
+                                            @foreach ($transactions as $transaction)
+                                            <tr data-href="{{route('admin.transaction-details',  $transaction->uuid)}}">
+                                                <td>{{$sn++}}</td>
+                                                <td>#{{$transaction->orderID}}</td>
+                                                <td>{{$transaction->first_name}} {{$transaction->last_name}}</td>
+                                                <td>{{$transaction->amount}}</td>
                                                 <td>Pending</td>
-                                                <td class="text-center"><a href="#">View</a></td>
+                                                <td class="text-center">
+                                                    12th July 2021
+                                                </td>
                                             </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>#MANDY220056</td>
-                                                <td>Dorime Gown</td>
-                                                <td>12th July 2021</td>
-                                                <td>₦25000</td>
-                                                <td>Bank Transfer</td>
-                                                <td>Pending</td>
-                                                <td class="text-center"><a href="#">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>#MANDY220056</td>
-                                                <td>Dorime Gown</td>
-                                                <td>12th July 2021</td>
-                                                <td>₦25000</td>
-                                                <td>Bank Transfer</td>
-                                                <td>Pending</td>
-                                                <td class="text-center"><a href="#">View</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>#MANDY220056</td>
-                                                <td>Dorime Gown</td>
-                                                <td>12th July 2021</td>
-                                                <td>₦25000</td>
-                                                <td>Bank Transfer</td>
-                                                <td>Pending</td>
-                                                <td class="text-center"><a href="#">View</a></td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
+    
                                     </table>
                                 </div>
 
@@ -198,7 +170,17 @@
     <script src="{{ asset('user-dashboard-assets/plugins/apex/apexcharts.min.js') }}"></script>
     <script src="{{ asset('user-dashboard-assets/js/dashboard/dash_2.js') }}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script>
+        window.addEventListener('load', () => {
+            const rows = document.querySelectorAll('tr[data-href]');
 
+            rows.forEach(row => {
+                row.addEventListener('click', () => {
+                    window.location.href = row.dataset.href;
+                })
+            });
+        });
+    </script>
 </body>
 
 </html>

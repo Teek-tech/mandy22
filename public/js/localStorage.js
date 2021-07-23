@@ -32,14 +32,14 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
      let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
         updateCart = shoppingCart.findIndex((product => product.productID == productID));
         shoppingCart[updateCart].size = this.value == '' ? 'none' : this.value
-        if(updateCart){
-            $('#successText').text('Quantity updated successfullly.');
-            $('#successMsg').show();
-            // $('#sizedata').val(this.value)
+        if(shoppingCart[updateCart].size == this.value){
+            $('#successMsgSize').text('Size updated successfullly.');
+            $('#successMsgSize').fadeIn('slow');
+            $('#successMsgSize').fadeOut(2000);
         }
        
      localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
-     getData();
+    //  getData();
     })
 
 
@@ -54,12 +54,20 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
          let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
         updateCart = shoppingCart.findIndex((product => product.productID == product_id));
         shoppingCart[updateCart].quantity = quantity > 0 ? quantity : 1
-        if(updateCart){
-            $('#successText').text('Quantity updated successfullly.');
-            $('#successMsg').show();
-        }
+
+        // if(quantity > stock){
+        //     $('#errorText').text('We only have '+ stock + ' in stock');
+        // }
+
+        // if(shoppingCart[updateCart].quantity != shoppingCart[updateCart].quantity){
+        //     $('#successMsg').text('Quantity updated successfullly.');
+        //     $('#successMsg').show();
+        // }
      localStorage.setItem('Mandy22Shop', JSON.stringify(shoppingCart));
-     getData();
+     $('#successMsg').text('Quantity updated successfullly.');
+    $('#successMsg').fadeIn('slow');
+    $('#successMsg').fadeOut(2000);
+     //getData();
 	 });
      
     //remove item from cart by id
@@ -69,13 +77,13 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
         let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
         let filteredProducts = shoppingCart.filter(product => product.productID !== productID );
         localStorage.setItem('Mandy22Shop', JSON.stringify(filteredProducts));
-        getData();
+       
         })
 
         $(".empty-cart").on('click', function(){
             localStorage.clear();
             console.log(localStorage.getItem('Mandy22Shop'));
-            getData();
+            
          });
 
 })
@@ -88,6 +96,7 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
         var product = $(this).attr('data-product');
         var quantity = $('#quant input').val(); // $(this).attr('data-quantity');
         var price =   $(this).attr('data-price');
+        var url =   $(this).attr('data-url');
         var size = $('#sizedata').val(); // $(this).attr('data-size');
         var img = $(this).attr('data-img');
 
@@ -104,10 +113,12 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
         var getProductID = shoppingCart.findIndex((product => product.productID == productID));
 
         if(shoppingCart[getProductID]){
-            console.log("You have already added this item to cart! " + shoppingCart[getProductID].price)
+            //console.log("You have already added this item to cart! " + shoppingCart[getProductID].price)
             $('#errorText').text('You have already added this item to cart!');
             $('#errorMsg').show();
-        }else{
+            $('.add-to-cart').fadeOut('slow');
+            $('#cshop').show();
+         } else{
             shoppingCart.push({
                 'productID' : productID,
                 'product' : product,
@@ -115,13 +126,16 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
                 'size' : size,
                 'quantity' : quantity,
                 'img' : img
-                })
+                });
+            localStorage.setItem("Mandy22Shop", JSON.stringify(shoppingCart));
+            window.location = url;
         }
         //Log object to Console.
-        console.log("Before update: ", shoppingCart[getProductID])
+       // console.log("Before update: ", shoppingCart[getProductID])
         //retrieve updated cart items.
-        localStorage.setItem("Mandy22Shop", JSON.stringify(shoppingCart));
+        // localStorage.setItem("Mandy22Shop", JSON.stringify(shoppingCart));
         //console.log("se itmes: " + shoppingCart);
+       
     });
 
 

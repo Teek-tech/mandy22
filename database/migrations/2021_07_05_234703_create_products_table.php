@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->boolean('status')->default(true);
             $table->boolean('in_stock')->default(true);
+            $table->integer('stock')->default(0);
             $table->timestamps();
         });
     }

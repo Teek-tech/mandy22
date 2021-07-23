@@ -43,6 +43,7 @@ class ProductController extends Controller
             'title' => 'required|max:20|min:3',
             'category' => 'required',
             'size' => 'required',
+            'stock' => 'required',
             'price' => 'required|max:20|min:3',
             'description' => 'required|max:500|min:5',
             'product_image' => 'required',
@@ -121,6 +122,7 @@ class ProductController extends Controller
         
         $product->title = $request->get('title');
         $product->category = $request->get('category');
+        $product->stock = $request->get('stock');
         $product->size = implode(',', $request->get('size'));
         $product->color = $request->get('color');
         $product->price = $request->get('price');

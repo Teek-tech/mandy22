@@ -187,6 +187,7 @@
 	 proQty.append('<span class="inc qtybtn">+</span>');
 	 proQty.on('click', '.qtybtn', function () {
 		 var $button = $(this);
+		 var stock = $("#inStock").val();
 		 var oldValue = $button.parent().find('input').val();
 		 if ($button.hasClass('inc')) {
 			 var newVal = parseFloat(oldValue) + 1;
@@ -198,6 +199,15 @@
 				 newVal = 0;
 			 }
 		 }
+
+		if(newVal > stock){
+			console.log(stock);
+		   $('#errorQant').text('We only have '+ parseInt(stock) +' in stock');
+		//    $('#errorQant').fadeIn('slow');
+		//    $('#errorQant').fadeOut(2000);
+		   newVal = 0;
+		}
+
 		 $button.parent().find('input').val(newVal);
 	 });
  

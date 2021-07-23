@@ -84,7 +84,10 @@
                                                 <option value="children">Children</option>
                                             </select>
                                         </div>
-
+                                        <div class="form-group my-3">
+                                            <label for="name">Quantity (How manay is in stock)</label>
+                                            <input type="number" name="stock" class="form-control" value="{{$product->stock}}">
+                                        </div>
                                         <div class="form-group my-3">
                                             <label for="size">Select Available Sizes</label>
                                             <select name="size[]" class="form-control js-example-basic-multiple" multiple="multiple">

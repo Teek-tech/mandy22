@@ -4,7 +4,19 @@
 <head>
     <title>Mandies22 | No.1 Fashion Store in Port Harcourt</title>
     @include('layouts.head')
-
+<style>
+    #message {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 40%;
+    background-color: green;
+}
+#inner-message {
+    margin: 0 auto;
+    color: #fff;
+}
+</style>
 </head>
 
 <body>
@@ -55,8 +67,16 @@
             <div class="slide-num-holder" id="snh-1"></div>
         </div>
     </section>
-
-
+    @if(request('success') == 1)
+    <div id="message">
+        {{-- <div style="padding: 5px;"> --}}
+            <div id="inner-message" class="alert alert-error">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                You have successfully added {{ucfirst(request('product'))}}  to your cart.
+            </div>
+        {{-- </div> --}}
+    </div>
+    @endif
     <section class="features-section">
         <div class="container-fluid">
             <div class="row">
