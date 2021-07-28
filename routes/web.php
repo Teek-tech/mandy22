@@ -124,6 +124,41 @@ Route::get('/checkout', function(){
 Route::post('checkout', [App\Http\Controllers\TransactionController::class, 'store'])->name('user.checkout');
 
 
+
+// CUSTOMER DASHBOARD START
+
+// index
+Route::get('/user/dashboard', function(){
+    return view('customer-dashboard.index');
+})->name('customer-dashboard.index');
+
+// profile
+Route::get('/user/profile', function(){
+    return view('customer-dashboard.profile');
+})->name('customer-dashboard.profile');
+
+// user order details
+Route::get('/user/order-detail', function(){
+    return view('customer-dashboard.orders-details');
+})->name('customer-dashboard.orders-details');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

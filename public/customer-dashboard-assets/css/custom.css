@@ -1,0 +1,54 @@
+:root {
+    --primary-color: #fc8835;
+    --white: #fff;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar[data-color="orange"] li.active > a {
+    background-color: var(--primary-color) !important;
+}
+
+.card-header-primary {
+    background: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+table th {
+    color: var(--primary-color) !important;
+}
+
+table tbody tr .badge {
+    padding: 10px;
+    color: var(--white);
+}
+
+table tbody tr .badge.bg-warning {
+    background-color: var(--primary-color) !important;
+}
+
+#orders-table tbody tr,
+#transactions-table tbody tr {
+    cursor: pointer;
+}
+
+.is-focused .form-control {
+    border-bottom: 1px solid var(--primary-color) !important;
+    background-image: none !important;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+footer .float-right a {
+    color: var(--primary-color) !important;
+}
