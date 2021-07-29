@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Mandies22 | Profile</title>
 
-    @include('layouts.user-dashboard.head')
+    @include('layouts.admin.head')
 
     <!-- END PAGE LEVEL STYLES -->
     <style>
@@ -43,7 +43,7 @@
 <body>
 
 
-    @include('layouts.user-dashboard.nav')
+    @include('layouts.admin.nav')
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container" id="container">
@@ -52,7 +52,7 @@
         <div class="search-overlay"></div>
 
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.new-admin.sidebar')
+        @include('layouts.admin.sidebar')
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
