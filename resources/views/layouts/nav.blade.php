@@ -34,7 +34,7 @@
                 <div class="site-logo-area">
                     <a href="{{ route('welcome') }}" class="site-logo">
                         <img src="{{ asset('img/logo/logon.png') }}" alt="mandy22 logo">
-                        
+
                     </a>
                 </div>
                 <div class="">
@@ -149,7 +149,7 @@
         <div class="container">
 
             <ul class="main-menu">
-                <li><a href="{{ route('welcome') }}">Home</a></li>
+                <li class="active"><a href="{{ route('welcome') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li><a href="#">Shop</a>
                     <ul class="sub-menu">

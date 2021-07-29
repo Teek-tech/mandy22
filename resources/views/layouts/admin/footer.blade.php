@@ -1,5 +1,13 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="{{ asset('user-dashboard-assets/js/libs/jquery-3.1.1.min.js') }}"></script>
+<script src="{{ asset('user-dashboard-assets/bootstrap/js/popper.min.js') }}"></script>
+<script src="{{ asset('user-dashboard-assets/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('user-dashboard-assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+<script src="{{ asset('user-dashboard-assets/js/app.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        App.init();
+    });
 </script>
-<script src="{{ asset('admin-assets/js/scripts.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-<script src="{{ asset('admin-assets/js/datatables-simple-demo.js') }}"></script>
+<script src="{{ asset('user-dashboard-assets/js/custom.js') }}"></script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
