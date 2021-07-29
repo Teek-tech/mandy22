@@ -276,7 +276,11 @@
 }
 
 .main-menu li:hover > a {
-    color: #fc8837;
+    color: var(--primary-color);
+}
+
+.main-menu li.active a {
+    color: var(--primary-color);
 }
 
 .main-menu .sub-menu li a:hover {
@@ -294,6 +298,20 @@
 
 .feature:nth-child(2) {
     background: #115ae6;
+}
+
+.feature .feature-inner {
+    padding: 10px 15px;
+}
+
+.feature .feature-icon {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.feature h2 {
+    font-size: 1em;
 }
 
 .product-item .tag-sale {
