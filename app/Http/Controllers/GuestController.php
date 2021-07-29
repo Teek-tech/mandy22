@@ -109,5 +109,20 @@ class GuestController extends Controller
         $user->notify(new NotifyCustomer($user));
         return back()->with('success', 'We will contact you shortly.');
     }
+
+    public function dashboard()
+    {
+        return view('customer-dashboard.index');
+    }
+
+    public function profile()
+    {
+        return view('customer-dashboard.profile');
+    }
+
+    public function orderDetails()
+    {
+        return view('customer-dashboard.orders-details');
+    }
     
 }
