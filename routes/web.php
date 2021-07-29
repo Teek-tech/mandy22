@@ -100,20 +100,20 @@ Route::get('/admin/register', function(){
 
 Auth::routes(['verify' => true]);
 
-// user dashboard
-Route::get('/user/index', function(){
-    return view('user-dashboard.index');
-})->name('user-dashboard.index');
+// // user dashboard
+// Route::get('/user/index', function(){
+//     return view('user-dashboard.index');
+// })->name('user-dashboard.index');
 
-// orders
-Route::get('/user/orders', function(){
-    return view('user-dashboard.orders');
-})->name('user-dashboard.orders');
+// // orders
+// Route::get('/user/orders', function(){
+//     return view('user-dashboard.orders');
+// })->name('user-dashboard.orders');
 
-// Transactions
-Route::get('/user/transactions', function(){
-    return view('user-dashboard.transactions');
-})->name('user-dashboard.transactions');
+// // Transactions
+// Route::get('/user/transactions', function(){
+//     return view('user-dashboard.transactions');
+// })->name('user-dashboard.transactions');
 
 
 
@@ -128,23 +128,25 @@ Route::post('checkout', [App\Http\Controllers\TransactionController::class, 'sto
 // CUSTOMER DASHBOARD START
 
 // index
-Route::get('/user/dashboard', function(){
-    return view('customer-dashboard.index');
-})->name('customer-dashboard.index');
+// Route::get('/user/dashboard', function(){
+//     return view('customer-dashboard.index');
+// })->name('customer-dashboard.index');
 
-// profile
-Route::get('/user/profile', function(){
-    return view('customer-dashboard.profile');
-})->name('customer-dashboard.profile');
+// // profile
+// Route::get('/user/profile', function(){
+//     return view('customer-dashboard.profile');
+// })->name('customer-dashboard.profile');
 
-// user order details
-Route::get('/user/order-detail', function(){
-    return view('customer-dashboard.orders-details');
-})->name('customer-dashboard.orders-details');
-
-
+// // user order details
+// Route::get('/user/order-detail', function(){
+//     return view('customer-dashboard.orders-details');
+// })->name('customer-dashboard.orders-details');
 
 
+
+Route::get('/user/dashboard', [App\Http\Controllers\GuestController::class, 'dashboard'])->middleware('auth')->name('customer-dashboard.index');
+Route::get('/user/profile', [App\Http\Controllers\GuestController::class, 'profile'])->name('customer-dashboard.profile');
+Route::get('/user/order-detail', [App\Http\Controllers\GuestController::class, 'orderDetails'])->name('customer-dashboard.orders-details');
 
 
 
