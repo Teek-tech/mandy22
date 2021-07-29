@@ -83,9 +83,20 @@ class GuestController extends Controller
      * @param  \App\Models\Transaction  $transaction
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $user)
     {
-        //
+        $user = auth()->user();
+        $user->update([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'phone' => $request->phone,
+            'postal' => $request->postal,
+            'address' => $request->address,
+            'country' => $request->country
+        ]);
+        // $user->first_name = $request->first_name;
+        // $user->save();
+        return back();
     }
 
     /**
@@ -117,7 +128,8 @@ class GuestController extends Controller
 
     public function profile()
     {
-        return view('customer-dashboard.profile');
+        $user = auth()->user();
+        return view('customer-dashboard.profile', compact('user'));
     }
 
     public function orderDetails()

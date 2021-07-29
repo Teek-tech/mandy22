@@ -4,13 +4,13 @@
         </a></div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="nav-item active  ">
+            <li class="nav-item {{request()->is('user/dashboard') ? 'active' : ''}} ">
                 <a class="nav-link" href="{{ route('customer-dashboard.index') }}">
                     <i class="material-icons">dashboard</i>
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{request()->is('user/profile') ? 'active' : ''}}">
                 <a class="nav-link" href="{{ route('customer-dashboard.profile') }}">
                     <i class="material-icons">person</i>
                     <p>User Profile</p>

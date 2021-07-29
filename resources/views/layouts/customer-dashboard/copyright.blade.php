@@ -3,18 +3,18 @@
         <nav class="float-left">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="{{route('welcome')}}">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{route('about')}}">
                         About Us
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{route('contact')}}">
                         contact
                     </a>
                 </li>

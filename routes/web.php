@@ -146,6 +146,7 @@ Route::post('checkout', [App\Http\Controllers\TransactionController::class, 'sto
 
 Route::get('/user/dashboard', [App\Http\Controllers\GuestController::class, 'dashboard'])->middleware('auth')->name('customer-dashboard.index');
 Route::get('/user/profile', [App\Http\Controllers\GuestController::class, 'profile'])->name('customer-dashboard.profile');
+Route::post('/user/profile/{user}/update', [App\Http\Controllers\GuestController::class, 'update'])->name('update-user-profile');
 Route::get('/user/order-detail', [App\Http\Controllers\GuestController::class, 'orderDetails'])->name('customer-dashboard.orders-details');
 
 
