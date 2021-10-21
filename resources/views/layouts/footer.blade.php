@@ -8,7 +8,7 @@
                 <div class="footer-widget about-widget">
                     <h2>About</h2>
                     <p>
-                        We are a brand committed to bringing showcasing feminine beauty with our Mandies Pieces.
+                        We are a brand committed to showcasing feminine beauty with our Mandies Pieces.
                         Each design is specifically suited to suit our customer's tastes and preferences.
                     </p>
                     <img src="img/xcards.png.pagespeed.ic.JYcvaPNjMW.png" alt="" />
@@ -79,7 +79,7 @@
     <div class="social-links-warp">
         <div class="container">
             <div class="social-links text-center">
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+                <a href="https://instagram.com/mandies22.ng" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
                 {{-- <a href="#" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a> --}}
                 {{-- <a href="#" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a> --}}
                 <a href="#" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>

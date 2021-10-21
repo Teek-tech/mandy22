@@ -13,9 +13,9 @@
                             <i class="fas fa-bars"></i>
                         </div>
 
-                        <div class="panel-icon web-search-trigger">
+                        {{-- <div class="panel-icon web-search-trigger">
                             <i class="fas fa-search"></i>
-                        </div>
+                        </div> --}}
 
                         <div class="panel-icon">
                             <a href="#">
@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="panel-icon">
-                            <a href="#">
+                            <a href="https://instagram.com/mandies22.ng">
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
@@ -44,11 +44,11 @@
                                 <i class="flaticon-profile"></i>
                             </a>
                         </div>
-                        <div class="up-item">
+                        {{-- <div class="up-item">
                             <a href="#">
                                 <i class="flaticon-heart"></i>
                             </a>
-                        </div>
+                        </div> --}}
                         <div class="up-item">
                             <a href="{{ route('cart') }}">
                                 <div class="shopping-card">
@@ -106,10 +106,10 @@
                 </div>
             </div>
             <div class="nav-right-panel">
-                <div class="right-panel-search-area">
+                {{-- <div class="right-panel-search-area">
                     <input type="text" placeholder="search">
                     <button><i class="fas fa-search"></i></button>
-                </div>
+                </div> --}}
                 <div class="nav-other-items">
                     <div class="nav-right-panel-menu-items">
                         <ul>
@@ -135,7 +135,7 @@
                             </a>
                         </span>
                         <span class="panel-social-icon">
-                            <a href="">
+                            <a href="https://instagram.com/mandies22.ng">
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </span>

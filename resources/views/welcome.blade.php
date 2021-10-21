@@ -26,7 +26,7 @@
 
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="img/queen.jpg">
+            <div class="hs-item set-bg" data-setbg="img/first.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-7 text-white">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hs-item set-bg" data-setbg="img/casual.jpg">
+            <div class="hs-item set-bg" data-setbg="img/second.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-7 text-white">
