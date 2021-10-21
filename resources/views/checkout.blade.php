@@ -33,6 +33,9 @@
                         </button>
                       {{ session()->get('success') }}
                     </div>
+                    <script type="text/javascript">
+                        localStorage.clear();
+                    </script>
                   @endif
                     <form class="checkout-form" id="checkout" action="{{route('user.checkout')}}" method="POST">
                         @csrf
