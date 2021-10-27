@@ -33,11 +33,9 @@
                         {{-- <h4>Top Notch Fashion store</h4> --}}
                         <h4>Meet the C.E.O</h4>
                         <p>
-                            Mandies22 is a Nigerian fashion brand that produces unique bespoke pieces ranging from corporate designs to shift wears for the confident woman. <br> 
-                            Our beautifully designed pieces make you beautiful and stand out. You are sure to turn heads  at events or functions in a Mandies dress. <br>
-
-                            Experience our world of beauty. We hope you enjoy wearing our designs as much as we enjoyed making them 
-                            <br> <br>
+                            Mandies22 is an indigenous Nigerian brand committed to unique urban and minimalistic fashion styles. <br>
+                            We fuse the native and urban styles to create a blend that is most irresistible by our customers. Our collections range from corporate office wears to comfortable shift dresses for the urban woman. <br>
+                            Our new and timeless collections are your best bet for turning heads and dazzling at events and workplaces. <br><br>
 
                             <a href="{{route('shop.adults')}}" class="site-btn">Shop Now</a>
                         </p>

@@ -59,7 +59,7 @@ class ProductController extends Controller
                 ]);
 
                 foreach($request->file('product_image') as $image) {
-                    $destinationPath = 'product_images/'.$validate['category'];
+                    $destinationPath = public_path('product_images/'.$validate['category']);
                     $filename = $validate['category'].time().$image->getClientOriginalName();
                     $image->move($destinationPath, $filename);
     
@@ -131,7 +131,7 @@ class ProductController extends Controller
         
         if($request->hasFile('image_file')) {
             foreach($request->file('image_file') as $image) {
-                $destinationPath = 'product_images/'.$request->category;
+                $destinationPath = public_path('product_images/'.$request->category);
                 $filename = $request->product_id.time().$image->getClientOriginalName();
                 $image->move($destinationPath, $filename);
 
@@ -154,7 +154,7 @@ class ProductController extends Controller
             'image_file' => 'required|image|mimes:jpeg,png,jpg|max:10000'
         ]);
 
-        $getImage = 'product_images/'.$request->category.'/'.$projectImage->image_file;
+        $getImage = public_path('product_images/'.$request->category.'/'.$projectImage->image_file);
        // dd($getImage);
             if (File::exists($getImage)) {
                 File::delete($getImage);
@@ -162,7 +162,7 @@ class ProductController extends Controller
             
         $image = $request->file('image_file');
         if(!empty($image)){
-            $destinationPath = 'product_images/'.$request->category;
+            $destinationPath = public_path('product_images/'.$request->category);
             $filename = $projectImage->category.time().$image->getClientOriginalName();
             $image->move($destinationPath, $filename);
             $projectImage->update([
@@ -182,7 +182,7 @@ class ProductController extends Controller
         ]);
         if($request->hasFile('image_file')) {
             foreach($request->file('image_file') as $image) {
-                $destinationPath = 'product_images/'.$request->category;
+                $destinationPath = public_path('product_images/'.$request->category);
                 $filename = $request->product_id.time().$image->getClientOriginalName();
                 $image->move($destinationPath, $filename);
 

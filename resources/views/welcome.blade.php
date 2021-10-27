@@ -29,17 +29,17 @@
             <div class="hs-item set-bg" data-setbg="img/first.jpg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-7 text-white">
+                        <div class="col-xl-6 col-lg-7 text-white ">
                             <span>New Arrivals</span>
-                            <h2>Native Perfection</h2>
-                            <p>Our beautifully designed wears give you an aura of confidence and make you stand out. We don't dress your body alone, we dress your confidence. </p>
+                            <h2>Tailored Perfection</h2>
+                            <p>Our beautifully designed wears give you an aura of confidence and make you stand out. We don't dress your body alone, we dress your confidence! </p>
                             <a href="{{route('shop.adults')}}" class="site-btn sb-line">DISCOVER</a>
                             <a href="{{route('contact')}}" class="site-btn">Contact Us</a>
                         </div>
                     </div>
                     <div class="offer-card text-white">
                         <span>from</span>
-                        <h2>₦6999</h2>
+                        <h2>₦7999</h2>
                         <p>SHOP NOW</p>
                     </div>
                 </div>
@@ -50,14 +50,14 @@
                         <div class="col-xl-6 col-lg-7 text-white">
                             <span>New Arrivals</span>
                             <h2>Casual Originality</h2>
-                            <p>Every design we create tells a story. We hope you have an amazing experience wearing  our carefully crafted pieces. </p>
+                            <p>We bring our minimalist fashion taste to life in our Casual wears collection- classy, chic and comfortable wears for moments when you want to make statements without trying too much. </p>
                             <a href="{{route('shop.adults')}}" class="site-btn sb-line">Shop</a>
                             <a href="{{route('about')}}" class="site-btn">Learn More</a>
                         </div>
                     </div>
                     <div class="offer-card text-white">
                         <span>from</span>
-                        <h2>₦5999</h2>
+                        <h2>₦7999</h2>
                         <p>SHOP NOW</p>
                     </div>
                 </div>
@@ -368,7 +368,7 @@
 
     <section class="banner-section">
         <div class="container">
-            <div class="banner set-bg" data-setbg="img/banner-bg.jpg">
+            <div class="banner set-bg" data-setbg="img/banner-bg1.png">
                 <div class="tag-new">NEW</div>
                 <span>New Arrivals</span>
                 <h2>STRIPED SHIRTS</h2>

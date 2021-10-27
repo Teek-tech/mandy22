@@ -71,6 +71,7 @@ ol {
     margin: 0;
 }
 
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -966,7 +967,7 @@ ol {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
 }
 
 .footer-widget p {

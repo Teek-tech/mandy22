@@ -8,8 +8,10 @@
                 <div class="footer-widget about-widget">
                     <h2>About</h2>
                     <p>
-                        We are a brand committed to showcasing feminine beauty with our Mandies Pieces.
-                        Each design is specifically suited to suit our customer's tastes and preferences.
+                        We at Mandies22 Fashion House are dedicated to showcasing feminine beauty through our exquisite wears. <br>
+                        Every design we create tells a story, because we believe in our art, and art speaks, through those who showcase them.
+                        <br><br>
+                        We hope you have an amazing experience with our collections.
                     </p>
                     <img src="img/xcards.png.pagespeed.ic.JYcvaPNjMW.png" alt="" />
                 </div>
@@ -18,7 +20,7 @@
                 <div class="footer-widget about-widget">
                     <h2>Shop</h2>
                     <ul>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="{{route('about')}}">About Us</a></li>
                         <li><a href="#">Track Orders</a></li>
                         <li><a href="#">Return Policy</a></li>
                     </ul>
