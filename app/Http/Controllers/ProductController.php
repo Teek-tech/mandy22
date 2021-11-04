@@ -180,20 +180,23 @@ class ProductController extends Controller
             'category' => 'required',
 
         ]);
-        if($request->hasFile('image_file')) {
-            foreach($request->file('image_file') as $image) {
+        // dd("hello");
+        if($request->hasFile('more_image_file')) {
+            foreach($request->file('more_image_file') as $image) {
                 $destinationPath = public_path('product_images/'.$request->category);
                 $filename = $request->product_id.time().$image->getClientOriginalName();
                 $image->move($destinationPath, $filename);
 
-                ProjectImage::create([
+                ProductImage::create([
                     'product_id' => $request->product_id,
-                    'image_file' => $filename
+                    'image_file' => $filename,
+                    'category' => $request->category,
                 ]);
                 // $image->save($images);
             }
+            return back()->with('success', 'Project Images was successfully added.');
         }
-        return back()->with('success', 'Project Images was successfully added.');
+        return back()->with('success', 'Project Images was NOT successfully added.');
     }
     /**
      * Remove the specified resource from storage.

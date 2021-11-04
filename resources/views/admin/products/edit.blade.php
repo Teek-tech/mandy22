@@ -21,7 +21,11 @@
 
         
     <!-- END PAGE LEVEL STYLES -->
-
+<style>
+    .moreImg{
+        display: none;
+    }
+</style>
 </head>
 
 <body>
@@ -45,6 +49,18 @@
                 <div class="row layout-top-spacing">
                     <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                         <div class="widget-content widget-content-area br-6">
+
+                            <button class="btn btn-primary clickMoreImg" style="float: right;" type="button">Update Image</button>
+                        <div class="col-md-6 col-md-offset-4 moreImg">
+                            <form action="{{route('admin-addmore-product-image')}}" method="post" enctype="multipart/form-data">
+                                @csrf
+                            <input type="file" name="more_image_file[]" required multiple>
+                            <input type="hidden" name="category" value="{{$product->category}}" required>
+                            <input type="hidden" name="product_id" value="{{$product->id}}" required>
+                            <button class="btn btn-primary" type="submit">Upload More Image</button>
+                            </form>
+                        </div>
+
                             <h5 class="mt-4 text-center">Edit Product</h5>
                             @if(session()->has('success'))
                             <div class="alert alert-solid alert-success" role="alert">
@@ -132,10 +148,13 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                @php
+                                    $sn = 1;
+                                @endphp
                                 <tbody>
                                     @foreach ($product->images as $image)
                                     <tr>
-                                        <th scope="row">1</th>
+                                        <th scope="row">{{$sn++}}</th>
                                         <td>{{$image->image_file}}</td>
                                         <td class="img-to-edit">
                                             <img src="{{asset('product_images/'.$product->category. '/' .$image->image_file)}}"
@@ -205,6 +224,10 @@
                     $('.dataTables_wrapper table').removeClass('table-striped');
                 }
             });
+
+            $('.clickMoreImg').on('click', function(){
+                $('.moreImg').toggle();
+            })
         });
     </script>
     <!-- END PAGE LEVEL SCRIPTS -->
