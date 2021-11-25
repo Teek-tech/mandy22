@@ -43,6 +43,25 @@
                     <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                         <div class="widget-content widget-content-area br-6">
                             <h4>Products</h4>
+                            {{-- Success --}}
+                            @if(session()->has('success'))
+                            <div class="alert alert-solid alert-success" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                              {{ session()->get('success') }}
+                            </div>
+                          @endif
+                          {{-- Error --}}
+                          @if(session()->has('error'))
+                          <div class="alert alert-solid alert-danger" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                            {{ session()->get('error') }}
+                          </div>
+                        @endif
+
                             <div class="table-responsive mb-4 mt-4">
                                 <table class="multi-table table table-hover" style="width:100%">
                                     <thead>
@@ -74,9 +93,22 @@
                                             <span class="badge bg-warning">unavailable</span>
                                             @endif
                                             </td>
-                                        <td class="d-flex justify-content-center"><a
-                                                href="{{ route('admin.product.edit', $product->uuid) }}"
-                                                class="btn btn-primary">Edit</a>
+                                        <td class="d-flex justify-content-center">
+                                            {{-- <a href="{{ route('admin.product.edit', $product->uuid) }}"
+                                                class="btn btn-primary">Edit</a> --}}
+                                                {{-- &nbsp;&nbsp; --}}
+                                                <span class="badge bg-primary">
+                                                    <a style="color:#fff;" href="{{ route('admin.product.edit', $product->uuid) }}"
+                                                        >Edit</a>
+                                                </span>
+                                                &nbsp;&nbsp;
+                                               
+                                                    <form id="delete-product-form" action="{{ route('delete-product', $product->id) }}" method="POST" >
+                                                        @csrf
+                                                        <button type="submit" class="btn sm-btn btn-danger">delete</button>
+                                                    </form>
+                                                
+                                                
                                         </td>
                                     </tr>
                                     @endforeach

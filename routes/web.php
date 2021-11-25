@@ -190,6 +190,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isMaster', 'auth', 'verifie
     Route::post('update-product-image', [App\Http\Controllers\ProductController::class, 'updateImage'])->name('admin-update-product-image');
     
     Route::post('more-product-image', [App\Http\Controllers\ProductController::class, 'uploadMoreProductImage'])->name('admin-addmore-product-image');
+
+    Route::post('product/delete-product/{id}', [App\Http\Controllers\ProductController::class, 'deleteProduct'])->name('delete-product');
+
     // Route::get('add-products/cars', [App\Http\Controllers\ProductController::class, 'cars'])->name('admin.add-cars');
     // Route::get('add-products/parts', [App\Http\Controllers\ProductController::class, 'parts'])->name('admin.add-parts');
     

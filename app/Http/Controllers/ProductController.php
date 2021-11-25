@@ -204,8 +204,23 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function deleteProduct(Request $request, $id)
     {
-        //
+        $getProduct = Product::findOrFail($id);
+        if ($getProduct->images) {
+        foreach($getProduct->images as $image){
+            //  dd($image);
+            $image_path = public_path('/product_images/'.$getProduct->category.'/'.$image->image_file);
+            
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+            }
+            $image->delete();
+            }
+            $getProduct->delete();
+            return back()->with('success', 'Product was successfully deleted.');
+        }
+        
+        return back()->with('error', 'Something went wrong...');
     }
 }
