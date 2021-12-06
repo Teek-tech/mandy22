@@ -24,7 +24,7 @@ class GuestController extends Controller
     public function index()
     {
         $products = $this->product;
-        $uniqueProduct = Product::inRandomOrder()->get();
+        $uniqueProduct = Product::inRandomOrder()->take(8)->get();
         return view('welcome', compact('products', 'uniqueProduct'));
     }
 

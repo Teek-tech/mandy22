@@ -308,7 +308,9 @@
                 </div> --}}
                 @endforeach
             </div>  
-           
+            <div class="text-center pt-5">
+                <button class="site-btn sb-line sb-dark"><a href="{{ route('shop.adults') }}"> LOAD MORE</a></button>
+            </div>
             
             {{-- <div class="row best-selling-products children" style="display: none;">
                 <div class="col-lg-3 col-sm-6">
