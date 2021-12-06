@@ -156,15 +156,15 @@
                     </div>
                 </div> --}}
             </div>
-            <div class="text-center pt-5">
+            {{-- <div class="text-center pt-5">
                 <button class="site-btn sb-line sb-dark">LOAD MORE</button>
-            </div>
+            </div> --}}
         </div>
     </section>
 
 
 
-    <section class="banner-section">
+    {{-- <section class="banner-section">
         <div class="container">
             <div class="banner set-bg" data-setbg="{{ asset('img/banner-bg.jpg') }}">
                 <div class="tag-new">NEW</div>
@@ -173,7 +173,7 @@
                 <a href="#" class="site-btn">SHOP NOW</a>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     @include('layouts.footer');

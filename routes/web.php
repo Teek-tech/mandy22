@@ -48,9 +48,9 @@ Route::get('/cart', function(){
 
 
 // contact
-Route::get('/contact', function (){
-    return view('contact');
-})->name('contact');
+// Route::get('/contact', function (){
+//     return view('contact');
+// })->name('contact');
 
 
 
@@ -142,6 +142,8 @@ Route::post('checkout', [App\Http\Controllers\TransactionController::class, 'sto
 //     return view('customer-dashboard.orders-details');
 // })->name('customer-dashboard.orders-details');
 
+Route::get('/gallery', [App\Http\Controllers\GuestController::class, 'gallery'])->name('gallery');
+Route::get('/contact', [App\Http\Controllers\GuestController::class, 'contact'])->name('contact');
 
 
 Route::get('/user/dashboard', [App\Http\Controllers\GuestController::class, 'dashboard'])->middleware('auth')->name('customer-dashboard.index');

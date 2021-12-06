@@ -12,15 +12,18 @@ use App\Notifications\NotifyCustomer;
 
 class GuestController extends Controller
 {
-   
+   public $product;
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        $this->product = Product::all();
+    }
     public function index()
     {
-        $products = Product::all();
+        $products = $this->product;
         $uniqueProduct = $products->random(2);
         return view('welcome', compact('products', 'uniqueProduct'));
     }
@@ -138,4 +141,14 @@ class GuestController extends Controller
         return view('customer-dashboard.orders-details');
     }
     
+    public function gallery()
+    {
+        $gallery = ProductImage::inRandomOrder()->get();
+        return view('gallery', compact('gallery'));
+    }
+
+    public function contact(){
+        $products = $this->product;
+        return view('contact', compact('products'));
+    }
 }

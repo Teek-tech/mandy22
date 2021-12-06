@@ -26,17 +26,20 @@
     <section class="gallery-area">
         <div class="container">
             <div class="gallery">
-                <ul class="gallery-controls">
+                {{-- <ul class="gallery-controls">
                     <li class="control-btn active" data-filter="all">All</li>
                     <li class="control-btn" data-filter="adults">Adults</li>
                     <li class="control-btn" data-filter="children">Children</li>
-                </ul>
+                </ul> --}}
 
                 <div class="image-container">
-                    <a href="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" class="image adults">
-                        <img src="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" alt="">
+                    @foreach ($gallery as $image)
+                    <a href="{{asset('product_images/'.$image->category. '/' .$image->image_file)}}" class="image adults">
+                        <img src="{{asset('product_images/'.$image->category. '/' .$image->image_file)}}" alt="">
                     </a>
-
+                    @endforeach
+                   
+                {{-- 
                     <a href="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" class="image children">
                         <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
                     </a>
@@ -71,7 +74,7 @@
 
                     <a href="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" class="image children">
                         <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>

@@ -151,11 +151,11 @@
             <ul class="main-menu">
                 <li class="{{request()->is('/') ? 'active' : ''}}"><a href="{{ route('welcome') }}">Home</a></li>
                 <li class="{{request()->is('about') ? 'active' : ''}}"><a href="{{ route('about') }}">About</a></li>
-                <li><a href="#">Shop</a>
-                    <ul class="sub-menu">
+                <li><a href="{{ route('shop.adults') }}">Shop</a>
+                    {{-- <ul class="sub-menu">
                         <li><a href="{{ route('shop.adults') }}">Adults</a></li>
                         <li><a href="{{ route('shop.children') }}">Children</a></li>
-                    </ul>
+                    </ul> --}}
                 </li>
                 <li class="{{request()->is('gallery') ? 'active' : ''}}"><a href="{{ route('gallery') }}">Gallery</a></li>
                 <li class="{{request()->is('contact') ? 'active' : ''}}"><a href="{{ route('contact') }}">Contact</a></li>
