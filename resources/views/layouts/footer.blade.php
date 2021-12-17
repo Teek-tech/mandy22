@@ -96,7 +96,7 @@
                     document.write(new Date().getFullYear());
                 </script>
                 All rights reserved | created by
-                <a href="https://mezitox" target="_blank">Mezitox</a>
+                <a href="https://mezitox.com" target="_blank">Mezitox</a>
             </p>
         </div>
     </div>
