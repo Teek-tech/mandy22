@@ -70,7 +70,7 @@
                     <div class="con-info">
                         <span>E.</span>
                         <p>
-                            hello@mandies22.ng
+                            <a href="mailto:mandies22.ng@gmail.com">mandies22.ng@gmail.com</a> | <a href="mailto:hello@mandies22.ng ">hello@mandies22.ng </a>  
                             {{-- <a href="#" class="__cf_email__">hello@mandies22.ng</a> --}}
                         </p>
                     </div>

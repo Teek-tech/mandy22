@@ -387,8 +387,8 @@
             <div class="banner set-bg" data-setbg="img/banner-bg1.png">
                 <div class="tag-new">NEW</div>
                 <span>New Arrivals</span>
-                <h2>STRIPED SHIRTS</h2>
-                <a href="#" class="site-btn">SHOP NOW</a>
+                <h2>Exquisite</h2>
+                <a href="{{route('shop.adults')}}" class="site-btn">SHOP NOW</a>
             </div>
         </div>
     </section>

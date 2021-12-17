@@ -158,7 +158,7 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
     console.log(total);
    // document.getElementById("fee").value = charge;
 var handler = PaystackPop.setup({
-key: 'pk_test_e683c68a6edfe02bba60e52d92ec930427339096',
+key: 'pk_live_8de23fbd1c399bc244eb9464ccc3a60518dab1a9', //pk_test_e683c68a6edfe02bba60e52d92ec930427339096',
 email: document.getElementById("email").value,
 amount: total * 100, //document.getElementById("votes").value * 30 + "00",
 currency: "NGN",
