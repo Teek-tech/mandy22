@@ -33,9 +33,15 @@ class GuestController extends Controller
         return view('shop.adults', compact('products'));
     }
 
+    public function about(){
+        $products = $this->product;
+        return view('about', compact('products'));
+    }
+
     public function productDetails(Product $product){
         $product = Product::findOrFail($product->id);
-        return view('shop.details', compact('product'));
+        $products =  $this->product;
+        return view('shop.details', compact('product', 'products'));
     }
     /**
      * Show the form for creating a new resource.

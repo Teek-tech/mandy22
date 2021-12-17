@@ -50,74 +50,7 @@
             <div class="section-title">
                 <h2>LATEST PRODUCTS</h2>
             </div>
-            <div class="product-slider owl-carousel">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/product/x1.jpg.pagespeed.ic._92Pc1JtDC.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <div class="tag-new">New</div>
-                        <img src="img/product/x2.jpg.pagespeed.ic.yx20XuH2nc.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/product/x3.jpg.pagespeed.ic.tRzgvLMuBN.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
+            @include('layouts.partials.latest')
         </div>
     </section>
 

@@ -134,12 +134,13 @@
                                 data-parent="#accordion">
                                 <div class="panel-body">
                                     <p>
-                                        {{$product->description}}
+                                        Can be worn as casual and office wear with the appropriate footwear.
+                                        Our fabrics are made with good quality dyes that don't come off easily but launder with Ankara friendly detergents for more durability.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel">
+                        {{-- <div class="panel">
                             <div class="panel-header" id="headingTwo">
                                 <button class="panel-link" data-toggle="collapse" data-target="#collapse2"
                                     aria-expanded="false" aria-controls="collapse2">care details </button>
@@ -152,7 +153,7 @@
                                         mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="panel">
                             <div class="panel-header" id="headingThree">
                                 <button class="panel-link" data-toggle="collapse" data-target="#collapse3"
@@ -161,19 +162,19 @@
                             <div id="collapse3" class="collapse" aria-labelledby="headingThree"
                                 data-parent="#accordion">
                                 <div class="panel-body">
-                                    <h4>7 Days Returns</h4>
-                                    <p>Cash on Delivery Available<br>Home Delivery <span>3 - 4 days</span></p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so
-                                        dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te
-                                        mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
+                                    <p>
+                                        In order to provide the best services and right fits for our customers, our production and delivery spans within 10-12 working days. <br>
+
+                                        We have a no return policy as we work hard to serve our customers right from point of order to point of delivery.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="social-sharing">
+                        <a href="https://instagram.com/mandies22.ng"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -186,74 +187,7 @@
             <div class="section-title">
                 <h2>RELATED PRODUCTS</h2>
             </div>
-            <div class="product-slider owl-carousel">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="{{ asset('img/product/x1.jpg.pagespeed.ic._92Pc1JtDC.jpg') }}" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <div class="tag-new">New</div>
-                        <img src="{{ asset('img/product/x2.jpg.pagespeed.ic.yx20XuH2nc.jpg') }}" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="{{ asset('img/product/x3.jpg.pagespeed.ic.tRzgvLMuBN.jpg') }}" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="{{ asset('img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg') }}" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div> 
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="{{ asset('img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg') }}" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
+            @include('layouts.partials.latest')
         </div>
     </section>
 

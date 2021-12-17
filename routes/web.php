@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 
 // about
-Route::get('/about', function(){
-    return view('about');
-})->name('about');
+// Route::get('/about', function(){
+//     return view('about');
+// })->name('about');
 
-
+Route::get('about', [App\Http\Controllers\GuestController::class, 'about'])->name('about');
 
 
 

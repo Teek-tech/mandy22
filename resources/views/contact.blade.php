@@ -26,16 +26,16 @@
             <div class="row" style="display: flex;justify-content: center;">
                 <div class="col-lg-7 contact-info">
                     <h2>Get in touch</h2>
-                    <p>Main Str, no 23, New York</p>
-                    <p>+546 990221 123</p>
-                    <p><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__"
-                            data-cfemail="d8b0b7abacb1b6bf98bbb7b6acb9bbacf6bbb7b5">[email&#160;protected]</a></p>
+                    <p>No. 4, Peter Odili Road Port-Harcourt,
+                        P.O. BOX 68</p>
+                    <p><a href="tel:+2348174703240">+234817 470 3240</a></p>
+                    <p>
+                         <a href="mailto:hello@mandies22.ng ">hello@mandies22.ng </a> 
+                    </p>
                     <div class="contact-social">
-                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="https://instagram.com/mandies22.ng"><i class="fa fa-instagram"></i></a>
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
                     </div>
                     @if(session()->has('success'))
                     <div class="alert alert-solid alert-success" role="alert" style="background-color: green; color:#fff;">
@@ -63,112 +63,7 @@
             <div class="section-title">
                 <h2>Your Favorites</h2>
             </div>
-            <div class="product-slider owl-carousel">
-                @if ($products->count() > 0)
-                    @foreach ($products as $product)
-                    <div class="product-item">
-                        <div class="pi-pic">
-                            <img data-href="{{route('shop.product.detail', $product->uuid)}}"
-                            src="{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}" alt="">
-                            <div class="pi-links">
-                                <a href="{{route('shop.product.detail', $product->uuid)}}" class="add-card add-to-cart"
-                                data-id="{{$product->id}}"
-                                data-quantity="1"
-                                data-price="{{$product->price}}"
-                                data-size="none"
-                                data-product="{{$product->title}}"
-                                data-img="<img src='{{asset('product_images/'.$product->category. '/' .$product->firstImage->image_file)}}'>"
-                                ><i class="flaticon-bag"></i><span>ADD TO
-                                        CART</span></a>
-                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="pi-text">
-                            <h6>₦{{number_format($product->price, 0, '.', ',')}}</h6>
-                            <p>{{$product->title}}</p>
-                        </div>
-                    </div>
-                    @endforeach
-                @else
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img data-href="/shop/adults/product/detail"
-                            src="img/product/x1.jpg.pagespeed.ic._92Pc1JtDC.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="{{ route('cart') }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
-                                    CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>₦35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <div class="tag-new">New</div>
-                        <img data-href="/shop/adults/product/detail"
-                            src="img/product/x2.jpg.pagespeed.ic.yx20XuH2nc.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="{{ route('cart') }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
-                                    CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>₦35,00</h6>
-                        <p>Black and White Stripes Dress</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img data-href="/shop/adults/product/detail"
-                            src="img/product/x3.jpg.pagespeed.ic.tRzgvLMuBN.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="{{ route('cart') }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
-                                    CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>₦35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img data-href="/shop/adults/product/detail"
-                            src="img/product/x4.jpg.pagespeed.ic.r5-0RLqqms.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="{{ route('cart') }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
-                                    CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>₦35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img data-href="/shop/adults/product/detail"
-                            src="img/product/x6.jpg.pagespeed.ic.Nqbz4AFh6C.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="{{ route('cart') }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
-                                    CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>₦35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-                @endif
-               
-            </div>
+            @include('layouts.partials.latest')
         </div>
     </section>
 

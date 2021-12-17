@@ -59,13 +59,13 @@
                     <div class="con-info">
                         <span>B.</span>
                         <p>
-                            Peter Odili Road Port-Harcourt,
+                            No. 4, Peter Odili Road Port-Harcourt,
                             P.O. BOX 68
                         </p>
                     </div>
                     <div class="con-info">
                         <span>T.</span>
-                        <p>+(234) 000 000 0000</p>
+                        <p>+(234) 817 470 3240</p>
                     </div>
                     <div class="con-info">
                         <span>E.</span>
