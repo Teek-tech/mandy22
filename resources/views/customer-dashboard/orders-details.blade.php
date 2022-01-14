@@ -41,24 +41,20 @@
                                                 <th>Total</th>
                                             </tr>
                                         </thead>
+                                        @php
+                                        $itemData = json_decode($receipt->product_details, true);
+                                        @endphp
                                         <tbody>
+                                            @foreach ($itemData as $item)
                                             <tr>
-                                                <th scope="col">Purple gown</th>
+                                                <th scope="col">{{$item['product']}}</th>
                                                 <td>Adults</td>
-                                                <td>s</td>
-                                                <td>20000</td>
-                                                <td>2</td>
-                                                <td>40000</td>
+                                                <td>{{$item['size']}}</td>
+                                                <td>{{$item['price']}}</td>
+                                                <td>{{$item['quantity']}}</td>
+                                                <td>{{$item['price'] * $item['quantity']}}</td>
                                             </tr>
-
-                                            <tr>
-                                                <th scope="col">Red gown</th>
-                                                <td>Children</td>
-                                                <td>xl</td>
-                                                <td>20000</td>
-                                                <td>1</td>
-                                                <td>20000</td>
-                                            </tr>
+                                            @endforeach
 
                                             <tr>
                                                 <th scope="row" colspan="5" style="text-align: right">Sub Total :</th>
@@ -70,7 +66,7 @@
                                             <tr>
                                                 <th scope="row" colspan="5" style="text-align: right">Total :</th>
                                                 <td>
-                                                    <div class="font-weight-bold">0</div>
+                                                    <div class="font-weight-bold">{{$receipt->amount}}</div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -88,16 +84,12 @@
                                         <h4 class="card-title">Shipping Information</h4>
                                     </div>
                                     <div class="card-body">
-                                        <h6 class="font-family-primary font-weight-semibold">Brent Jones</h6>
+                                        <h6 class="font-family-primary font-weight-semibold">{{$receipt->first_name}} {{$receipt->last_name}}</h6>
 
-                                        <p class="mb-2"><span class="font-weight-semibold mr-2">Address:</span> 3559
-                                            Roosevelt Wilson Lane San Bernardino, CA 92405</p>
-                                        <p class="mb-2"><span class="font-weight-semibold mr-2">Phone:</span> (123)
-                                            456-7890
+                                        <p class="mb-2"><span class="font-weight-semibold mr-2">Address:</span> {{$receipt->address}}</p>
+                                        <p class="mb-2"><span class="font-weight-semibold mr-2">Phone:</span> {{$receipt->phone}}
                                         </p>
-                                        <p class="mb-0"><span class="font-weight-semibold mr-2">Mobile:</span> (+01)
-                                            12345
-                                            67890</p>
+                                        <p class="mb-0"><span class="font-weight-semibold mr-2">Mobile:</span> {{$receipt->email}}</p>
                                     </div>
                                 </div>
                             </div>

@@ -40,9 +40,16 @@
                 <div class="">
                     <div class="user-panel">
                         <div class="up-item">
+                            @if (auth()->user())
+                            <a href="{{ route('customer-dashboard.index') }}">
+                                <i class="flaticon-profile"></i>
+                            </a>
+                            @else
                             <a href="{{ route('register') }}">
                                 <i class="flaticon-profile"></i>
                             </a>
+                            @endif
+                           
                         </div>
                         {{-- <div class="up-item">
                             <a href="#">

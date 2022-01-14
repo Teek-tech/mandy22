@@ -41,9 +41,12 @@ Route::get('/gallery', function(){
 })->name('gallery');
 
 // cart
-Route::get('/cart', function(){
-    return view('cart');
-})->name('cart');
+// Route::get('/cart', function(){
+//     return view('cart');
+// })->name('cart');
+
+Route::get('/cart', [App\Http\Controllers\GuestController::class, 'cart'])->name('cart');
+
 
 
 
@@ -149,7 +152,7 @@ Route::get('/contact', [App\Http\Controllers\GuestController::class, 'contact'])
 Route::get('/user/dashboard', [App\Http\Controllers\GuestController::class, 'dashboard'])->middleware('auth')->name('customer-dashboard.index');
 Route::get('/user/profile', [App\Http\Controllers\GuestController::class, 'profile'])->name('customer-dashboard.profile');
 Route::post('/user/profile/{user}/update', [App\Http\Controllers\GuestController::class, 'update'])->name('update-user-profile');
-Route::get('/user/order-detail', [App\Http\Controllers\GuestController::class, 'orderDetails'])->name('customer-dashboard.orders-details');
+Route::get('/user/order-detail/{transaction:uuid}', [App\Http\Controllers\GuestController::class, 'orderDetails'])->name('customer-dashboard.orders-details');
 
 
 

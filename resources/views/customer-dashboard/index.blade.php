@@ -26,7 +26,7 @@
             <!-- End Navbar -->
             <div class="content">
                 <div class="container-fluid">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="card card-stats">
                                 <div class="card-header card-header-warning card-header-icon">
@@ -75,9 +75,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header card-header-primary">
@@ -170,7 +170,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="row">
                         <div class="col-md-12">
@@ -189,12 +189,7 @@
                                                 <th>
                                                     Order Id
                                                 </th>
-                                                <th>
-                                                    Product
-                                                </th>
-                                                <th>
-                                                    Quantity
-                                                </th>
+                                                
                                                 <th>
                                                     Amount
                                                 </th>
@@ -205,66 +200,27 @@
                                                     Date
                                                 </th>
                                             </thead>
+                                            @php
+                                                $sn = 1;
+                                            @endphp
                                             <tbody>
-                                                <tr data-href="/user/order-detail">
+                                                @foreach ($transaction as $item)
+                                                <tr data-href="{{route('customer-dashboard.orders-details',  $item->uuid)}}">
                                                     <td>
-                                                        1
+                                                        {{$sn++}}
                                                     </td>
                                                     <td>
-                                                        MANDY343
+                                                        {{$item->orderID}}
                                                     </td>
-                                                    <td>
-                                                        Dorime Gown
-                                                    </td>
-                                                    <td>
-                                                        1
-                                                    </td>
-                                                    <td>N34,000</td>
+                                                   
+                                                    <td>N{{$item->amount}}</td>
                                                     <td class="">
                                                         <span class="badge bg-warning">pending</span>
                                                     </td>
                                                     <td>12th july 2021</td>
-                                                </tr>
-
-                                                <tr data-href="/user/order-detail">
-                                                    <td>
-                                                        1
-                                                    </td>
-                                                    <td>
-                                                        MANDY343
-                                                    </td>
-                                                    <td>
-                                                        Dorime Gown
-                                                    </td>
-                                                    <td>
-                                                        1
-                                                    </td>
-                                                    <td>N34,000</td>
-                                                    <td class="">
-                                                        <span class="badge bg-warning">pending</span>
-                                                    </td>
-                                                    <td>12th july 2021</td>
-                                                </tr>
-
-                                                <tr data-href="/user/order-detail">
-                                                    <td>
-                                                        1
-                                                    </td>
-                                                    <td>
-                                                        MANDY343
-                                                    </td>
-                                                    <td>
-                                                        Dorime Gown
-                                                    </td>
-                                                    <td>
-                                                        1
-                                                    </td>
-                                                    <td>N34,000</td>
-                                                    <td class="">
-                                                        <span class="badge bg-warning">pending</span>
-                                                    </td>
-                                                    <td>12th july 2021</td>
-                                                </tr>
+                                                </tr> 
+                                                @endforeach
+                                                
                                             </tbody>
                                         </table>
                                     </div>

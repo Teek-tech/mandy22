@@ -92,6 +92,7 @@
                             </div>
                             <div class="col-md-12">
                                 <input type="text" placeholder=" Delivery Address" name="address">
+                                <small style="color: red;">Bill does not include delivery fee.</small>
                                 @error('address')
                                 <span class="invalid-feedback" role="alert">
                                     <strong style="color: red;">{{ $message }}</strong>
@@ -135,14 +136,14 @@
                         </div> --}}
                         <div class="cf-title">Payment</div>
                         <ul class="payment-list">
-                            <li>Paypal<a href="#"><img src="img/xpaypal.png.pagespeed.ic.zQ_J36CLr7.png" alt=""></a>
+                            {{-- <li>Paypal<a href="#"><img src="img/xpaypal.png.pagespeed.ic.zQ_J36CLr7.png" alt=""></a> --}}
                             </li>
                             <li>Credit / Debit card<a href="#"><img
                                         src="img/xmastercart.png.pagespeed.ic.ED5Ynfm8sT.png" alt=""></a></li>
-                            <li>Pay when you get the package</li>
+                            {{-- <li>Pay when you get the package</li> --}}
                         </ul>
                     </form>
-                    <button class="site-btn submit-order-btn" onclick="payWithPaystack()">Place Order</button>
+                    <button class="site-btn submit-order-btn" onclick="payWithPaystack()">Pay with card</button>
                     <br><br><div id="error"></div>
                 </div>
                 <div class="col-lg-4 order-1 order-lg-2">

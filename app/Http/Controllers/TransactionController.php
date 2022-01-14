@@ -45,7 +45,7 @@ class TransactionController extends Controller
             'product_details' => 'required',
             'orderID' => 'required',
             'amount' => 'required'
-        ]);
+        ]); 
          //dd($validate);
         Transaction::create(request()->all());
 

@@ -9,6 +9,7 @@ use App\Models\ProductImage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NotifyAdmin;
 use App\Notifications\NotifyCustomer;
+use App\Models\Transaction;
 
 class GuestController extends Controller
 {
@@ -133,7 +134,8 @@ class GuestController extends Controller
 
     public function dashboard()
     {
-        return view('customer-dashboard.index');
+        $transaction = Transaction::where('email', auth()->user()->email)->get();
+        return view('customer-dashboard.index', compact('transaction'));
     }
 
     public function profile()
@@ -142,9 +144,11 @@ class GuestController extends Controller
         return view('customer-dashboard.profile', compact('user'));
     }
 
-    public function orderDetails()
+    public function orderDetails(Transaction $transaction)
     {
-        return view('customer-dashboard.orders-details');
+       // dd($transaction);
+       $receipt = Transaction::findOrFail($transaction->id);
+        return view('customer-dashboard.orders-details', compact('receipt'));
     }
     
     public function gallery()
@@ -156,5 +160,10 @@ class GuestController extends Controller
     public function contact(){
         $products = $this->product;
         return view('contact', compact('products'));
+    }
+
+    public function cart(){
+        $products = $this->product;
+        return view('cart', compact('products'));
     }
 }

@@ -82,7 +82,8 @@
                                 <div class="col-lg-4">
                                     <h5 class="header-title mb-3">Shipping Information</h5>
 
-                                    <h6 class="font-family-primary font-weight-semibold">{{$receipt->first_name}} {{$receipt->last_name}}</h6>
+                                    <h6 class="font-family-primary font-weight-semibold">
+                                        {{$receipt->first_name}} {{$receipt->last_name}}</h6>
 
                                     <p class="mb-2"><span class="font-weight-semibold mr-2">Address:</span> {{$receipt->address}}</p>
                                     <p class="mb-2"><span class="font-weight-semibold mr-2">Phone:</span> {{$receipt->phone}}
