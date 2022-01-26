@@ -1414,6 +1414,11 @@ ol {
     margin-right: 5px;
 }
 
+.fw-size-choose .color-item {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+}
 .fw-size-choose label {
     display: inline-block;
     height: 30px;

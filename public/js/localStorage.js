@@ -1,18 +1,25 @@
 // Developed by Tochukwu Odeme ** https://github.com/teek-tech
+ var selectedColor = "";
 jQuery(function() {
-    let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
+    let shoppingCart = "";
+    if(!localStorage.getItem('Mandy22Shop')){
+    localStorage.setItem('Mandy22Shop', "[]");
+    }else{
+        shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
+    }
+    console.log(shoppingCart);
     const total = document.querySelector('#total');
     if (shoppingCart && shoppingCart.length > 0) {
         $('#item_count').text(shoppingCart.length);
     }else{
         $('#item_count').text(0);
     }
-   
+   console.log("fisssh: " + shoppingCart);
 
 //update item from cart by id
 $("#shopTable tbody").on('click', '.updateProduct', function(e){
     // console.log(this.id);
-     let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
+    //  let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
         updateCart = shoppingCart.findIndex((product => product.productID == this.id));
         shoppingCart[updateCart].quantity = this.value > 0 ? this.value : 1
         if(updateCart){
@@ -23,13 +30,31 @@ $("#shopTable tbody").on('click', '.updateProduct', function(e){
      //getData();
     })
 
+//color
+// function getColor(){
+  
+     $("[name=color]").on("click", function() {
+        console.log(this.id)
+        selectedColor = this.id;
+        // $('#reagent_code').toggle(this.value == 1)
+        $('#reagent_code').text("Selected Color: " + this.id);
+        });
+// }
+
+
+
 //update size from cart by id
 $(".sc-item").on('click', '.updateProductSize', function(e){
     var productID = $(".sc-item").attr('data-id');
-    // console.log(this.value);
+    // console.log("=======");
+    // console.log(selectedColor);
     // console.log(productID);
+    // if (shoppingCart == null) {
+    //     console.log("fisssh: " + shoppingCart);
+    // }
+    
     $("#sizedata").val(this.value);
-     let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
+    //  let shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));    
         updateCart = shoppingCart.findIndex((product => product.productID == productID));
         shoppingCart[updateCart].size = this.value == '' ? 'none' : this.value
         if(shoppingCart[updateCart].size == this.value){
@@ -89,7 +114,9 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
 })
 
 
+// var color = $("[name=color]:checked").click() ? console.log(this.id) : console.log("none");
 
+// console.log("====>"+ color);
 
     $('.add-to-cart').on('click', function(e){
         var productID = $(this).attr('data-id');
@@ -99,19 +126,18 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
         var url =   $(this).attr('data-url');
         var size = $('#sizedata').val(); // $(this).attr('data-size');
         var img = $(this).attr('data-img');
-
         let shoppingCart = [];
         //get cart items if user have added items to cart before
        if (localStorage.getItem("Mandy22Shop")) {
         shoppingCart = JSON.parse(localStorage.getItem('Mandy22Shop'));
        }else{
            //create new storage for unknown user
-        localStorage.setItem("Mandy22Shop", "[Empty Cart]");
+        shoppingCart =  localStorage.setItem("Mandy22Shop", "[Empty Cart]");
        }
 
         //Find index of specific object using findIndex method.  
-        var getProductID = shoppingCart.findIndex((product => product.productID == productID));
-
+        var getProductID = shoppingCart.find((product => product.productID == productID));
+        console.log("yooo" + getProductID);
         if(shoppingCart[getProductID]){
             //console.log("You have already added this item to cart! " + shoppingCart[getProductID].price)
             $('#errorText').text('You have already added this item to cart!');
@@ -124,6 +150,7 @@ $(".sc-item").on('click', '.updateProductSize', function(e){
                 'product' : product,
                 'price' : price,
                 'size' : size,
+                'color' : selectedColor,
                 'quantity' : quantity,
                 'img' : img
                 });

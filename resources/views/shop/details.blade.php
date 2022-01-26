@@ -12,6 +12,9 @@
         #successMsg, #successMsgSize {
             display: none;
         }
+
+
+        
     </style>
 </head>
 
@@ -102,6 +105,49 @@
                             <label for="xxl-size">42</label>
                         </div> --}}
                     </div>
+
+                    <div class="fw-size-choose">
+                            
+                        <p>Color</p>
+                        
+                        <div class="color-item" >
+                            <input type="radio" name="color" id="red" value="red">
+                            <label for="red" style="background-color: red;">R</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="black">
+                            <label for="black" style="background-color: black;">B</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="white">
+                            <label for="white" style="background-color: rgb(255, 234, 234);">W</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="blue">
+                            <label for="blue" style="background-color: blue;">B</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="yellow">
+                            <label for="yellow" style="background-color: yellow;" value="yellow">Y</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="brown">
+                            <label for="brown" style="background-color: brown;">B</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="pink">
+                            <label for="pink" style="background-color: pink;">P</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="orange">
+                            <label for="orange" style="background-color: #FFA500;">O</label>
+                        </div>
+                        <div class="color-item">
+                            <input type="radio" name="color" id="navy blue">
+                            <label for="navy blue" style="background-color: #000080;">N</label>
+                        </div>
+                        <div id="reagent_code">Kindly pick a color...</div>
+                    </div>
                             <div class="quantity">
                                 
                                 <p>Quantity <span style="color: red" id="errorQant"></span> <br></p>
@@ -137,6 +183,82 @@
                                         Can be worn as casual and office wear with the appropriate footwear.
                                         Our fabrics are made with good quality dyes that don't come off easily but launder with Ankara friendly detergents for more durability.
                                     </p>
+                                    <table class="table table-bordered">
+                                    <thead style="background-color:#fc8835; color:#fff;">
+                                        <tr>
+                                        <th scope="col">Size (Inches)</th>
+                                        <th scope="col">8</th>
+                                        <th scope="col">10</th>
+                                        <th scope="col">12</th>
+                                        <th scope="col">14</th>
+                                        <th scope="col">16</th>
+                                        <th scope="col">18</th>
+                                        <th scope="col">20</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Bust</th>
+                                                <td>36</td>
+                                                <td>38</td>
+                                                <td>40</td>
+                                                <td>42</td>
+                                                <td>44</td>
+                                                <td>46</td>
+                                                <td>48</td>
+                                        </tr>
+                                          <tr>
+                                            <th scope="row">Waist</th>
+                                                <td>32</td>
+                                                <td>34</td>
+                                                <td>36</td>
+                                                <td>38</td>
+                                                <td>40</td>
+                                                <td>42</td>
+                                                <td>44</td>
+                                        </tr>
+                                          <tr>
+                                            <th scope="row">Hip</th>
+                                                <td>41-42</td>
+                                                <td>43-44</td>
+                                                <td>44-45</td>
+                                                <td>45-46</td>
+                                                <td>46-47</td>
+                                                <td>47-48</td>
+                                                <td>48-50</td>
+                                        </tr>  
+                                        <tr>
+                                            <th scope="row">Dress length (S)</th>
+                                                <td>38</td>
+                                                <td>39</td>
+                                                <td>40</td>
+                                                <td>42</td>
+                                                <td>43</td>
+                                                <td>43</td>
+                                                <td>43</td>
+                                        </tr>
+                                         <tr>
+                                            <th scope="row">Dress length (L)</th>
+                                                <td>61</td>
+                                                <td>61</td>
+                                                <td>62</td>
+                                                <td>63</td>
+                                                <td>63</td>
+                                                <td>64</td>
+                                                <td>64</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Dress length (L)</th>
+                                                <td>24</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -193,6 +315,14 @@
 
 
     @include('layouts.footer')
+    <script>
+        // $("[name=color]").on("click", function() {
+        // console.log(this.id)
+        // // $('#reagent_code').toggle(this.value == 1)
+        // $('#reagent_code').text("Selected Color: " + this.id)
+        // })
+        // $("[name=color]:checked").click()
+    </script>
 </body>
 
 </html>

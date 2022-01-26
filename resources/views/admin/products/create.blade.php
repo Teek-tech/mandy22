@@ -82,6 +82,7 @@
                                                <option label="Select Ctaegory" selected></option>
                                                 <option value="adults">Adults</option>
                                                 <option value="children">Children</option>
+                                                <option value="uniform">Uniform</option>
                                             </select>
                                         </div>
                                         <div class="form-group my-3">

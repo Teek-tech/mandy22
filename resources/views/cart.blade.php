@@ -34,6 +34,7 @@
                                     <tr>
                                         <th class="product-th">Product</th>
                                         <th class="quy-th">Quantity</th>
+                                        <th class=" text-center">Color</th>
                                         <th class="size-th">Size</th>
                                         <th class="total-th">Price</th>
                                         <th class="action-th">Delete</th>
@@ -121,6 +122,9 @@
             </td>
             <td class="quy-col text-center">
             <h4> ${cart.quantity}</h4>
+            </td>
+            <td class="quy-col text-center">
+            <h5> ${cart.color}</h5>
             </td>
             <td class="size-col text-center">
                 <h4>${cart.size}</h4>

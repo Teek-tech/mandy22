@@ -40,7 +40,8 @@
                                         <tr>
                                             <th>Product name</th>
                                             <th>category</th>
-                                            <th>size</th>
+                                            <th>Color</th>
+                                            <th>Size</th>
                                             <th>Price</th>
                                             <th>quantity</th>
                                             <th>Total</th>
@@ -54,6 +55,7 @@
                                         <tr>
                                             <th scope="col">{{$item['product']}}</th>
                                             <td>Adults</td>
+                                            <td>{{$item['color']}}</td>
                                             <td>{{$item['size']}}</td>
                                             <td>{{$item['price']}}</td>
                                             <td>{{$item['quantity']}}</td>
