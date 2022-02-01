@@ -31,11 +31,12 @@
                 <div class="col-md-6 about-section-text-area">
                     <div>
                         {{-- <h4>Top Notch Fashion store</h4> --}}
-                        <h4>Meet the C.E.O</h4>
+                        <h4>About The Brand.</h4>
+                        <br>
                         <p>
                             Mandies22 is an indigenous Nigerian brand committed to unique urban and minimalistic fashion styles. <br>
                             We fuse the native and urban styles to create a blend that is most irresistible by our customers. Our collections range from corporate office wears to comfortable shift dresses for the urban woman. <br>
-                            Our new and timeless collections are your best bet for turning heads and dazzling at events and workplaces. <br><br>
+                            Our new and timeless collections are your best bet for turning heads and dazzling at events and workplaces. <br>
 
                             <a href="{{route('shop.adults')}}" class="site-btn">Shop Now</a>
                         </p>

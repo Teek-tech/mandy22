@@ -19,7 +19,7 @@
         position: relative;
         }
         .strikeout::after {
-        border-bottom: 0.15em solid red;
+        border-bottom: 0.10em solid red;
         content: "";
         left: 0;
         margin-top: calc(0.125em / 2 * -1);
