@@ -93,6 +93,11 @@
                                         </div>
 
                                         <div class="form-group my-3">
+                                            <label for="name">Higher Price</label>
+                                            <input type="number" name="discounted" class="form-control" value="{{$product->discounted}}">
+                                        </div>
+
+                                        <div class="form-group my-3">
                                             <label for="category">Category</label>
                                             <select name="category" class="form-control">
                                                 <option value="{{$product->category}}" selected>{{$product->category}}</option>
@@ -116,6 +121,21 @@
                                                <option value="18">18</option>
                                                <option value="20">20</option>
                                                <option value="22">22</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group my-3">
+                                            <label for="color">Select Available Color</label>
+                                            <select name="color[]" class="form-control js-example-basic-multiple" multiple="multiple">
+                                                <option value="{{$product->color}}" selected>{{$product->color}}</option>
+                                               <option value="black">black</option>
+                                               <option value="green">green</option>
+                                               <option value="yellow">yellow</option>
+                                               <option value="orangered">orange</option>
+                                               <option value="navy">navy blue</option>
+                                               <option value="brown">brown</option>
+                                               <option value="blue">blue</option>
+                                               <option value="white">white</option>
                                             </select>
                                         </div>
 

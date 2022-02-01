@@ -44,7 +44,9 @@ class ProductController extends Controller
             'category' => 'required',
             'size' => 'required',
             'stock' => 'required',
+            'color' => 'required',
             'price' => 'required|max:20|min:3',
+            'discounted' => 'required|max:20|min:3',
             'description' => 'required|max:500|min:5',
             'product_image' => 'required',
         ]);
@@ -54,6 +56,9 @@ class ProductController extends Controller
                     'title' => $validate['title'],
                     'description' => $validate['description'],
                     'category' => $validate['category'],
+                    'stock' => $validate['stock'],
+                    'color' => implode(',', $validate['color']),
+                    'discounted' => $validate['discounted'],
                     'size' => implode(',', $validate['size']),
                     'price' => $validate['price']
                 ]);
@@ -124,8 +129,9 @@ class ProductController extends Controller
         $product->category = $request->get('category');
         $product->stock = $request->get('stock');
         $product->size = implode(',', $request->get('size'));
-        $product->color = $request->get('color');
+        $product->color = implode(',', $request->get('color'));
         $product->price = $request->get('price');
+        $product->discounted = $request->get('discounted');
         $product->description = $request->get('description');
         $product->save();
         

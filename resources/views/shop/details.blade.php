@@ -13,7 +13,20 @@
             display: none;
         }
 
-
+        .strikeout {
+        /* font-size: 4em; */
+        line-height: 1em;
+        position: relative;
+        }
+        .strikeout::after {
+        border-bottom: 0.15em solid red;
+        content: "";
+        left: 0;
+        margin-top: calc(0.125em / 2 * -1);
+        position: absolute;
+        right: 0;
+        top: 40%;
+        }
         
     </style>
 </head>
@@ -57,7 +70,8 @@
                 <div class="col-lg-6 product-details">
                     
                     <h2 class="p-title">{{$product->title}}</h2>
-                    <h3 class="p-price">₦{{number_format($product->price, 0, '.', ',')}}</h3>
+                    <h3 class="p-price">₦{{number_format($product->price, 0, '.', ',')}} 
+                    <sup class="strikeout">₦{{number_format($product->discounted, 0, '.', ',')}}</sup></h3>
                     <h4 class="p-stock">Available: <span>{{$product->in_stock == TRUE ? 'In Stock' : 'Sold out' }}</span></h4>
                     <div class="p-rating">
                         <i class="fa fa-star-o"></i>
@@ -109,12 +123,14 @@
                     <div class="fw-size-choose">
                             
                         <p>Color</p>
-                        
+                        @foreach (explode(',', $product->color) as $color)
                         <div class="color-item" >
-                            <input type="radio" name="color" id="red" value="red">
-                            <label for="red" style="background-color: red;">R</label>
+                            <input type="radio" name="color" id="{{ucfirst($color)}}" value="{{ucfirst($color)}}">
+                            <label for="{{ucfirst($color)}}" style="background-color: {{$color}};">{{ucfirst(mb_substr($color, 0, 1))}}</label>
                         </div>
-                        <div class="color-item">
+                        @endforeach
+                       
+                        {{-- <div class="color-item">
                             <input type="radio" name="color" id="black">
                             <label for="black" style="background-color: black;">B</label>
                         </div>
@@ -145,7 +161,7 @@
                         <div class="color-item">
                             <input type="radio" name="color" id="navy blue">
                             <label for="navy blue" style="background-color: #000080;">N</label>
-                        </div>
+                        </div> --}}
                         <div id="reagent_code">Kindly pick a color...</div>
                     </div>
                             <div class="quantity">
